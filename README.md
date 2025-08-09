@@ -1,6 +1,6 @@
-# PearExpansion
+# Pear Expansion
 
-PearExpansion is a small Minecraft mod that adds various features, blocks, items, and tweaks — just things I felt like adding.
+Pear Expansion is a small Minecraft mod that adds various features, blocks, items, and tweaks — just things I felt like adding.
 
 ## Features
 
@@ -23,7 +23,7 @@ PearExpansion is a small Minecraft mod that adds various features, blocks, items
   All items are grouped in a dedicated PearExpansion creative tab.
 
 - **Multilingual Support**  
-  The mod includes translations for English, French, Esperanto, and Toki Pona.
+  The mod includes translations for English, Esperanto, French, German, Italian, Spanish, and Toki Pona languages.
 
 ## Compatibility
 
