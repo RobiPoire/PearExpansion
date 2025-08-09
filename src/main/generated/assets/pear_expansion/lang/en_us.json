@@ -1,6 +1,22 @@
 {
+  "block.pear_expansion.vertical_acacia_slab": "Vertical Acacia Slab",
+  "block.pear_expansion.vertical_birch_slab": "Vertical Birch Slab",
+  "block.pear_expansion.vertical_cherry_slab": "Vertical Cherry Slab",
+  "block.pear_expansion.vertical_dark_oak_slab": "Vertical Dark Oak Slab",
+  "block.pear_expansion.vertical_jungle_slab": "Vertical Jungle Slab",
+  "block.pear_expansion.vertical_mangrove_slab": "Vertical Mangrove Slab",
+  "block.pear_expansion.vertical_oak_slab": "Vertical Oak Slab",
+  "block.pear_expansion.vertical_spruce_slab": "Vertical Spruce Slab",
   "item.pear_expansion.enchanted_golden_pear": "Enchanted Golden Pear",
   "item.pear_expansion.golden_pear": "Golden Pear",
   "item.pear_expansion.pear": "Pear",
+  "item.pear_expansion.vertical_acacia_slab": "Vertical Acacia Slab",
+  "item.pear_expansion.vertical_birch_slab": "Vertical Birch Slab",
+  "item.pear_expansion.vertical_cherry_slab": "Vertical Cherry Slab",
+  "item.pear_expansion.vertical_dark_oak_slab": "Vertical Dark Oak Slab",
+  "item.pear_expansion.vertical_jungle_slab": "Vertical Jungle Slab",
+  "item.pear_expansion.vertical_mangrove_slab": "Vertical Mangrove Slab",
+  "item.pear_expansion.vertical_oak_slab": "Vertical Oak Slab",
+  "item.pear_expansion.vertical_spruce_slab": "Vertical Spruce Slab",
   "itemGroup.pear_expansion": "Pear Expansion"
 }

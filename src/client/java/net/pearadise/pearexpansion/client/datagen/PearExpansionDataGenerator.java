@@ -37,6 +37,8 @@ public class PearExpansionDataGenerator implements DataGeneratorEntrypoint {
 
         // Register the internal model provider
         pack.addProvider(PearExpansionInternalModelProvider::new);
+        pack.addProvider(PearExpansionModelProvider::new);
+
 
         // Register the language providers
         PearExpansionLangProvider.addLangProviders(pack);

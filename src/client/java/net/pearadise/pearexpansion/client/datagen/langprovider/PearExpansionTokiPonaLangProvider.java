@@ -3,6 +3,7 @@ package net.pearadise.pearexpansion.client.datagen.langprovider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.registry.RegistryWrapper;
+import net.pearadise.pearexpansion.block.ModBlocks;
 import net.pearadise.pearexpansion.item.ModItems;
 
 import java.util.concurrent.CompletableFuture;
@@ -48,6 +49,23 @@ public class PearExpansionTokiPonaLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.PEAR, "kili pi kasi palisa");
         translationBuilder.add(ModItems.GOLDEN_PEAR, "kili seli jelo");
         translationBuilder.add(ModItems.ENCHANTED_GOLDEN_PEAR, "kili palisa jelo pi wile pona");
+
+        translationBuilder.add(ModBlocks.VERTICAL_OAK_SLAB, "palisa lete pi kasi kili loje");
+        translationBuilder.add(ModBlocks.VERTICAL_SPRUCE_SLAB, "palisa lete pi kasi supasu");
+        translationBuilder.add(ModBlocks.VERTICAL_BIRCH_SLAB, "palisa lete pi kasi palisa walo");
+        translationBuilder.add(ModBlocks.VERTICAL_JUNGLE_SLAB, "palisa lete pi kasi tomo seli");
+        translationBuilder.add(ModBlocks.VERTICAL_ACACIA_SLAB, "palisa lete pi kasi akasija");
+        translationBuilder.add(ModBlocks.VERTICAL_DARK_OAK_SLAB, "palisa lete pi kasi kili loje pimeja");
+        translationBuilder.add(ModBlocks.VERTICAL_MANGROVE_SLAB, "palisa lete pi kasi ma telo");
+        translationBuilder.add(ModBlocks.VERTICAL_CHERRY_SLAB, "palisa lete pi kasi kili loje walo");
+        translationBuilder.add(ModBlocks.VERTICAL_OAK_SLAB.asItem(), "palisa lete pi kasi kili loje");
+        translationBuilder.add(ModBlocks.VERTICAL_SPRUCE_SLAB.asItem(), "palisa lete pi kasi supasu");
+        translationBuilder.add(ModBlocks.VERTICAL_BIRCH_SLAB.asItem(), "palisa lete pi kasi palisa walo");
+        translationBuilder.add(ModBlocks.VERTICAL_JUNGLE_SLAB.asItem(), "palisa lete pi kasi tomo seli");
+        translationBuilder.add(ModBlocks.VERTICAL_ACACIA_SLAB.asItem(), "palisa lete pi kasi akasija");
+        translationBuilder.add(ModBlocks.VERTICAL_DARK_OAK_SLAB.asItem(), "palisa lete pi kasi kili loje pimeja");
+        translationBuilder.add(ModBlocks.VERTICAL_MANGROVE_SLAB.asItem(), "palisa lete pi kasi ma telo");
+        translationBuilder.add(ModBlocks.VERTICAL_CHERRY_SLAB.asItem(), "palisa lete pi kasi kili loje walo");
 
     }
 

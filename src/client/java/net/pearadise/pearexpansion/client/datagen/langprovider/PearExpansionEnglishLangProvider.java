@@ -3,6 +3,7 @@ package net.pearadise.pearexpansion.client.datagen.langprovider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.registry.RegistryWrapper;
+import net.pearadise.pearexpansion.block.ModBlocks;
 import net.pearadise.pearexpansion.item.ModItems;
 
 import java.util.concurrent.CompletableFuture;
@@ -48,6 +49,23 @@ public class PearExpansionEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.PEAR, "Pear");
         translationBuilder.add(ModItems.GOLDEN_PEAR, "Golden Pear");
         translationBuilder.add(ModItems.ENCHANTED_GOLDEN_PEAR, "Enchanted Golden Pear");
+
+        translationBuilder.add(ModBlocks.VERTICAL_OAK_SLAB, "Dalle de chêne verticale");
+        translationBuilder.add(ModBlocks.VERTICAL_SPRUCE_SLAB, "Dalle d’épicéa verticale");
+        translationBuilder.add(ModBlocks.VERTICAL_BIRCH_SLAB, "Dalle de bouleau verticale");
+        translationBuilder.add(ModBlocks.VERTICAL_JUNGLE_SLAB, "Dalle d’acajou tropical verticale");
+        translationBuilder.add(ModBlocks.VERTICAL_ACACIA_SLAB, "Dalle d’acacia verticale");
+        translationBuilder.add(ModBlocks.VERTICAL_DARK_OAK_SLAB, "Dalle de chêne noir verticale");
+        translationBuilder.add(ModBlocks.VERTICAL_MANGROVE_SLAB, "Dalle de palétuvier verticale");
+        translationBuilder.add(ModBlocks.VERTICAL_CHERRY_SLAB, "Dalle de cerisier verticale");
+        translationBuilder.add(ModBlocks.VERTICAL_OAK_SLAB.asItem(), "Dalle de chêne verticale");
+        translationBuilder.add(ModBlocks.VERTICAL_SPRUCE_SLAB.asItem(), "Dalle d’épicéa verticale");
+        translationBuilder.add(ModBlocks.VERTICAL_BIRCH_SLAB.asItem(), "Dalle de bouleau verticale");
+        translationBuilder.add(ModBlocks.VERTICAL_JUNGLE_SLAB.asItem(), "Dalle d’acajou tropical verticale");
+        translationBuilder.add(ModBlocks.VERTICAL_ACACIA_SLAB.asItem(), "Dalle d’acacia verticale");
+        translationBuilder.add(ModBlocks.VERTICAL_DARK_OAK_SLAB.asItem(), "Dalle de chêne noir verticale");
+        translationBuilder.add(ModBlocks.VERTICAL_MANGROVE_SLAB.asItem(), "Dalle de palétuvier verticale");
+        translationBuilder.add(ModBlocks.VERTICAL_CHERRY_SLAB.asItem(), "Dalle de cerisier verticale");
 
     }
 

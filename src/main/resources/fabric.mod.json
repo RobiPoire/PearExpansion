@@ -18,7 +18,8 @@
     ],
     "main": [
       "net.pearadise.pearexpansion.PearExpansion",
-      "net.pearadise.pearexpansion.item.PearExpansionItems"
+      "net.pearadise.pearexpansion.item.PearExpansionItems",
+      "net.pearadise.pearexpansion.block.PearExpansionBlocks"
     ]
   },
   "mixins": [

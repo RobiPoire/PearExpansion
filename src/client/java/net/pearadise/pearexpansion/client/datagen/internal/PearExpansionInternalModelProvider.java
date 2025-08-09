@@ -67,6 +67,6 @@ public class PearExpansionInternalModelProvider extends FabricModelProvider {
      */
     @Override
     public String getName() {
-        return "PearExpansion Internal Model Provider";
+        return "Pear Expansion Internal Model Provider";
     }
 }

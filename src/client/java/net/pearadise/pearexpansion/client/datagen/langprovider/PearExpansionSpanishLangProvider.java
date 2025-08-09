@@ -3,6 +3,7 @@ package net.pearadise.pearexpansion.client.datagen.langprovider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.registry.RegistryWrapper;
+import net.pearadise.pearexpansion.block.ModBlocks;
 import net.pearadise.pearexpansion.item.ModItems;
 
 import java.util.concurrent.CompletableFuture;
@@ -48,6 +49,23 @@ public class PearExpansionSpanishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.PEAR, "Pera");
         translationBuilder.add(ModItems.GOLDEN_PEAR, "Pera Dorada");
         translationBuilder.add(ModItems.ENCHANTED_GOLDEN_PEAR, "Pera Dorada Encantada");
+
+        translationBuilder.add(ModBlocks.VERTICAL_OAK_SLAB, "Losa de roble vertical");
+        translationBuilder.add(ModBlocks.VERTICAL_SPRUCE_SLAB, "Losa de abeto vertical");
+        translationBuilder.add(ModBlocks.VERTICAL_BIRCH_SLAB, "Losa de abedul vertical");
+        translationBuilder.add(ModBlocks.VERTICAL_JUNGLE_SLAB, "Losa de madera de jungla vertical");
+        translationBuilder.add(ModBlocks.VERTICAL_ACACIA_SLAB, "Losa de acacia vertical");
+        translationBuilder.add(ModBlocks.VERTICAL_DARK_OAK_SLAB, "Losa de roble oscuro vertical");
+        translationBuilder.add(ModBlocks.VERTICAL_MANGROVE_SLAB, "Losa de mangle vertical");
+        translationBuilder.add(ModBlocks.VERTICAL_CHERRY_SLAB, "Losa de cerezo vertical");
+        translationBuilder.add(ModBlocks.VERTICAL_OAK_SLAB.asItem(), "Losa de roble vertical");
+        translationBuilder.add(ModBlocks.VERTICAL_SPRUCE_SLAB.asItem(), "Losa de abeto vertical");
+        translationBuilder.add(ModBlocks.VERTICAL_BIRCH_SLAB.asItem(), "Losa de abedul vertical");
+        translationBuilder.add(ModBlocks.VERTICAL_JUNGLE_SLAB.asItem(), "Losa de madera de jungla vertical");
+        translationBuilder.add(ModBlocks.VERTICAL_ACACIA_SLAB.asItem(), "Losa de acacia vertical");
+        translationBuilder.add(ModBlocks.VERTICAL_DARK_OAK_SLAB.asItem(), "Losa de roble oscuro vertical");
+        translationBuilder.add(ModBlocks.VERTICAL_MANGROVE_SLAB.asItem(), "Losa de mangle vertical");
+        translationBuilder.add(ModBlocks.VERTICAL_CHERRY_SLAB.asItem(), "Losa de cerezo vertical");
 
     }
 
