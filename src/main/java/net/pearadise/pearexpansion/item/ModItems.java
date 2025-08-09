@@ -1,114 +1,154 @@
-/**
- * Enumeration of custom items for the PearExpansion mod.
- * <p>
- * Each enum constant represents a mod item with its unique identifier and
- * settings, including food components, consumable components, rarity, and
- * additional data components.
- * </p>
- *
- * <p>Items are registered to the Minecraft registry upon construction,
- * and grouped into default item groups during initialization.</p>
- *
- * @author RobiPoire
- */
 package net.pearadise.pearexpansion.item;
 
-import net.pearadise.pearexpansion.PearExpansion;
-import net.pearadise.pearexpansion.component.type.ModConsumableComponents;
-import net.pearadise.pearexpansion.component.type.ModFoodComponents;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.ConsumableComponents;
+import net.minecraft.component.type.FoodComponent;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.Item;
-import net.minecraft.item.Items;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.consume.ApplyEffectsConsumeEffect;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
+import net.pearadise.pearexpansion.PearExpansion;
 
-public enum ModItems {
+import java.util.function.Function;
 
-    /**
-     * Basic pear item that restores hunger using the PEAR food component.
-     */
-    PEAR(
-            "pear",
-            new Item.Settings()
-                    .food(ModFoodComponents.PEAR.getFoodComponent())
-    ),
-
-    /**
-     * Golden pear item that restores hunger and applies additional effects
-     * using GOLDEN_PEAR food and consumable components.
-     */
-    GOLDEN_PEAR(
-            "golden_pear",
-            new Item.Settings()
-                    .food(
-                            ModFoodComponents.GOLDEN_PEAR.getFoodComponent(),
-                            ModConsumableComponents.GOLDEN_PEAR.getConsumableComponent()
-                    )
-    ),
+/**
+ * Utility class for registering and managing custom items and item groups
+ * for the Pear Expansion mod.
+ * <p>
+ * This class defines and registers custom items such as {@link #PEAR},
+ * {@link #GOLDEN_PEAR}, and {@link #ENCHANTED_GOLDEN_PEAR}, as well as
+ * the custom item group that contains them.
+ * </p>
+ *
+ * @author RobiPoire
+ * @version 0.2
+ */
+public class ModItems {
 
     /**
-     * Enchanted golden pear with rare rarity, hunger restoration, status effects,
-     * and an enchantment glint override component.
+     * The registry key for the custom item group used by the Pear Expansion mod.
      */
-    ENCHANTED_GOLDEN_PEAR(
-            "enchanted_golden_pear",
-            new Item.Settings()
-                    .rarity(Rarity.RARE)
-                    .food(
-                            ModFoodComponents.ENCHANTED_GOLDEN_PEAR.getFoodComponent(),
-                            ModConsumableComponents.ENCHANTED_GOLDEN_PEAR.getConsumableComponent()
-                    )
-                    .component(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true)
+    public static final RegistryKey<ItemGroup> CUSTOM_ITEM_GROUP_KEY = RegistryKey.of(
+            Registries.ITEM_GROUP.getKey(),
+            Identifier.of(PearExpansion.MOD_ID, "item_group")
     );
 
     /**
-     * The registered {@link Item} instance.
-     */
-    private final Item item;
-
-    /**
-     * Constructs a new enum constant by registering an item with the given
-     * identifier and settings.
-     *
-     * @param id       the string identifier of the item
-     * @param settings the item settings to apply
-     */
-    ModItems(String id, Item.Settings settings) {
-        this.item = Items.register(
-                RegistryKey.of(RegistryKeys.ITEM, Identifier.of(PearExpansion.MOD_ID, id)),
-                Item::new,
-                settings
-        );
-    }
-
-    /**
-     * Initializes all mod items by adding them to the default item group.
+     * The basic Pear item.
      * <p>
-     * This method should be called during mod initialization to ensure items
-     * appear in the creative inventory.
+     * Restores 4 hunger and provides a low saturation modifier.
      * </p>
-     *
-     * @since 0.1
-     * <p>Example usage:</p>
-     * <pre><code>
-     * ModItems.init();
-     * </code></pre>
      */
-    public static void init() {
-        for (ModItems entry : values()) {
-            ModItemGroups.addItemToDefaultGroup(entry.getItem());
-        }
-    }
+    public static final Item PEAR = register(
+            "pear",
+            Item::new,
+            new Item.Settings().food(new FoodComponent.Builder()
+                    .nutrition(4)
+                    .saturationModifier(0.3f)
+                    .build())
+    );
 
     /**
-     * Retrieves the registered {@link Item} instance for this enum constant.
-     *
-     * @return the {@code Item}
+     * The custom item group instance containing all mod items.
      */
-    public Item getItem() {
+    public static final ItemGroup CUSTOM_ITEM_GROUP = FabricItemGroup.builder()
+            .icon(() -> new ItemStack(ModItems.PEAR))
+            .displayName(Text.translatable("itemGroup.pear_expansion"))
+            .build();
+
+    /**
+     * The Golden Pear item.
+     * <p>
+     * Restores 4 hunger, provides high saturation, and grants
+     * Regeneration and Absorption effects upon consumption.
+     * </p>
+     */
+    public static final Item GOLDEN_PEAR = register(
+            "golden_pear",
+            Item::new,
+            new Item.Settings().food(new FoodComponent.Builder()
+                            .nutrition(4)
+                            .saturationModifier(1.2f)
+                            .alwaysEdible()
+                            .build(),
+                    ConsumableComponents.food()
+                            .consumeEffect(new ApplyEffectsConsumeEffect(
+                                    new StatusEffectInstance(StatusEffects.REGENERATION, 100, 1)))
+                            .consumeEffect(new ApplyEffectsConsumeEffect(
+                                    new StatusEffectInstance(StatusEffects.ABSORPTION, 2400, 0)))
+                            .build())
+    );
+
+    /**
+     * The Enchanted Golden Pear item.
+     * <p>
+     * Restores 4 hunger, provides high saturation, and grants
+     * Regeneration, Resistance, Fire Resistance, and enhanced Absorption
+     * effects upon consumption.
+     * </p>
+     */
+    public static final Item ENCHANTED_GOLDEN_PEAR = register(
+            "enchanted_golden_pear",
+            Item::new,
+            new Item.Settings().rarity(Rarity.RARE)
+                    .component(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true)
+                    .food(new FoodComponent.Builder()
+                                    .nutrition(4)
+                                    .saturationModifier(1.2f)
+                                    .alwaysEdible()
+                                    .build(),
+                            ConsumableComponents.food()
+                                    .consumeEffect(new ApplyEffectsConsumeEffect(
+                                            new StatusEffectInstance(StatusEffects.REGENERATION, 400, 1)))
+                                    .consumeEffect(new ApplyEffectsConsumeEffect(
+                                            new StatusEffectInstance(StatusEffects.RESISTANCE, 6000, 0)))
+                                    .consumeEffect(new ApplyEffectsConsumeEffect(
+                                            new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 6000, 0)))
+                                    .consumeEffect(new ApplyEffectsConsumeEffect(
+                                            new StatusEffectInstance(StatusEffects.ABSORPTION, 2400, 3)))
+                                    .build())
+    );
+
+    /**
+     * Registers a custom item with the specified name, factory, and settings.
+     *
+     * @param name        the unique name of the item within the mod namespace
+     * @param itemFactory a function that creates the item from its settings
+     * @param settings    the settings to apply to the item
+     * @return the registered {@link Item} instance
+     */
+    public static Item register(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
+        RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(PearExpansion.MOD_ID, name));
+        Item item = itemFactory.apply(settings.registryKey(itemKey));
+        Registry.register(Registries.ITEM, itemKey, item);
         return item;
     }
-}
 
+    /**
+     * Initializes the mod's items and item group.
+     * <p>
+     * Registers the custom item group and adds all custom items to it.
+     * This method should be called during the mod's initialization phase.
+     * </p>
+     */
+    public static void initialize() {
+        Registry.register(Registries.ITEM_GROUP, CUSTOM_ITEM_GROUP_KEY, CUSTOM_ITEM_GROUP);
+
+        ItemGroupEvents.modifyEntriesEvent(CUSTOM_ITEM_GROUP_KEY).register(itemGroup -> {
+            itemGroup.add(ModItems.PEAR);
+            itemGroup.add(ModItems.GOLDEN_PEAR);
+            itemGroup.add(ModItems.ENCHANTED_GOLDEN_PEAR);
+        });
+    }
+}

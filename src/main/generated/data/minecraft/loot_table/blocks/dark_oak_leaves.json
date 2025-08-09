@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "chance": 0.005,
+              "condition": "minecraft:random_chance"
+            }
+          ],
+          "name": "pear_expansion:pear"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ]
+}

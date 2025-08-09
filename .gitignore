@@ -218,3 +218,6 @@ replay_pid*
 *.hprof
 
 # End of https://www.toptal.com/developers/gitignore/api/java,gradle,intellij+iml
+
+
+/src/main/generated/.cache/
