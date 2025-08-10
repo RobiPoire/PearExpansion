@@ -50,188 +50,188 @@ public class PearExpansionTokiPonaLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.GOLDEN_PEAR, "kili seli jelo");
         translationBuilder.add(ModItems.ENCHANTED_GOLDEN_PEAR, "kili palisa jelo pi wile pona");
 
-        translationBuilder.add(ModBlocks.VERTICAL_ACACIA_SLAB, "kule palisa palisa Acacia");
-        translationBuilder.add(ModBlocks.VERTICAL_ACACIA_SLAB.asItem(), "kule palisa palisa Acacia");
+        translationBuilder.add(ModBlocks.VERTICAL_ACACIA_SLAB, "supa pi linja sewi pi kasi seli");
+        translationBuilder.add(ModBlocks.VERTICAL_ACACIA_SLAB.asItem(), "supa pi linja sewi pi kasi seli");
 
-        translationBuilder.add(ModBlocks.VERTICAL_ANDESITE_SLAB, "kule palisa palisa Andesite");
-        translationBuilder.add(ModBlocks.VERTICAL_ANDESITE_SLAB.asItem(), "kule palisa palisa Andesite");
+        translationBuilder.add(ModBlocks.VERTICAL_ANDESITE_SLAB, "supa pi linja sewi pi kiwen pimeja walo");
+        translationBuilder.add(ModBlocks.VERTICAL_ANDESITE_SLAB.asItem(), "supa pi linja sewi pi kiwen pimeja walo");
 
-        translationBuilder.add(ModBlocks.VERTICAL_BAMBOO_MOSAIC_SLAB, "kule palisa palisa kulupu waso bambi");
-        translationBuilder.add(ModBlocks.VERTICAL_BAMBOO_MOSAIC_SLAB.asItem(), "kule palisa palisa kulupu waso bambi");
+        translationBuilder.add(ModBlocks.VERTICAL_BAMBOO_MOSAIC_SLAB, "supa pi linja sewi namako pi kasi palisa");
+        translationBuilder.add(ModBlocks.VERTICAL_BAMBOO_MOSAIC_SLAB.asItem(), "supa pi linja sewi namako pi kasi palisa");
 
-        translationBuilder.add(ModBlocks.VERTICAL_BAMBOO_SLAB, "kule palisa palisa bambi");
-        translationBuilder.add(ModBlocks.VERTICAL_BAMBOO_SLAB.asItem(), "kule palisa palisa bambi");
+        translationBuilder.add(ModBlocks.VERTICAL_BAMBOO_SLAB, "supa pi linja sewi pi kasi palisa");
+        translationBuilder.add(ModBlocks.VERTICAL_BAMBOO_SLAB.asItem(), "supa pi linja sewi pi kasi palisa");
 
-        translationBuilder.add(ModBlocks.VERTICAL_BIRCH_SLAB, "kule palisa palisa walo sijelo");
-        translationBuilder.add(ModBlocks.VERTICAL_BIRCH_SLAB.asItem(), "kule palisa palisa walo sijelo");
+        translationBuilder.add(ModBlocks.VERTICAL_BIRCH_SLAB, "supa pi linja sewi pi kasi jelo");
+        translationBuilder.add(ModBlocks.VERTICAL_BIRCH_SLAB.asItem(), "supa pi linja sewi pi kasi jelo");
 
-        translationBuilder.add(ModBlocks.VERTICAL_BLACKSTONE_SLAB, "kule palisa palisa walo pimeja");
-        translationBuilder.add(ModBlocks.VERTICAL_BLACKSTONE_SLAB.asItem(), "kule palisa palisa walo pimeja");
+        translationBuilder.add(ModBlocks.VERTICAL_BLACKSTONE_SLAB, "supa pi linja sewi kiwen pimeja");
+        translationBuilder.add(ModBlocks.VERTICAL_BLACKSTONE_SLAB.asItem(), "supa pi linja sewi kiwen pimeja");
 
-        translationBuilder.add(ModBlocks.VERTICAL_BRICK_SLAB, "kule palisa palisa sijelo");
-        translationBuilder.add(ModBlocks.VERTICAL_BRICK_SLAB.asItem(), "kule palisa palisa sijelo");
+        translationBuilder.add(ModBlocks.VERTICAL_BRICK_SLAB, "supa pi linja sewi pi kiwen leko loje");
+        translationBuilder.add(ModBlocks.VERTICAL_BRICK_SLAB.asItem(), "supa pi linja sewi pi kiwen leko loje");
 
-        translationBuilder.add(ModBlocks.VERTICAL_CHERRY_SLAB, "kule palisa palisa kili walo");
-        translationBuilder.add(ModBlocks.VERTICAL_CHERRY_SLAB.asItem(), "kule palisa palisa kili walo");
+        translationBuilder.add(ModBlocks.VERTICAL_CHERRY_SLAB, "supa pi linja sewi pi kasi suwi");
+        translationBuilder.add(ModBlocks.VERTICAL_CHERRY_SLAB.asItem(), "supa pi linja sewi pi kasi suwi");
 
-        translationBuilder.add(ModBlocks.VERTICAL_COBBLED_DEEPSLATE_SLAB, "kule palisa palisa mani suli ala");
-        translationBuilder.add(ModBlocks.VERTICAL_COBBLED_DEEPSLATE_SLAB.asItem(), "kule palisa palisa mani suli ala");
+        translationBuilder.add(ModBlocks.VERTICAL_COBBLED_DEEPSLATE_SLAB, "supa pi linja sewi pi kiwen anpa nena");
+        translationBuilder.add(ModBlocks.VERTICAL_COBBLED_DEEPSLATE_SLAB.asItem(), "supa pi linja sewi pi kiwen anpa nena");
 
-        translationBuilder.add(ModBlocks.VERTICAL_COBBLESTONE_SLAB, "kule palisa palisa mani");
-        translationBuilder.add(ModBlocks.VERTICAL_COBBLESTONE_SLAB.asItem(), "kule palisa palisa mani");
+        translationBuilder.add(ModBlocks.VERTICAL_COBBLESTONE_SLAB, "supa pi linja sewi pi kiwen nena");
+        translationBuilder.add(ModBlocks.VERTICAL_COBBLESTONE_SLAB.asItem(), "supa pi linja sewi pi kiwen nena");
 
-        translationBuilder.add(ModBlocks.VERTICAL_CRIMSON_SLAB, "kule palisa palisa kasi pimeja");
-        translationBuilder.add(ModBlocks.VERTICAL_CRIMSON_SLAB.asItem(), "kule palisa palisa kasi pimeja");
+        translationBuilder.add(ModBlocks.VERTICAL_CRIMSON_SLAB, "supa pi linja sewi pi soko loje");
+        translationBuilder.add(ModBlocks.VERTICAL_CRIMSON_SLAB.asItem(), "supa pi linja sewi pi soko loje");
 
-        translationBuilder.add(ModBlocks.VERTICAL_CUT_COPPER_SLAB, "kule palisa palisa mani walo");
-        translationBuilder.add(ModBlocks.VERTICAL_CUT_COPPER_SLAB.asItem(), "kule palisa palisa mani walo");
+        translationBuilder.add(ModBlocks.VERTICAL_CUT_COPPER_SLAB, "supa pi linja sewi pi kiwen ante");
+        translationBuilder.add(ModBlocks.VERTICAL_CUT_COPPER_SLAB.asItem(), "supa pi linja sewi pi kiwen ante");
 
-        translationBuilder.add(ModBlocks.VERTICAL_CUT_RED_SANDSTONE_SLAB, "kule palisa palisa mani walo loje");
-        translationBuilder.add(ModBlocks.VERTICAL_CUT_RED_SANDSTONE_SLAB.asItem(), "kule palisa palisa mani walo loje");
+        translationBuilder.add(ModBlocks.VERTICAL_CUT_RED_SANDSTONE_SLAB, "supa pi linja sewi pi kiwen ko loje kipisi");
+        translationBuilder.add(ModBlocks.VERTICAL_CUT_RED_SANDSTONE_SLAB.asItem(), "supa pi linja sewi pi kiwen ko loje kipisi");
 
-        translationBuilder.add(ModBlocks.VERTICAL_CUT_SANDSTONE_SLAB, "kule palisa palisa mani walo");
-        translationBuilder.add(ModBlocks.VERTICAL_CUT_SANDSTONE_SLAB.asItem(), "kule palisa palisa mani walo");
+        translationBuilder.add(ModBlocks.VERTICAL_CUT_SANDSTONE_SLAB, "supa pi linja sewi pi kiwen ko kipisi");
+        translationBuilder.add(ModBlocks.VERTICAL_CUT_SANDSTONE_SLAB.asItem(), "supa pi linja sewi pi kiwen ko kipisi");
 
-        translationBuilder.add(ModBlocks.VERTICAL_DARK_OAK_SLAB, "kule palisa palisa kasi pimeja");
-        translationBuilder.add(ModBlocks.VERTICAL_DARK_OAK_SLAB.asItem(), "kule palisa palisa kasi pimeja");
+        translationBuilder.add(ModBlocks.VERTICAL_DARK_OAK_SLAB, "supa pi linja sewi pi kasi pimeja");
+        translationBuilder.add(ModBlocks.VERTICAL_DARK_OAK_SLAB.asItem(), "supa pi linja sewi pi kasi pimeja");
 
-        translationBuilder.add(ModBlocks.VERTICAL_DARK_PRISMARINE_SLAB, "kule palisa palisa mani laso pimeja");
-        translationBuilder.add(ModBlocks.VERTICAL_DARK_PRISMARINE_SLAB.asItem(), "kule palisa palisa mani laso pimeja");
+        translationBuilder.add(ModBlocks.VERTICAL_DARK_PRISMARINE_SLAB, "supa pi linja sewi pi kiwen Prismarine pimeja");
+        translationBuilder.add(ModBlocks.VERTICAL_DARK_PRISMARINE_SLAB.asItem(), "supa pi linja sewi pi kiwen Prismarine pimeja");
 
-        translationBuilder.add(ModBlocks.VERTICAL_DEEPSLATE_BRICK_SLAB, "kule palisa palisa mani suli");
-        translationBuilder.add(ModBlocks.VERTICAL_DEEPSLATE_BRICK_SLAB.asItem(), "kule palisa palisa mani suli");
+        translationBuilder.add(ModBlocks.VERTICAL_DEEPSLATE_BRICK_SLAB, "supa pi linja sewi pi kiwen anpa leko");
+        translationBuilder.add(ModBlocks.VERTICAL_DEEPSLATE_BRICK_SLAB.asItem(), "supa pi linja sewi pi kiwen anpa leko");
 
-        translationBuilder.add(ModBlocks.VERTICAL_DEEPSLATE_TILE_SLAB, "kule palisa palisa mani suli");
-        translationBuilder.add(ModBlocks.VERTICAL_DEEPSLATE_TILE_SLAB.asItem(), "kule palisa palisa mani suli");
+        translationBuilder.add(ModBlocks.VERTICAL_DEEPSLATE_TILE_SLAB, "supa pi linja sewi pi kiwen anpa pi leko lipu");
+        translationBuilder.add(ModBlocks.VERTICAL_DEEPSLATE_TILE_SLAB.asItem(), "supa pi linja sewi pi kiwen anpa pi leko lipu");
 
-        translationBuilder.add(ModBlocks.VERTICAL_DIORITE_SLAB, "kule palisa palisa walo suli");
-        translationBuilder.add(ModBlocks.VERTICAL_DIORITE_SLAB.asItem(), "kule palisa palisa walo suli");
+        translationBuilder.add(ModBlocks.VERTICAL_DIORITE_SLAB, "supa pi linja sewi pi kiwen walo pimeja");
+        translationBuilder.add(ModBlocks.VERTICAL_DIORITE_SLAB.asItem(), "supa pi linja sewi pi kiwen walo pimeja");
 
-        translationBuilder.add(ModBlocks.VERTICAL_END_STONE_BRICK_SLAB, "kule palisa palisa mani suli tenpo pini");
-        translationBuilder.add(ModBlocks.VERTICAL_END_STONE_BRICK_SLAB.asItem(), "kule palisa palisa mani suli tenpo pini");
+        translationBuilder.add(ModBlocks.VERTICAL_END_STONE_BRICK_SLAB, "supa pi linja sewi kiwen pi ma End");
+        translationBuilder.add(ModBlocks.VERTICAL_END_STONE_BRICK_SLAB.asItem(), "supa pi linja sewi kiwen pi ma End");
 
-        translationBuilder.add(ModBlocks.VERTICAL_EXPOSED_CUT_COPPER_SLAB, "kule palisa palisa mani walo pini");
-        translationBuilder.add(ModBlocks.VERTICAL_EXPOSED_CUT_COPPER_SLAB.asItem(), "kule palisa palisa mani walo pini");
+        translationBuilder.add(ModBlocks.VERTICAL_EXPOSED_CUT_COPPER_SLAB, "supa pi linja sewi pi kiwen ante pi loje ma");
+        translationBuilder.add(ModBlocks.VERTICAL_EXPOSED_CUT_COPPER_SLAB.asItem(), "supa pi linja sewi pi kiwen ante pi loje ma");
 
-        translationBuilder.add(ModBlocks.VERTICAL_GRANITE_SLAB, "kule palisa palisa kasi walo");
-        translationBuilder.add(ModBlocks.VERTICAL_GRANITE_SLAB.asItem(), "kule palisa palisa kasi walo");
+        translationBuilder.add(ModBlocks.VERTICAL_GRANITE_SLAB, "supa pi linja sewi pi kiwen loje");
+        translationBuilder.add(ModBlocks.VERTICAL_GRANITE_SLAB.asItem(), "supa pi linja sewi pi kiwen loje");
 
-        translationBuilder.add(ModBlocks.VERTICAL_JUNGLE_SLAB, "kule palisa palisa kasi suli");
-        translationBuilder.add(ModBlocks.VERTICAL_JUNGLE_SLAB.asItem(), "kule palisa palisa kasi suli");
+        translationBuilder.add(ModBlocks.VERTICAL_JUNGLE_SLAB, "supa pi linja sewi pi kasi suli");
+        translationBuilder.add(ModBlocks.VERTICAL_JUNGLE_SLAB.asItem(), "supa pi linja sewi pi kasi suli");
 
-        translationBuilder.add(ModBlocks.VERTICAL_MANGROVE_SLAB, "kule palisa palisa kasi mani");
-        translationBuilder.add(ModBlocks.VERTICAL_MANGROVE_SLAB.asItem(), "kule palisa palisa kasi mani");
+        translationBuilder.add(ModBlocks.VERTICAL_MANGROVE_SLAB, "supa pi linja sewi pi kasi telo");
+        translationBuilder.add(ModBlocks.VERTICAL_MANGROVE_SLAB.asItem(), "supa pi linja sewi pi kasi telo");
 
-        translationBuilder.add(ModBlocks.VERTICAL_MOSSY_COBBLESTONE_SLAB, "kule palisa palisa mani pi waso");
-        translationBuilder.add(ModBlocks.VERTICAL_MOSSY_COBBLESTONE_SLAB.asItem(), "kule palisa palisa mani pi waso");
+        translationBuilder.add(ModBlocks.VERTICAL_MOSSY_COBBLESTONE_SLAB, "supa pi linja sewi pi kiwen nena kasi");
+        translationBuilder.add(ModBlocks.VERTICAL_MOSSY_COBBLESTONE_SLAB.asItem(), "supa pi linja sewi pi kiwen nena kasi");
 
-        translationBuilder.add(ModBlocks.VERTICAL_MOSSY_STONE_BRICK_SLAB, "kule palisa palisa mani pi waso");
-        translationBuilder.add(ModBlocks.VERTICAL_MOSSY_STONE_BRICK_SLAB.asItem(), "kule palisa palisa mani pi waso");
+        translationBuilder.add(ModBlocks.VERTICAL_MOSSY_STONE_BRICK_SLAB, "supa pi linja sewi pi kiwen leko kasi");
+        translationBuilder.add(ModBlocks.VERTICAL_MOSSY_STONE_BRICK_SLAB.asItem(), "supa pi linja sewi pi kiwen leko kasi");
 
-        translationBuilder.add(ModBlocks.VERTICAL_MUD_BRICK_SLAB, "kule palisa palisa sijelo wawa");
-        translationBuilder.add(ModBlocks.VERTICAL_MUD_BRICK_SLAB.asItem(), "kule palisa palisa sijelo wawa");
+        translationBuilder.add(ModBlocks.VERTICAL_MUD_BRICK_SLAB, "supa pi linja sewi pi kiwen leko ma");
+        translationBuilder.add(ModBlocks.VERTICAL_MUD_BRICK_SLAB.asItem(), "supa pi linja sewi pi kiwen leko ma");
 
-        translationBuilder.add(ModBlocks.VERTICAL_NETHER_BRICK_SLAB, "kule palisa palisa mani pi ma waso");
-        translationBuilder.add(ModBlocks.VERTICAL_NETHER_BRICK_SLAB.asItem(), "kule palisa palisa mani pi ma waso");
+        translationBuilder.add(ModBlocks.VERTICAL_NETHER_BRICK_SLAB, "supa pi linja sewi pi ma Nether");
+        translationBuilder.add(ModBlocks.VERTICAL_NETHER_BRICK_SLAB.asItem(), "supa pi linja sewi pi ma Nether");
 
-        translationBuilder.add(ModBlocks.VERTICAL_OAK_SLAB, "kule palisa palisa kasi");
-        translationBuilder.add(ModBlocks.VERTICAL_OAK_SLAB.asItem(), "kule palisa palisa kasi");
+        translationBuilder.add(ModBlocks.VERTICAL_OAK_SLAB, "supa pi linja sewi pi kasi kili");
+        translationBuilder.add(ModBlocks.VERTICAL_OAK_SLAB.asItem(), "supa pi linja sewi pi kasi kili");
 
-        translationBuilder.add(ModBlocks.VERTICAL_OXIDIZED_CUT_COPPER_SLAB, "kule palisa palisa mani walo pi sijelo sijelo");
-        translationBuilder.add(ModBlocks.VERTICAL_OXIDIZED_CUT_COPPER_SLAB.asItem(), "kule palisa palisa mani walo pi sijelo sijelo");
+        translationBuilder.add(ModBlocks.VERTICAL_OXIDIZED_CUT_COPPER_SLAB, "supa pi linja sewi pi kiwen ante laso");
+        translationBuilder.add(ModBlocks.VERTICAL_OXIDIZED_CUT_COPPER_SLAB.asItem(), "supa pi linja sewi pi kiwen ante laso");
 
-        translationBuilder.add(ModBlocks.VERTICAL_PALE_OAK_SLAB, "kule palisa palisa kasi walo");
-        translationBuilder.add(ModBlocks.VERTICAL_PALE_OAK_SLAB.asItem(), "kule palisa palisa kasi walo");
+        translationBuilder.add(ModBlocks.VERTICAL_PALE_OAK_SLAB, "supa pi linja sewi pi kasi walo");
+        translationBuilder.add(ModBlocks.VERTICAL_PALE_OAK_SLAB.asItem(), "supa pi linja sewi pi kasi walo");
 
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_ANDESITE_SLAB, "kule palisa palisa mani walo pi suli");
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_ANDESITE_SLAB.asItem(), "kule palisa palisa mani walo pi suli");
+        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_ANDESITE_SLAB, "supa pi linja sewi pi kiwen pimeja walo pi selo pona");
+        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_ANDESITE_SLAB.asItem(), "supa pi linja sewi pi kiwen pimeja walo pi selo pona");
 
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_BRICK_SLAB, "kule palisa palisa mani pimeja pi suli");
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_BRICK_SLAB.asItem(), "kule palisa palisa mani pimeja pi suli");
+        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_BRICK_SLAB, "supa pi linja sewi pi kiwen pimeja leko");
+        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_BRICK_SLAB.asItem(), "supa pi linja sewi pi kiwen pimeja leko");
 
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_SLAB, "kule palisa palisa mani pimeja");
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_SLAB.asItem(), "kule palisa palisa mani pimeja");
+        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_SLAB, "supa pi linja sewi pi kiwen pimeja pi selo pona");
+        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_SLAB.asItem(), "supa pi linja sewi pi kiwen pimeja pi selo pona");
 
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_DIORITE_SLAB, "kule palisa palisa mani walo");
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_DIORITE_SLAB.asItem(), "kule palisa palisa mani walo");
+        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_DEEPSLATE_SLAB, "supa pi linja sewi pi kiwen anpa pi selo pona");
+        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_DEEPSLATE_SLAB.asItem(), "supa pi linja sewi pi kiwen anpa pi selo pona");
 
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_GRANITE_SLAB, "kule palisa palisa mani walo");
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_GRANITE_SLAB.asItem(), "kule palisa palisa mani walo");
+        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_DIORITE_SLAB, "supa pi linja sewi pi kiwen walo pimeja pi selo pona");
+        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_DIORITE_SLAB.asItem(), "supa pi linja sewi pi kiwen walo pimeja pi selo pona");
 
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_DEEPSLATE_SLAB, "kule palisa palisa mani suli");
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_DEEPSLATE_SLAB.asItem(), "kule palisa palisa mani suli");
+        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_GRANITE_SLAB, "supa pi linja sewi pi kiwen loje pi selo pona");
+        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_GRANITE_SLAB.asItem(), "supa pi linja sewi pi kiwen loje pi selo pona");
 
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_TUFF_SLAB, "kule palisa palisa mani suli");
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_TUFF_SLAB.asItem(), "kule palisa palisa mani suli");
+        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_TUFF_SLAB, "supa pi linja sewi pi ko seli kiwen pi selo pona");
+        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_TUFF_SLAB.asItem(), "supa pi linja sewi pi ko seli kiwen pi selo pona");
 
-        translationBuilder.add(ModBlocks.VERTICAL_PRISMARINE_BRICK_SLAB, "kule palisa palisa mani laso");
-        translationBuilder.add(ModBlocks.VERTICAL_PRISMARINE_BRICK_SLAB.asItem(), "kule palisa palisa mani laso");
+        translationBuilder.add(ModBlocks.VERTICAL_PRISMARINE_BRICK_SLAB, "supa pi linja sewi pi kiwen leko Prismarine");
+        translationBuilder.add(ModBlocks.VERTICAL_PRISMARINE_BRICK_SLAB.asItem(), "supa pi linja sewi pi kiwen leko Prismarine");
 
-        translationBuilder.add(ModBlocks.VERTICAL_PRISMARINE_SLAB, "kule palisa palisa mani laso");
-        translationBuilder.add(ModBlocks.VERTICAL_PRISMARINE_SLAB.asItem(), "kule palisa palisa mani laso");
+        translationBuilder.add(ModBlocks.VERTICAL_PRISMARINE_SLAB, "supa pi linja sewi pi kiwen Prismarine");
+        translationBuilder.add(ModBlocks.VERTICAL_PRISMARINE_SLAB.asItem(), "supa pi linja sewi pi kiwen Prismarine");
 
-        translationBuilder.add(ModBlocks.VERTICAL_PURPUR_SLAB, "kule palisa palisa kasi laso");
-        translationBuilder.add(ModBlocks.VERTICAL_PURPUR_SLAB.asItem(), "kule palisa palisa kasi laso");
+        translationBuilder.add(ModBlocks.VERTICAL_PURPUR_SLAB, "supa pi linja sewi pi kiwen Purpur");
+        translationBuilder.add(ModBlocks.VERTICAL_PURPUR_SLAB.asItem(), "supa pi linja sewi pi kiwen Purpur");
 
-        translationBuilder.add(ModBlocks.VERTICAL_QUARTZ_SLAB, "kule palisa palisa mani pimeja");
-        translationBuilder.add(ModBlocks.VERTICAL_QUARTZ_SLAB.asItem(), "kule palisa palisa mani pimeja");
+        translationBuilder.add(ModBlocks.VERTICAL_QUARTZ_SLAB, "supa pi linja sewi pi kiwen walo");
+        translationBuilder.add(ModBlocks.VERTICAL_QUARTZ_SLAB.asItem(), "supa pi linja sewi pi kiwen walo");
 
-        translationBuilder.add(ModBlocks.VERTICAL_RED_NETHER_BRICK_SLAB, "kule palisa palisa mani loje pi ma waso");
-        translationBuilder.add(ModBlocks.VERTICAL_RED_NETHER_BRICK_SLAB.asItem(), "kule palisa palisa mani loje pi ma waso");
+        translationBuilder.add(ModBlocks.VERTICAL_RED_NETHER_BRICK_SLAB, "supa pi linja sewi pi kiwen leko loje pi ma Nether");
+        translationBuilder.add(ModBlocks.VERTICAL_RED_NETHER_BRICK_SLAB.asItem(), "supa pi linja sewi pi kiwen leko loje pi ma Nether");
 
-        translationBuilder.add(ModBlocks.VERTICAL_RED_SANDSTONE_SLAB, "kule palisa palisa mani loje");
-        translationBuilder.add(ModBlocks.VERTICAL_RED_SANDSTONE_SLAB.asItem(), "kule palisa palisa mani loje");
+        translationBuilder.add(ModBlocks.VERTICAL_RED_SANDSTONE_SLAB, "supa pi linja sewi pi kiwen ko loje");
+        translationBuilder.add(ModBlocks.VERTICAL_RED_SANDSTONE_SLAB.asItem(), "supa pi linja sewi pi kiwen ko loje");
 
-        translationBuilder.add(ModBlocks.VERTICAL_RESIN_BRICK_SLAB, "kule palisa palisa mani pi sijelo");
-        translationBuilder.add(ModBlocks.VERTICAL_RESIN_BRICK_SLAB.asItem(), "kule palisa palisa mani pi sijelo");
+        translationBuilder.add(ModBlocks.VERTICAL_RESIN_BRICK_SLAB, "supa pi linja sewi pi kiwen ko loje");
+        translationBuilder.add(ModBlocks.VERTICAL_RESIN_BRICK_SLAB.asItem(), "supa pi linja sewi pi kiwen ko loje");
 
-        translationBuilder.add(ModBlocks.VERTICAL_SANDSTONE_SLAB, "kule palisa palisa mani");
-        translationBuilder.add(ModBlocks.VERTICAL_SANDSTONE_SLAB.asItem(), "kule palisa palisa mani");
+        translationBuilder.add(ModBlocks.VERTICAL_SANDSTONE_SLAB, "supa pi linja sewi pi kiwen ko");
+        translationBuilder.add(ModBlocks.VERTICAL_SANDSTONE_SLAB.asItem(), "supa pi linja sewi pi kiwen ko");
 
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_QUARTZ_SLAB, "kule palisa palisa mani pimeja pi wawa");
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_QUARTZ_SLAB.asItem(), "kule palisa palisa mani pimeja pi wawa");
+        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_QUARTZ_SLAB, "supa pi linja sewi pi kiwen walo pi selo pona");
+        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_QUARTZ_SLAB.asItem(), "supa pi linja sewi pi kiwen walo pi selo pona");
 
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_RED_SANDSTONE_SLAB, "kule palisa palisa mani loje pi wawa");
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_RED_SANDSTONE_SLAB.asItem(), "kule palisa palisa mani loje pi wawa");
+        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_RED_SANDSTONE_SLAB, "supa pi linja sewi pi kiwen ko loje pi selo pona");
+        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_RED_SANDSTONE_SLAB.asItem(), "supa pi linja sewi pi kiwen ko loje pi selo pona");
 
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_SANDSTONE_SLAB, "kule palisa palisa mani pi wawa");
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_SANDSTONE_SLAB.asItem(), "kule palisa palisa mani pi wawa");
+        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_SANDSTONE_SLAB, "supa pi linja sewi pi kiwen ko pi selo pona");
+        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_SANDSTONE_SLAB.asItem(), "supa pi linja sewi pi kiwen ko pi selo pona");
 
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_STONE_SLAB, "kule palisa palisa mani pi wawa");
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_STONE_SLAB.asItem(), "kule palisa palisa mani pi wawa");
+        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_STONE_SLAB, "supa pi linja sewi kiwen pi selo pona");
+        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_STONE_SLAB.asItem(), "supa pi linja sewi kiwen pi selo pona");
 
-        translationBuilder.add(ModBlocks.VERTICAL_SPRUCE_SLAB, "kule palisa palisa kasi walo pimeja");
-        translationBuilder.add(ModBlocks.VERTICAL_SPRUCE_SLAB.asItem(), "kule palisa palisa kasi walo pimeja");
+        translationBuilder.add(ModBlocks.VERTICAL_SPRUCE_SLAB, "supa pi linja sewi pi kasi lete");
+        translationBuilder.add(ModBlocks.VERTICAL_SPRUCE_SLAB.asItem(), "supa pi linja sewi pi kasi lete");
 
-        translationBuilder.add(ModBlocks.VERTICAL_STONE_BRICK_SLAB, "kule palisa palisa mani sijelo");
-        translationBuilder.add(ModBlocks.VERTICAL_STONE_BRICK_SLAB.asItem(), "kule palisa palisa mani sijelo");
+        translationBuilder.add(ModBlocks.VERTICAL_STONE_BRICK_SLAB, "supa pi linja sewi pi kiwen leko");
+        translationBuilder.add(ModBlocks.VERTICAL_STONE_BRICK_SLAB.asItem(), "supa pi linja sewi pi kiwen leko");
 
-        translationBuilder.add(ModBlocks.VERTICAL_STONE_SLAB, "kule palisa palisa mani");
-        translationBuilder.add(ModBlocks.VERTICAL_STONE_SLAB.asItem(), "kule palisa palisa mani");
+        translationBuilder.add(ModBlocks.VERTICAL_STONE_SLAB, "supa pi linja sewi kiwen");
+        translationBuilder.add(ModBlocks.VERTICAL_STONE_SLAB.asItem(), "supa pi linja sewi kiwen");
 
-        translationBuilder.add(ModBlocks.VERTICAL_TUFF_BRICK_SLAB, "kule palisa palisa mani suli");
-        translationBuilder.add(ModBlocks.VERTICAL_TUFF_BRICK_SLAB.asItem(), "kule palisa palisa mani suli");
+        translationBuilder.add(ModBlocks.VERTICAL_TUFF_BRICK_SLAB, "supa pi linja sewi pi ko seli kiwen leko");
+        translationBuilder.add(ModBlocks.VERTICAL_TUFF_BRICK_SLAB.asItem(), "supa pi linja sewi pi ko seli kiwen leko");
 
-        translationBuilder.add(ModBlocks.VERTICAL_TUFF_SLAB, "kule palisa palisa mani suli");
-        translationBuilder.add(ModBlocks.VERTICAL_TUFF_SLAB.asItem(), "kule palisa palisa mani suli");
+        translationBuilder.add(ModBlocks.VERTICAL_TUFF_SLAB, "supa pi linja sewi pi ko seli kiwen");
+        translationBuilder.add(ModBlocks.VERTICAL_TUFF_SLAB.asItem(), "supa pi linja sewi pi ko seli kiwen");
 
-        translationBuilder.add(ModBlocks.VERTICAL_WARPED_SLAB, "kule palisa palisa kasi pi sijelo sijelo");
-        translationBuilder.add(ModBlocks.VERTICAL_WARPED_SLAB.asItem(), "kule palisa palisa kasi pi sijelo sijelo");
+        translationBuilder.add(ModBlocks.VERTICAL_WARPED_SLAB, "supa pi linja sewi pi soko laso");
+        translationBuilder.add(ModBlocks.VERTICAL_WARPED_SLAB.asItem(), "supa pi linja sewi pi soko laso");
 
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_CUT_COPPER_SLAB, "kule palisa palisa mani walo pi wile waso");
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_CUT_COPPER_SLAB.asItem(), "kule palisa palisa mani walo pi wile waso");
+        translationBuilder.add(ModBlocks.VERTICAL_WAXED_CUT_COPPER_SLAB, "supa pi linja sewi pi kiwen ante awen");
+        translationBuilder.add(ModBlocks.VERTICAL_WAXED_CUT_COPPER_SLAB.asItem(), "supa pi linja sewi pi kiwen ante awen");
 
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_EXPOSED_CUT_COPPER_SLAB, "kule palisa palisa mani walo pi wile waso pini");
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_EXPOSED_CUT_COPPER_SLAB.asItem(), "kule palisa palisa mani walo pi wile waso pini");
+        translationBuilder.add(ModBlocks.VERTICAL_WAXED_EXPOSED_CUT_COPPER_SLAB, "supa pi linja sewi pi kiwen ante awen pi loje ma");
+        translationBuilder.add(ModBlocks.VERTICAL_WAXED_EXPOSED_CUT_COPPER_SLAB.asItem(), "supa pi linja sewi pi kiwen ante awen pi loje ma");
 
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_OXIDIZED_CUT_COPPER_SLAB, "kule palisa palisa mani walo pi sijelo sijelo pi wile waso");
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_OXIDIZED_CUT_COPPER_SLAB.asItem(), "kule palisa palisa mani walo pi sijelo sijelo pi wile waso");
+        translationBuilder.add(ModBlocks.VERTICAL_WAXED_OXIDIZED_CUT_COPPER_SLAB, "supa pi linja sewi pi kiwen ante awen laso");
+        translationBuilder.add(ModBlocks.VERTICAL_WAXED_OXIDIZED_CUT_COPPER_SLAB.asItem(), "supa pi linja sewi pi kiwen ante awen laso");
 
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_WEATHERED_CUT_COPPER_SLAB, "kule palisa palisa mani walo pi sijelo suli pi wile waso");
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_WEATHERED_CUT_COPPER_SLAB.asItem(), "kule palisa palisa mani walo pi sijelo suli pi wile waso");
+        translationBuilder.add(ModBlocks.VERTICAL_WAXED_WEATHERED_CUT_COPPER_SLAB, "supa pi linja sewi pi kiwen ante awen pi laso lili");
+        translationBuilder.add(ModBlocks.VERTICAL_WAXED_WEATHERED_CUT_COPPER_SLAB.asItem(), "supa pi linja sewi pi kiwen ante awen pi laso lili");
 
-        translationBuilder.add(ModBlocks.VERTICAL_WEATHERED_CUT_COPPER_SLAB, "kule palisa palisa mani walo pi sijelo suli");
-        translationBuilder.add(ModBlocks.VERTICAL_WEATHERED_CUT_COPPER_SLAB.asItem(), "kule palisa palisa mani walo pi sijelo suli");
+        translationBuilder.add(ModBlocks.VERTICAL_WEATHERED_CUT_COPPER_SLAB, "supa pi linja sewi pi kiwen ante pi laso lili");
+        translationBuilder.add(ModBlocks.VERTICAL_WEATHERED_CUT_COPPER_SLAB.asItem(), "supa pi linja sewi pi kiwen ante pi laso lili");
 
 
     }
