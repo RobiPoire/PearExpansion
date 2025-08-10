@@ -10,46 +10,56 @@ import java.util.concurrent.CompletableFuture;
 
 /**
  * Provides Spanish language translations for the Pear Expansion mod.
+ *
  * <p>
- * This class generates the es_es language file, adding translations for
- * the item group and custom items introduced by the mod. It extends
- * FabricLanguageProvider to integrate with the Fabric data generation system.
+ * This class generates the {@code es_es} language file for the mod using Fabric's data generation system.
+ * It adds translation entries for the item group, custom items, and all custom blocks introduced by the mod.
+ * Register this provider in your data generator to include Spanish translations in your mod's assets.
  * </p>
  *
  * @author RobiPoire
- * @version 0.2
+ * @see FabricLanguageProvider
+ * @see ModBlocks
+ * @see ModItems
  */
 public class PearExpansionSpanishLangProvider extends FabricLanguageProvider {
 
     /**
-     * Constructs a new PearExpansionSpanishLangProvider.
+     * Constructs a new Spanish language provider for Pear Expansion.
      *
-     * @param dataOutput     The output destination for generated language data.
-     * @param registryLookup A future providing access to the registry lookup.
+     * <p>
+     * Use this constructor to register the provider with Fabric's data generation system.
+     * </p>
+     *
+     * @param dataOutput     the output destination for generated language data
+     * @param registryLookup a future providing access to the registry lookup
      */
     protected PearExpansionSpanishLangProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
         super(dataOutput, "es_es", registryLookup);
     }
 
     /**
-     * Generates Spanish translations for the mod.
+     * Generates Spanish translations for all mod content.
+     *
      * <p>
-     * Adds translation entries for the item group and all custom pear items.
-     * This method is called during data generation.
+     * Adds translation entries for the item group, all custom pear items, and all custom vertical slab blocks.
+     * This method is called by the Fabric data generator during the data generation phase.
      * </p>
      *
-     * @param wrapperLookup      The registry lookup used for translation.
-     * @param translationBuilder The builder used to add translation entries.
+     * @param wrapperLookup      the registry lookup used for translation (not used directly here)
+     * @param translationBuilder the builder used to add translation entries
      */
     @Override
     public void generateTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder) {
-
+        // Add translation for the custom item group
         translationBuilder.add("itemGroup.pear_expansion", "Pear Expansion");
 
+        // Add translations for custom pear items
         translationBuilder.add(ModItems.PEAR, "Pera");
         translationBuilder.add(ModItems.GOLDEN_PEAR, "Pera Dorada");
         translationBuilder.add(ModItems.ENCHANTED_GOLDEN_PEAR, "Pera Dorada Encantada");
 
+        // Add translations for all custom vertical slab blocks and their item forms
         translationBuilder.add(ModBlocks.VERTICAL_ACACIA_SLAB, "Losa vertical de acacia");
         translationBuilder.add(ModBlocks.VERTICAL_ACACIA_SLAB.asItem(), "Losa vertical de acacia");
 

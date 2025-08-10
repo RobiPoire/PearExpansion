@@ -6,38 +6,41 @@ import net.pearadise.pearexpansion.client.datagen.langprovider.PearExpansionLang
 
 /**
  * Main data generator entry point for the Pear Expansion mod.
+ *
  * <p>
- * This class registers all data providers needed for generating
- * resources such as loot tables, models, and language files.
- * It is called automatically by the Fabric data generation system.
+ * Registers all data providers needed for generating resources such as loot tables, models, and language files.
+ * Called automatically by the Fabric data generation system during the data generation phase.
  * </p>
  *
  * @author RobiPoire
- * @version 0.2
+ * @see net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint
+ * @see PearExpansionLangProvider
  */
 public class PearExpansionDataGenerator implements DataGeneratorEntrypoint {
 
     /**
      * Initializes the data generator and registers all required data providers.
+     *
      * <p>
      * This method creates a new data pack and adds providers for block loot tables,
      * internal models, and language files. It is called by Fabric during the
-     * data generation process.
+     * data generation process on the main thread.
      * </p>
      *
-     * @param fabricDataGenerator The Fabric data generator instance used to create and manage data packs.
+     * @param fabricDataGenerator the Fabric data generator instance used to create and manage data packs
      */
     @Override
     public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
+        // Create a new data pack for this mod
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
-        // Register the block loot table provider
+        // Register the block loot table provider for custom block drops
         pack.addProvider(PearExpansionBlockLootTableProvider::new);
 
-        // Register the model provider
+        // Register the model provider for block and item models
         pack.addProvider(PearExpansionModelProvider::new);
 
-        // Register the language providers
+        // Register all language providers for supported languages
         PearExpansionLangProvider.addLangProviders(pack);
     }
 

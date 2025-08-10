@@ -23,16 +23,17 @@ import net.pearadise.pearexpansion.PearExpansion;
 import java.util.function.Function;
 
 /**
- * Utility class for registering and managing custom items and item groups
- * for the Pear Expansion mod.
+ * Registers and manages custom items and item groups for the Pear Expansion mod.
+ *
  * <p>
- * This class defines and registers custom items such as {@link #PEAR},
- * {@link #GOLDEN_PEAR}, and {@link #ENCHANTED_GOLDEN_PEAR}, as well as
- * the custom item group that contains them.
+ * This class defines, registers, and manages all custom items and the custom item group
+ * for the mod. It provides helper methods for item registration and ensures that all
+ * items are added to the creative inventory tab. Call {@link #initialize()} during mod
+ * initialization to register items and item groups.
  * </p>
  *
  * @author RobiPoire
- * @version 0.2
+ * @see net.pearadise.pearexpansion.PearExpansion
  */
 public class ModItems {
 
@@ -46,6 +47,7 @@ public class ModItems {
 
     /**
      * The basic Pear item.
+     *
      * <p>
      * Restores 4 hunger and provides a low saturation modifier.
      * </p>
@@ -61,6 +63,10 @@ public class ModItems {
 
     /**
      * The custom item group instance containing all mod items.
+     *
+     * <p>
+     * This group is used to display all custom items in the creative inventory.
+     * </p>
      */
     public static final ItemGroup CUSTOM_ITEM_GROUP = FabricItemGroup.builder()
             .icon(() -> new ItemStack(ModItems.PEAR))
@@ -69,6 +75,7 @@ public class ModItems {
 
     /**
      * The Golden Pear item.
+     *
      * <p>
      * Restores 4 hunger, provides high saturation, and grants
      * Regeneration and Absorption effects upon consumption.
@@ -92,6 +99,7 @@ public class ModItems {
 
     /**
      * The Enchanted Golden Pear item.
+     *
      * <p>
      * Restores 4 hunger, provides high saturation, and grants
      * Regeneration, Resistance, Fire Resistance, and enhanced Absorption
@@ -123,6 +131,11 @@ public class ModItems {
     /**
      * Registers a custom item with the specified name, factory, and settings.
      *
+     * <p>
+     * This method creates and registers a new item in the mod's namespace using the provided
+     * factory and settings. The item is registered with the Fabric registry system.
+     * </p>
+     *
      * @param name        the unique name of the item within the mod namespace
      * @param itemFactory a function that creates the item from its settings
      * @param settings    the settings to apply to the item
@@ -137,14 +150,18 @@ public class ModItems {
 
     /**
      * Initializes the mod's items and item group.
+     *
      * <p>
      * Registers the custom item group and adds all custom items to it.
-     * This method should be called during the mod's initialization phase.
+     * This method should be called during the mod's initialization phase,
+     * typically from the mod initializer.
      * </p>
      */
     public static void initialize() {
+        // Register the custom item group in the registry
         Registry.register(Registries.ITEM_GROUP, CUSTOM_ITEM_GROUP_KEY, CUSTOM_ITEM_GROUP);
 
+        // Add all custom items to the item group for creative inventory display
         ItemGroupEvents.modifyEntriesEvent(CUSTOM_ITEM_GROUP_KEY).register(itemGroup -> {
             itemGroup.add(ModItems.PEAR);
             itemGroup.add(ModItems.GOLDEN_PEAR);

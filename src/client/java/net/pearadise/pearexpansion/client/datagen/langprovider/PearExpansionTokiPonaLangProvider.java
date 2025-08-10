@@ -10,46 +10,57 @@ import java.util.concurrent.CompletableFuture;
 
 /**
  * Provides Toki Pona language translations for the Pear Expansion mod.
+ *
  * <p>
- * This class generates the tok language file, adding translations for
- * the item group and custom items introduced by the mod. It extends
- * FabricLanguageProvider to integrate with the Fabric data generation system.
+ * This class generates the Toki Pona language file for the mod using Fabric's data generation system.
+ * It adds translations for the item group, custom items, and custom blocks introduced by the mod.
+ * Register this provider in your data generator to output the Toki Pona language file.
  * </p>
  *
  * @author RobiPoire
- * @version 0.2
+ * @see FabricLanguageProvider
+ * @see ModBlocks
+ * @see ModItems
  */
 public class PearExpansionTokiPonaLangProvider extends FabricLanguageProvider {
 
     /**
-     * Constructs a new PearExpansionTokiPonaLangProvider.
+     * Constructs a new Toki Pona language provider for Pear Expansion.
      *
-     * @param dataOutput     The output destination for generated language data.
-     * @param registryLookup A future providing access to the registry lookup.
+     * <p>
+     * This constructor sets up the language provider for the "tok" (Toki Pona) language code.
+     * </p>
+     *
+     * @param dataOutput     the output destination for generated language data
+     * @param registryLookup a future providing access to the registry lookup
      */
     protected PearExpansionTokiPonaLangProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
         super(dataOutput, "tok", registryLookup);
     }
 
     /**
-     * Generates Toki Pona translations for the mod.
+     * Generates Toki Pona translations for all mod items and blocks.
+     *
      * <p>
-     * Adds translation entries for the item group and all custom pear items.
-     * This method is called during data generation.
+     * This method is called by the Fabric data generator during the data generation phase.
+     * It adds translation entries for the item group, all custom pear items, and all custom vertical slab blocks.
      * </p>
      *
-     * @param wrapperLookup      The registry lookup used for translation.
-     * @param translationBuilder The builder used to add translation entries.
+     * @param wrapperLookup      the registry lookup used for translation (not used directly here)
+     * @param translationBuilder the builder used to add translation entries
      */
     @Override
     public void generateTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder) {
 
+        // Add translation for the custom item group
         translationBuilder.add("itemGroup.pear_expansion", "Pear Expansion");
 
+        // Add translations for custom pear items
         translationBuilder.add(ModItems.PEAR, "kili pi kasi palisa");
         translationBuilder.add(ModItems.GOLDEN_PEAR, "kili seli jelo");
         translationBuilder.add(ModItems.ENCHANTED_GOLDEN_PEAR, "kili palisa jelo pi wile pona");
 
+        // Add translations for all custom vertical slab blocks and their items
         translationBuilder.add(ModBlocks.VERTICAL_ACACIA_SLAB, "supa pi linja sewi pi kasi seli");
         translationBuilder.add(ModBlocks.VERTICAL_ACACIA_SLAB.asItem(), "supa pi linja sewi pi kasi seli");
 
@@ -232,7 +243,6 @@ public class PearExpansionTokiPonaLangProvider extends FabricLanguageProvider {
 
         translationBuilder.add(ModBlocks.VERTICAL_WEATHERED_CUT_COPPER_SLAB, "supa pi linja sewi pi kiwen ante pi laso lili");
         translationBuilder.add(ModBlocks.VERTICAL_WEATHERED_CUT_COPPER_SLAB.asItem(), "supa pi linja sewi pi kiwen ante pi laso lili");
-
 
     }
 

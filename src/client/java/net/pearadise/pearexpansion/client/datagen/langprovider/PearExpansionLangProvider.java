@@ -4,9 +4,11 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 
 /**
  * Registers all language providers for the Pear Expansion mod.
+ *
  * <p>
  * This class adds each language provider to the Fabric data generator pack,
  * enabling the generation of language files for multiple languages.
+ * Call {@link #addLangProviders(FabricDataGenerator.Pack)} during data generation setup.
  * </p>
  *
  * <p>
@@ -23,32 +25,47 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
  * </p>
  *
  * @author RobiPoire
- * @version 0.2
+ * @see FabricDataGenerator.Pack
+ * @see PearExpansionEnglishLangProvider
+ * @see PearExpansionEsperantoLangProvider
+ * @see PearExpansionFrenchLangProvider
+ * @see PearExpansionGermanLangProvider
+ * @see PearExpansionItalianLangProvider
+ * @see PearExpansionSpanishLangProvider
+ * @see PearExpansionTokiPonaLangProvider
  */
 public class PearExpansionLangProvider {
 
     /**
      * Adds all language providers to the given data generator pack.
+     *
      * <p>
-     * This method registers each language provider, so that language files
-     * for all supported languages are generated during the data generation process.
+     * Registers each language provider so that language files for all supported
+     * languages are generated during the data generation process.
      * </p>
      *
-     * @param pack The Fabric data generator pack to which language providers are added.
+     * @param pack the Fabric data generator pack to which language providers are added
      */
     public static void addLangProviders(FabricDataGenerator.Pack pack) {
-        pack.addProvider(PearExpansionEnglishLangProvider::new); // en_us
+        // Register English language provider (en_us)
+        pack.addProvider(PearExpansionEnglishLangProvider::new);
 
-        pack.addProvider(PearExpansionEsperantoLangProvider::new); // eo_uy
+        // Register Esperanto language provider (eo_uy)
+        pack.addProvider(PearExpansionEsperantoLangProvider::new);
 
-        pack.addProvider(PearExpansionFrenchLangProvider::new); // fr_fr
+        // Register French language provider (fr_fr)
+        pack.addProvider(PearExpansionFrenchLangProvider::new);
 
-        pack.addProvider(PearExpansionGermanLangProvider::new); // de_de
+        // Register German language provider (de_de)
+        pack.addProvider(PearExpansionGermanLangProvider::new);
 
-        pack.addProvider(PearExpansionItalianLangProvider::new); // it_it
+        // Register Italian language provider (it_it)
+        pack.addProvider(PearExpansionItalianLangProvider::new);
 
-        pack.addProvider(PearExpansionSpanishLangProvider::new); // es_es
+        // Register Spanish language provider (es_es)
+        pack.addProvider(PearExpansionSpanishLangProvider::new);
 
-        pack.addProvider(PearExpansionTokiPonaLangProvider::new); // tok
+        // Register Toki Pona language provider (tok)
+        pack.addProvider(PearExpansionTokiPonaLangProvider::new);
     }
 }

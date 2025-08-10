@@ -4,25 +4,29 @@ import net.fabricmc.api.ModInitializer;
 
 /**
  * Initializes all custom blocks for the Pear Expansion mod.
+ *
  * <p>
- * This class is responsible for registering and initializing all blocks
- * when the mod is loaded. It implements the {@link ModInitializer} interface
- * to hook into the Fabric mod loading process.
+ * This class registers and initializes all custom blocks when the mod is loaded.
+ * It implements the {@link ModInitializer} interface to hook into the Fabric mod loading process.
+ * Call this class from your mod initializer to ensure all blocks are available.
  * </p>
  *
  * @author RobiPoire
- * @version 0.2
+ * @see ModBlocks
  */
 public class PearExpansionBlocks implements ModInitializer {
 
     /**
-     * Called by the Fabric loader to initialize the mod.
+     * Initializes all custom blocks for the mod.
+     *
      * <p>
-     * This method registers all custom blocks by calling {@link ModBlocks#initialize()}.
+     * Called by the Fabric loader during the mod initialization phase.
+     * Registers all custom blocks by calling {@link ModBlocks#initialize()}.
      * </p>
      */
     @Override
     public void onInitialize() {
+        // Register all custom blocks and add them to the creative item group
         ModBlocks.initialize();
     }
 }

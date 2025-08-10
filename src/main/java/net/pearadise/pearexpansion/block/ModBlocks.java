@@ -20,20 +20,18 @@ import java.util.function.Function;
 /**
  * Registers and manages all custom blocks for the Pear Expansion mod.
  *
- * This class handles the registration of blocks based on existing vanilla blocks (templates),
- * and their corresponding items, as well as their integration into custom item groups.
+ * <p>This class handles the registration of all vertical slab blocks and their corresponding items.
+ * It provides helper methods for block registration, maintains a list of all custom blocks,
+ * and integrates them into the mod's custom item group for display in the creative inventory.
+ * Call {@link #initialize()} during mod initialization to ensure all blocks are registered.
  *
- * Helper methods reduce duplication while preserving the public constants used across the mod.
+ * @author RobiPoire
+ * @see net.pearadise.pearexpansion.block.custom.VerticalSlabBlock
+ * @see net.pearadise.pearexpansion.item.ModItems
  */
 public class ModBlocks {
 
-    // Helper that registers a block using the settings of a 'template' block.
-    // Name chosen to be generic (not "slab") so it can be reused for future non-slab blocks.
-    private static Block registerFromTemplate(String name, Block template) {
-        return register(name, VerticalSlabBlock::new, template.getSettings(), true);
-    }
-
-    // Vertical Slabs - Alphabetical order
+    // Vertical Slabs - Alphabetical order for maintainability
     public static final Block VERTICAL_ACACIA_SLAB = registerFromTemplate("vertical_acacia_slab", Blocks.ACACIA_SLAB);
     public static final Block VERTICAL_ANDESITE_SLAB = registerFromTemplate("vertical_andesite_slab", Blocks.ANDESITE_SLAB);
     public static final Block VERTICAL_BAMBOO_MOSAIC_SLAB = registerFromTemplate("vertical_bamboo_mosaic_slab", Blocks.BAMBOO_MOSAIC_SLAB);
@@ -95,8 +93,11 @@ public class ModBlocks {
     public static final Block VERTICAL_WAXED_OXIDIZED_CUT_COPPER_SLAB = registerFromTemplate("vertical_waxed_oxidized_cut_copper_slab", Blocks.WAXED_OXIDIZED_CUT_COPPER_SLAB);
     public static final Block VERTICAL_WAXED_WEATHERED_CUT_COPPER_SLAB = registerFromTemplate("vertical_waxed_weathered_cut_copper_slab", Blocks.WAXED_WEATHERED_CUT_COPPER_SLAB);
     public static final Block VERTICAL_WEATHERED_CUT_COPPER_SLAB = registerFromTemplate("vertical_weathered_cut_copper_slab", Blocks.WEATHERED_CUT_COPPER_SLAB);
-
-    // Consolidated array so we only maintain the block list in one place for item group population.
+    /**
+     * Array containing all custom vertical slab blocks.
+     *
+     * <p>Used to populate the custom item group and for batch operations.
+     */
     public static final Block[] ALL_BLOCKS = {
             VERTICAL_ACACIA_SLAB, VERTICAL_ANDESITE_SLAB, VERTICAL_BAMBOO_MOSAIC_SLAB, VERTICAL_BAMBOO_SLAB,
             VERTICAL_BIRCH_SLAB, VERTICAL_BLACKSTONE_SLAB, VERTICAL_BRICK_SLAB, VERTICAL_CHERRY_SLAB,
@@ -116,14 +117,25 @@ public class ModBlocks {
             VERTICAL_WAXED_WEATHERED_CUT_COPPER_SLAB, VERTICAL_WEATHERED_CUT_COPPER_SLAB
     };
 
+    // Registers a block using the settings of a template block.
+    // Used to create vertical slab variants with matching properties.
+    private static Block registerFromTemplate(String name, Block template) {
+        // Use the template's settings to create a new VerticalSlabBlock and register it
+        return register(name, VerticalSlabBlock::new, template.getSettings(), true);
+    }
+
     /**
      * Registers a block and optionally its item in the mod's registries.
      *
-     * @param name               The registry name for the block.
-     * @param blockFactory       The factory function to create the block.
-     * @param settings           The block settings to use.
-     * @param shouldRegisterItem Whether to also register a BlockItem for this block.
-     * @return The registered Block instance.
+     * <p>This method creates a new block using the provided factory and settings,
+     * registers it with the Fabric registry, and optionally registers a {@link BlockItem}
+     * so the block appears in inventories and creative tabs.
+     *
+     * @param name               the registry name for the block (should be unique within the mod)
+     * @param blockFactory       a function that creates the block from its settings
+     * @param settings           the block settings to use (copied from a template block)
+     * @param shouldRegisterItem whether to also register a BlockItem for this block
+     * @return the registered {@link Block} instance
      */
     private static Block register(String name, Function<AbstractBlock.Settings, Block> blockFactory, AbstractBlock.Settings settings, boolean shouldRegisterItem) {
         RegistryKey<Block> blockKey = keyOfBlock(name);
@@ -138,16 +150,21 @@ public class ModBlocks {
         return Registry.register(Registries.BLOCK, blockKey, block);
     }
 
+    // Returns a registry key for a block with the given name in this mod's namespace.
     private static RegistryKey<Block> keyOfBlock(String name) {
         return RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(PearExpansion.MOD_ID, name));
     }
 
+    // Returns a registry key for an item with the given name in this mod's namespace.
     private static RegistryKey<Item> keyOfItem(String name) {
         return RegistryKey.of(RegistryKeys.ITEM, Identifier.of(PearExpansion.MOD_ID, name));
     }
 
     /**
      * Initializes all custom blocks for the mod.
+     *
+     * <p>Call this method during the mod's initialization phase to ensure all blocks
+     * are registered and added to the custom item group.
      */
     public static void initialize() {
         setupItemGroups();
@@ -155,9 +172,13 @@ public class ModBlocks {
 
     /**
      * Adds all custom blocks to the mod's custom item group.
+     *
+     * <p>This method registers a callback with Fabric's {@link ItemGroupEvents}
+     * to add all vertical slab blocks to the creative inventory tab.
      */
     public static void setupItemGroups() {
         ItemGroupEvents.modifyEntriesEvent(ModItems.CUSTOM_ITEM_GROUP_KEY).register((itemGroup) -> {
+            // Add each custom block to the item group for creative inventory display
             for (Block b : ALL_BLOCKS) {
                 itemGroup.add(b);
             }

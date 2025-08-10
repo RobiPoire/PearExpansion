@@ -19,32 +19,32 @@ import java.util.Objects;
 import java.util.Optional;
 
 /**
+ * Provides Fabric data generation for block and item models for Pear Expansion.
  *
- * <p>This class maps each mod vertical slab to a vanilla source block. It then
- * generates model files and blockstate variants for each slab using Fabric's
- * data generation helpers.</p>
+ * <p>
+ * This class maps each mod vertical slab to a vanilla source block, then generates
+ * model files and blockstate variants for each slab using Fabric's data generation helpers.
+ * Use this provider with Fabric datagen to automate model and blockstate creation.
+ * </p>
  *
- * <p>Use this provider with Fabric datagen (for example: {@code gradlew genData}).
- * The provider only creates block models and blockstates; you still need other
- * providers (loot tables, tags, recipes) for a complete dataset.</p>
- *
- * <p>Author: RobiPoire
- * Version: 0.2</p>
+ * @author RobiPoire
+ * @see net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider
+ * @see net.pearadise.pearexpansion.block.ModBlocks
  */
 public class PearExpansionModelProvider extends FabricModelProvider {
 
     /**
-     * Map of mod vertical slab -> vanilla source block used for textures.
+     * Maps each mod vertical slab block to its vanilla source block for texture reuse.
      *
-     * <p>Key: the block added by the mod (vertical slab).
-     * Value: the vanilla block to reuse textures from.</p>
-     *
-     * <p>We use LinkedHashMap to keep a stable order when generating files.</p>
+     * <p>
+     * Key: the mod's vertical slab block.
+     * Value: the vanilla block to use for textures.
+     * </p>
      */
     private static final Map<Block, Block> VERTICAL_SLAB_SOURCES = new LinkedHashMap<>();
 
     static {
-        // Add mappings here. Keep order stable for consistent generated outputs.
+        // Populate the mapping of mod vertical slabs to vanilla source blocks for texture reference.
         VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_ACACIA_SLAB, Blocks.ACACIA_PLANKS);
         VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_ANDESITE_SLAB, Blocks.ANDESITE);
         VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_BAMBOO_MOSAIC_SLAB, Blocks.BAMBOO_MOSAIC);
@@ -109,18 +109,27 @@ public class PearExpansionModelProvider extends FabricModelProvider {
     }
 
     /**
-     * Create a new provider.
+     * Constructs a new model provider for Pear Expansion.
      *
-     * @param output Fabric's data output helper for writing generated files.
+     * <p>
+     * Called by Fabric's datagen system to initialize the provider.
+     * </p>
+     *
+     * @param output the Fabric data output helper for writing generated files
      */
     public PearExpansionModelProvider(FabricDataOutput output) {
         super(output);
     }
 
     /**
-     * Generate block models and blockstates for every mapped vertical slab.
+     * Generates block models and blockstate variants for all mapped vertical slabs.
      *
-     * @param blockStateModelGenerator Fabric helper that collects models and blockstates.
+     * <p>
+     * Iterates over all vertical slab mappings and registers models and blockstates
+     * using Fabric's {@link BlockStateModelGenerator}. Logs progress to the mod logger.
+     * </p>
+     *
+     * @param blockStateModelGenerator the Fabric helper for collecting models and blockstates
      */
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
@@ -132,13 +141,13 @@ public class PearExpansionModelProvider extends FabricModelProvider {
             Block modSlab = e.getKey();
             Block source = e.getValue();
 
-            // Skip invalid entries just in case
+            // Skip mappings with null values to avoid errors
             if (modSlab == null || source == null) {
                 PearExpansion.LOGGER.warn("Skipping null mapping for vertical slab: {} -> {}", modSlab, source);
                 continue;
             }
 
-            // Register model, blockstate and item model for this slab
+            // Register model, blockstate, and item model for this vertical slab
             CustomBlockStateModelGenerator.registerVerticalSlab(
                     blockStateModelGenerator,
                     modSlab,
@@ -151,23 +160,27 @@ public class PearExpansionModelProvider extends FabricModelProvider {
     }
 
     /**
-     * Generate item models. Left empty because parented item models are registered
-     * in the slab helper. Use this for standalone items if needed.
+     * Generates item models for custom items.
      *
-     * @param itemModelGenerator Fabric helper for item models.
+     * <p>
+     * Registers item models for the Pear Expansion items. For vertical slabs,
+     * item models are parented to the block models in the slab helper.
+     * </p>
+     *
+     * @param itemModelGenerator the Fabric helper for item model generation
      */
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+        // Register simple generated item models for custom items
         itemModelGenerator.register(ModItems.PEAR, Models.GENERATED);
         itemModelGenerator.register(ModItems.GOLDEN_PEAR, Models.GENERATED);
         itemModelGenerator.registerWithTextureSource(ModItems.ENCHANTED_GOLDEN_PEAR, ModItems.GOLDEN_PEAR, Models.GENERATED);
-
     }
 
     /**
-     * A short name for this provider used in logs.
+     * Returns a short name for this provider for logging purposes.
      *
-     * @return provider name
+     * @return the provider name
      */
     @Override
     public String getName() {
@@ -175,32 +188,45 @@ public class PearExpansionModelProvider extends FabricModelProvider {
     }
 
     /**
-     * Helper class that contains model and blockstate helpers for vertical slabs.
+     * Helper class for registering models and blockstates for vertical slabs.
      *
-     * <p>It builds a base model definition, a texture helper and creates blockstate
-     * variants for every facing + single/double state.</p>
+     * <p>
+     * Contains static methods to build model definitions, texture maps, and blockstate
+     * variants for all vertical slab blocks in the mod.
+     * </p>
+     *
+     * @author RobiPoire
+     * @see net.pearadise.pearexpansion.block.custom.VerticalSlabBlock
      */
     public static class CustomBlockStateModelGenerator {
 
         /**
-         * Base model definition used for vertical slabs.
-         * The model requires three textures: bottom, top and side.
+         * Base model definition for vertical slabs.
+         *
+         * <p>
+         * Requires three textures: bottom, top, and side.
+         * </p>
          */
         public static final Model VERTICAL_SLAB = block("vertical_slab", TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE);
 
         /**
-         * Helper to build a Model instance pointing to mod's block models.
+         * Builds a Model instance referencing a mod block model.
          *
-         * @param parent              parent model file name (without path)
-         * @param requiredTextureKeys texture keys that the model needs
-         * @return a Model object used for uploading
+         * @param parent              the parent model file name (without path)
+         * @param requiredTextureKeys the texture keys required by the model
+         * @return a Model object for uploading
          */
         private static Model block(String parent, TextureKey... requiredTextureKeys) {
             return new Model(Optional.of(Identifier.of(PearExpansion.MOD_ID, "block/" + parent)), Optional.empty(), requiredTextureKeys);
         }
 
         /**
-         * Internal overload that also accepts a variant string (not used currently).
+         * Builds a Model instance referencing a mod block model with a variant.
+         *
+         * @param parent              the parent model file name (without path)
+         * @param variant             the variant string (not currently used)
+         * @param requiredTextureKeys the texture keys required by the model
+         * @return a Model object for uploading
          */
         @SuppressWarnings("unused")
         private static Model block(String parent, String variant, TextureKey... requiredTextureKeys) {
@@ -208,13 +234,14 @@ public class PearExpansionModelProvider extends FabricModelProvider {
         }
 
         /**
-         * Build a TextureMap for slabs that use the block's "_top" texture for both top and bottom,
+         * Builds a TextureMap for slabs using the block's "_top" texture for both top and bottom,
          * and the regular block model for the side.
          *
-         * @param block vanilla source block used to derive texture ids
-         * @return TextureMap containing TOP, BOTTOM and SIDE keys
+         * @param block the vanilla source block to derive texture IDs from
+         * @return a TextureMap containing TOP, BOTTOM, and SIDE keys
          */
         public static TextureMap blockAndTopForEnds(Block block) {
+            // Use the "_top" texture for both ends and the side texture for the slab's side
             return new TextureMap()
                     .put(TextureKey.TOP, ModelIds.getBlockSubModelId(block, "_top"))
                     .put(TextureKey.BOTTOM, ModelIds.getBlockSubModelId(block, "_top"))
@@ -222,19 +249,22 @@ public class PearExpansionModelProvider extends FabricModelProvider {
         }
 
         /**
-         * Create blockstate variants for the vertical slab.
+         * Creates blockstate variants for a vertical slab block.
          *
-         * <p>Each facing (N/E/S/W) has a model for single slab state. The double state
-         * uses the full-block model.</p>
+         * <p>
+         * Each facing (N/E/S/W) has a model for the single slab state. The double state
+         * uses the full-block model. Rotations are applied for correct orientation.
+         * </p>
          *
-         * @param vertSlabBlock mod slab block
-         * @param vertSlabId    model id for the vertical slab model
-         * @param fullBlockId   model id for the full (double) block
-         * @return BlockModelDefinitionCreator that will be collected by the generator
+         * @param vertSlabBlock the mod's vertical slab block
+         * @param vertSlabId    the model ID for the vertical slab model
+         * @param fullBlockId   the model ID for the full (double) block
+         * @return a BlockModelDefinitionCreator for the blockstate generator
          */
         private static BlockModelDefinitionCreator createVerticalSlabBlockStates(Block vertSlabBlock, Identifier vertSlabId, Identifier fullBlockId) {
             WeightedVariant vertSlabModel = BlockStateModelGenerator.createWeightedVariant(vertSlabId);
             WeightedVariant fullBlockModel = BlockStateModelGenerator.createWeightedVariant(fullBlockId);
+            // Register blockstate variants for each facing and single/double state
             return VariantsBlockModelDefinitionCreator.of(vertSlabBlock)
                     .with(BlockStateVariantMap.models(VerticalSlabBlock.FACING, VerticalSlabBlock.SINGLE)
                             .register(Direction.NORTH, true, vertSlabModel.apply(BlockStateModelGenerator.UV_LOCK))
@@ -249,18 +279,26 @@ public class PearExpansionModelProvider extends FabricModelProvider {
         }
 
         /**
-         * Register the vertical slab model, the full-block model and blockstate variants.
-         * Also register a parented item model so the item uses the same textures as the block.
+         * Registers the vertical slab model, full-block model, blockstate variants, and item model.
          *
-         * @param generator     Fabric blockstate/model generator
+         * <p>
+         * Uploads the slab and full-block models, creates blockstate variants for all states,
+         * and registers a parented item model so the item uses the same textures as the block.
+         * </p>
+         *
+         * @param generator     the Fabric blockstate/model generator
          * @param vertSlabBlock the mod's vertical slab block
-         * @param fullBlock     the vanilla/full block used for the double state model
-         * @param textures      textures to use for the slab model
+         * @param fullBlock     the vanilla or full block used for the double state model
+         * @param textures      the textures to use for the slab model
          */
         public static void registerVerticalSlab(BlockStateModelGenerator generator, Block vertSlabBlock, Block fullBlock, TextureMap textures) {
+            // Upload the vertical slab model and get its identifier
             Identifier slabModel = VERTICAL_SLAB.upload(vertSlabBlock, textures, generator.modelCollector);
+            // Get the model identifier for the full block (double slab)
             Identifier fullBlockModel = ModelIds.getBlockModelId(fullBlock);
+            // Register blockstate variants for all facing and single/double states
             generator.blockStateCollector.accept(createVerticalSlabBlockStates(vertSlabBlock, slabModel, fullBlockModel));
+            // Register a parented item model for the vertical slab
             generator.registerParentedItemModel(vertSlabBlock, slabModel);
         }
     }

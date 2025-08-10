@@ -10,46 +10,55 @@ import java.util.concurrent.CompletableFuture;
 
 /**
  * Provides Esperanto language translations for the Pear Expansion mod.
+ *
  * <p>
- * This class generates the eo_uy language file, adding translations for
- * item group names and custom items introduced by the mod. It extends
- * FabricLanguageProvider to integrate with the Fabric data generation system.
+ * Generates the {@code eo_uy} language file for the mod, adding translations for
+ * item group names and all custom items and blocks. Integrates with the Fabric
+ * data generation system to automate language file creation.
  * </p>
  *
  * @author RobiPoire
- * @version 0.2
+ * @see FabricLanguageProvider
+ * @see PearExpansionLangProvider
  */
 public class PearExpansionEsperantoLangProvider extends FabricLanguageProvider {
 
     /**
-     * Constructs a new PearExpansionEsperantoLangProvider.
+     * Constructs a new Esperanto language provider for Pear Expansion.
      *
-     * @param dataOutput     The output destination for generated language data.
-     * @param registryLookup A future providing access to the registry lookup.
+     * <p>
+     * Sets up the provider to output {@code eo_uy} translations during data generation.
+     * </p>
+     *
+     * @param dataOutput     the output destination for generated language data (must not be null)
+     * @param registryLookup a future providing access to the registry lookup (must not be null)
      */
     protected PearExpansionEsperantoLangProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
         super(dataOutput, "eo_uy", registryLookup);
     }
 
     /**
-     * Generates Esperanto translations for the mod.
+     * Generates Esperanto translations for all custom items and blocks.
+     *
      * <p>
-     * Adds translation entries for the item group and all custom pear items.
-     * This method is called during data generation.
+     * Adds translation entries for the item group and all custom pear items and vertical slab blocks.
+     * Called automatically by the Fabric data generator during the data generation phase.
      * </p>
      *
-     * @param wrapperLookup      The registry lookup used for translation.
-     * @param translationBuilder The builder used to add translation entries.
+     * @param wrapperLookup      the registry lookup used for translation (provided by Fabric)
+     * @param translationBuilder the builder used to add translation entries (must not be null)
      */
     @Override
     public void generateTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder) {
-
+        // Add translation for the custom item group
         translationBuilder.add("itemGroup.pear_expansion", "Pear Expansion");
 
+        // Add translations for custom pear items
         translationBuilder.add(ModItems.PEAR, "Piro");
         translationBuilder.add(ModItems.GOLDEN_PEAR, "Ora Piro");
         translationBuilder.add(ModItems.ENCHANTED_GOLDEN_PEAR, "Sorĉita Ora Piro");
 
+        // Add translations for all custom vertical slab blocks and their item forms
         translationBuilder.add(ModBlocks.VERTICAL_ACACIA_SLAB, "Vertikala Akacia ŝtupo");
         translationBuilder.add(ModBlocks.VERTICAL_ACACIA_SLAB.asItem(), "Vertikala Akacia ŝtupo");
 
