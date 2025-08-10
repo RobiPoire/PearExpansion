@@ -2,7 +2,6 @@ package net.pearadise.pearexpansion.client.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
-import net.pearadise.pearexpansion.client.datagen.internal.PearExpansionInternalModelProvider;
 import net.pearadise.pearexpansion.client.datagen.langprovider.PearExpansionLangProvider;
 
 /**
@@ -35,10 +34,8 @@ public class PearExpansionDataGenerator implements DataGeneratorEntrypoint {
         // Register the block loot table provider
         pack.addProvider(PearExpansionBlockLootTableProvider::new);
 
-        // Register the internal model provider
-        pack.addProvider(PearExpansionInternalModelProvider::new);
+        // Register the model provider
         pack.addProvider(PearExpansionModelProvider::new);
-
 
         // Register the language providers
         PearExpansionLangProvider.addLangProviders(pack);

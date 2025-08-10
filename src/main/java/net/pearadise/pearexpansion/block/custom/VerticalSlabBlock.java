@@ -33,6 +33,9 @@ public class VerticalSlabBlock extends Block {
      * Property indicating if the slab is a single slab (true) or a double slab (false).
      */
     public static final BooleanProperty SINGLE = BooleanProperty.of("single");
+
+    public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
+
     /**
      * Property representing the horizontal facing direction of the slab.
      */
@@ -191,7 +194,7 @@ public class VerticalSlabBlock extends Block {
      */
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(SINGLE, FACING);
+        builder.add(SINGLE, FACING, WATERLOGGED);
     }
 
 }
