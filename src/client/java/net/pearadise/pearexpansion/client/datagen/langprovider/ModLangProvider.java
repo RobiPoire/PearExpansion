@@ -34,7 +34,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
  * @see SpanishLangProvider
  * @see TokiPonaLangProvider
  */
-public class LangProvider {
+public class ModLangProvider {
 
     /**
      * Adds all language providers to the given data generator pack.

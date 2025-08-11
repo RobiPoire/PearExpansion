@@ -2,7 +2,7 @@ package net.pearadise.pearexpansion.client.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
-import net.pearadise.pearexpansion.client.datagen.langprovider.LangProvider;
+import net.pearadise.pearexpansion.client.datagen.langprovider.ModLangProvider;
 
 /**
  * Main data generator entry point for the Pear Expansion mod.
@@ -14,7 +14,7 @@ import net.pearadise.pearexpansion.client.datagen.langprovider.LangProvider;
  *
  * @author RobiPoire
  * @see net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint
- * @see LangProvider
+ * @see ModLangProvider
  */
 public class ModDataGenerator implements DataGeneratorEntrypoint {
 
@@ -43,7 +43,7 @@ public class ModDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(ModTagProvider::new);
 
         // Register all language providers for supported languages
-        LangProvider.addLangProviders(pack);
+        ModLangProvider.addLangProviders(pack);
     }
 
 }

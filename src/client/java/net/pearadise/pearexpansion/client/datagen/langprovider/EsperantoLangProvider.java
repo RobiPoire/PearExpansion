@@ -19,7 +19,7 @@ import java.util.concurrent.CompletableFuture;
  *
  * @author RobiPoire
  * @see FabricLanguageProvider
- * @see LangProvider
+ * @see ModLangProvider
  */
 public class EsperantoLangProvider extends FabricLanguageProvider {
 
