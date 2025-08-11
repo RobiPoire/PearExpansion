@@ -86,11 +86,13 @@ public class PearExpansionModelProvider extends FabricModelProvider {
         VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_PRISMARINE_BRICK_SLAB, Blocks.PRISMARINE_BRICKS);
         VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_PRISMARINE_SLAB, Blocks.PRISMARINE);
         VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_PURPUR_SLAB, Blocks.PURPUR_BLOCK);
+        // TODO: Texture for vertical quartz slab not working actually
         VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_QUARTZ_SLAB, Blocks.QUARTZ_BLOCK);
         VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_RED_NETHER_BRICK_SLAB, Blocks.RED_NETHER_BRICKS);
         VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_RED_SANDSTONE_SLAB, Blocks.RED_SANDSTONE);
         VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_RESIN_BRICK_SLAB, Blocks.RESIN_BRICKS);
         VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_SANDSTONE_SLAB, Blocks.SANDSTONE);
+        // TODO: Texture for vertical smooth_quartz/smooth_red_sandstone/smooth_sandstone  slabs not working actually
         VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_SMOOTH_QUARTZ_SLAB, Blocks.SMOOTH_QUARTZ);
         VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_SMOOTH_RED_SANDSTONE_SLAB, Blocks.SMOOTH_RED_SANDSTONE);
         VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_SMOOTH_SANDSTONE_SLAB, Blocks.SMOOTH_SANDSTONE);

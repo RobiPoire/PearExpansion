@@ -9,6 +9,7 @@ import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.registry.RegistryWrapper;
+import net.pearadise.pearexpansion.block.ModBlocks;
 import net.pearadise.pearexpansion.item.ModItems;
 
 import java.util.concurrent.CompletableFuture;
@@ -71,5 +72,9 @@ public class PearExpansionBlockLootTableProvider extends FabricBlockLootTablePro
                         .conditionally(RandomChanceLootCondition.builder(0.005f)) // 0.5% chance
                 )
         ));
+
+        for (var block : ModBlocks.ALL_BLOCKS) {
+            addDrop(block);
+        }
     }
 }

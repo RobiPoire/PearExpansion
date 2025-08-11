@@ -1,6 +1,8 @@
 package net.pearadise.pearexpansion.block;
 
 import net.fabricmc.api.ModInitializer;
+import net.pearadise.pearexpansion.registry.FlammableBlocks;
+import net.pearadise.pearexpansion.registry.WeatheringBlocks;
 
 /**
  * Initializes all custom blocks for the Pear Expansion mod.
@@ -28,5 +30,9 @@ public class PearExpansionBlocks implements ModInitializer {
     public void onInitialize() {
         // Register all custom blocks and add them to the creative item group
         ModBlocks.initialize();
+        // Register weathering blocks
+        WeatheringBlocks.registerWeatheringBlocks();
+        // Register flammable blocks
+        FlammableBlocks.registerFlammableBlocks();
     }
 }
