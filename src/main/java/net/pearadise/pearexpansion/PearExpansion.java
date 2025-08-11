@@ -1,6 +1,12 @@
 package net.pearadise.pearexpansion;
 
 import net.fabricmc.api.ModInitializer;
+import net.pearadise.pearexpansion.block.ModBlocks;
+import net.pearadise.pearexpansion.item.ModItems;
+import net.pearadise.pearexpansion.registry.FlammableBlocks;
+import net.pearadise.pearexpansion.registry.FuelItems;
+import net.pearadise.pearexpansion.registry.OxidizableBlocks;
+import net.pearadise.pearexpansion.registry.WaxableBlocks;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -49,7 +55,11 @@ public class PearExpansion implements ModInitializer {
      */
     @Override
     public void onInitialize() {
-        // Mod initialization logic goes here.
-        // Register item groups, items, blocks, and other components as needed.
+        ModItems.initialize();
+        ModBlocks.initialize();
+        OxidizableBlocks.registerOxidizableBlocks();
+        WaxableBlocks.registerWaxableBlocks();
+        FlammableBlocks.registerFlammableBlocks();
+        FuelItems.registerFuelItems();
     }
 }

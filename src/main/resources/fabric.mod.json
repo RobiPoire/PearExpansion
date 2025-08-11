@@ -17,9 +17,7 @@
       "net.pearadise.pearexpansion.client.PearExpansionClient"
     ],
     "main": [
-      "net.pearadise.pearexpansion.PearExpansion",
-      "net.pearadise.pearexpansion.item.PearExpansionItems",
-      "net.pearadise.pearexpansion.block.PearExpansionBlocks"
+      "net.pearadise.pearexpansion.PearExpansion"
     ]
   },
   "mixins": [
