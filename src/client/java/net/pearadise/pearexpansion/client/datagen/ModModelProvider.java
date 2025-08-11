@@ -9,8 +9,8 @@ import net.minecraft.client.render.model.json.WeightedVariant;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 import net.pearadise.pearexpansion.PearExpansion;
-import net.pearadise.pearexpansion.block.ModBlocks;
 import net.pearadise.pearexpansion.block.custom.VerticalSlabBlock;
+import net.pearadise.pearexpansion.block.custom.VerticalSlabBlockEnum;
 import net.pearadise.pearexpansion.item.ModItems;
 
 import java.util.LinkedHashMap;
@@ -31,7 +31,7 @@ import java.util.Optional;
  * @see net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider
  * @see net.pearadise.pearexpansion.block.ModBlocks
  */
-public class PearExpansionModelProvider extends FabricModelProvider {
+public class ModModelProvider extends FabricModelProvider {
 
     /**
      * Maps each mod vertical slab block to its vanilla source block for texture reuse.
@@ -45,69 +45,69 @@ public class PearExpansionModelProvider extends FabricModelProvider {
 
     static {
         // Populate the mapping of mod vertical slabs to vanilla source blocks for texture reference.
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_ACACIA_SLAB, Blocks.ACACIA_PLANKS);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_ANDESITE_SLAB, Blocks.ANDESITE);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_BAMBOO_MOSAIC_SLAB, Blocks.BAMBOO_MOSAIC);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_BAMBOO_SLAB, Blocks.BAMBOO_PLANKS);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_BIRCH_SLAB, Blocks.BIRCH_PLANKS);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_BLACKSTONE_SLAB, Blocks.BLACKSTONE);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_BRICK_SLAB, Blocks.BRICKS);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_CHERRY_SLAB, Blocks.CHERRY_PLANKS);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_COBBLED_DEEPSLATE_SLAB, Blocks.COBBLED_DEEPSLATE);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_COBBLESTONE_SLAB, Blocks.COBBLESTONE);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_CRIMSON_SLAB, Blocks.CRIMSON_PLANKS);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_CUT_COPPER_SLAB, Blocks.CUT_COPPER);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_CUT_RED_SANDSTONE_SLAB, Blocks.CUT_RED_SANDSTONE);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_CUT_SANDSTONE_SLAB, Blocks.CUT_SANDSTONE);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_DARK_OAK_SLAB, Blocks.DARK_OAK_PLANKS);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_DARK_PRISMARINE_SLAB, Blocks.DARK_PRISMARINE);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_DEEPSLATE_BRICK_SLAB, Blocks.DEEPSLATE_BRICKS);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_DEEPSLATE_TILE_SLAB, Blocks.DEEPSLATE_TILES);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_DIORITE_SLAB, Blocks.DIORITE);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_END_STONE_BRICK_SLAB, Blocks.END_STONE_BRICKS);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_EXPOSED_CUT_COPPER_SLAB, Blocks.EXPOSED_CUT_COPPER);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_GRANITE_SLAB, Blocks.GRANITE);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_JUNGLE_SLAB, Blocks.JUNGLE_PLANKS);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_MANGROVE_SLAB, Blocks.MANGROVE_PLANKS);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_MOSSY_COBBLESTONE_SLAB, Blocks.MOSSY_COBBLESTONE);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_MOSSY_STONE_BRICK_SLAB, Blocks.MOSSY_STONE_BRICKS);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_MUD_BRICK_SLAB, Blocks.MUD_BRICKS);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_NETHER_BRICK_SLAB, Blocks.NETHER_BRICKS);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_OAK_SLAB, Blocks.OAK_PLANKS);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_OXIDIZED_CUT_COPPER_SLAB, Blocks.OXIDIZED_CUT_COPPER);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_PALE_OAK_SLAB, Blocks.PALE_OAK_PLANKS);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_POLISHED_ANDESITE_SLAB, Blocks.POLISHED_ANDESITE);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_BRICK_SLAB, Blocks.POLISHED_BLACKSTONE_BRICKS);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_SLAB, Blocks.POLISHED_BLACKSTONE);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_POLISHED_DIORITE_SLAB, Blocks.POLISHED_DIORITE);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_POLISHED_GRANITE_SLAB, Blocks.POLISHED_GRANITE);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_POLISHED_DEEPSLATE_SLAB, Blocks.POLISHED_DEEPSLATE);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_POLISHED_TUFF_SLAB, Blocks.POLISHED_TUFF);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_PRISMARINE_BRICK_SLAB, Blocks.PRISMARINE_BRICKS);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_PRISMARINE_SLAB, Blocks.PRISMARINE);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_PURPUR_SLAB, Blocks.PURPUR_BLOCK);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_ACACIA_SLAB.getBlock(), Blocks.ACACIA_PLANKS);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_ANDESITE_SLAB.getBlock(), Blocks.ANDESITE);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_BAMBOO_MOSAIC_SLAB.getBlock(), Blocks.BAMBOO_MOSAIC);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_BAMBOO_SLAB.getBlock(), Blocks.BAMBOO_PLANKS);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_BIRCH_SLAB.getBlock(), Blocks.BIRCH_PLANKS);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_BLACKSTONE_SLAB.getBlock(), Blocks.BLACKSTONE);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_BRICK_SLAB.getBlock(), Blocks.BRICKS);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_CHERRY_SLAB.getBlock(), Blocks.CHERRY_PLANKS);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_COBBLED_DEEPSLATE_SLAB.getBlock(), Blocks.COBBLED_DEEPSLATE);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_COBBLESTONE_SLAB.getBlock(), Blocks.COBBLESTONE);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_CRIMSON_SLAB.getBlock(), Blocks.CRIMSON_PLANKS);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_CUT_COPPER_SLAB.getBlock(), Blocks.CUT_COPPER);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_CUT_RED_SANDSTONE_SLAB.getBlock(), Blocks.CUT_RED_SANDSTONE);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_CUT_SANDSTONE_SLAB.getBlock(), Blocks.CUT_SANDSTONE);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_DARK_OAK_SLAB.getBlock(), Blocks.DARK_OAK_PLANKS);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_DARK_PRISMARINE_SLAB.getBlock(), Blocks.DARK_PRISMARINE);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_DEEPSLATE_BRICK_SLAB.getBlock(), Blocks.DEEPSLATE_BRICKS);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_DEEPSLATE_TILE_SLAB.getBlock(), Blocks.DEEPSLATE_TILES);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_DIORITE_SLAB.getBlock(), Blocks.DIORITE);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_END_STONE_BRICK_SLAB.getBlock(), Blocks.END_STONE_BRICKS);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_EXPOSED_CUT_COPPER_SLAB.getBlock(), Blocks.EXPOSED_CUT_COPPER);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_GRANITE_SLAB.getBlock(), Blocks.GRANITE);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_JUNGLE_SLAB.getBlock(), Blocks.JUNGLE_PLANKS);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_MANGROVE_SLAB.getBlock(), Blocks.MANGROVE_PLANKS);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_MOSSY_COBBLESTONE_SLAB.getBlock(), Blocks.MOSSY_COBBLESTONE);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_MOSSY_STONE_BRICK_SLAB.getBlock(), Blocks.MOSSY_STONE_BRICKS);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_MUD_BRICK_SLAB.getBlock(), Blocks.MUD_BRICKS);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_NETHER_BRICK_SLAB.getBlock(), Blocks.NETHER_BRICKS);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_OAK_SLAB.getBlock(), Blocks.OAK_PLANKS);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_OXIDIZED_CUT_COPPER_SLAB.getBlock(), Blocks.OXIDIZED_CUT_COPPER);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_PALE_OAK_SLAB.getBlock(), Blocks.PALE_OAK_PLANKS);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_POLISHED_ANDESITE_SLAB.getBlock(), Blocks.POLISHED_ANDESITE);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_POLISHED_BLACKSTONE_BRICK_SLAB.getBlock(), Blocks.POLISHED_BLACKSTONE_BRICKS);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_POLISHED_BLACKSTONE_SLAB.getBlock(), Blocks.POLISHED_BLACKSTONE);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_POLISHED_DIORITE_SLAB.getBlock(), Blocks.POLISHED_DIORITE);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_POLISHED_GRANITE_SLAB.getBlock(), Blocks.POLISHED_GRANITE);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_POLISHED_DEEPSLATE_SLAB.getBlock(), Blocks.POLISHED_DEEPSLATE);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_POLISHED_TUFF_SLAB.getBlock(), Blocks.POLISHED_TUFF);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_PRISMARINE_BRICK_SLAB.getBlock(), Blocks.PRISMARINE_BRICKS);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_PRISMARINE_SLAB.getBlock(), Blocks.PRISMARINE);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_PURPUR_SLAB.getBlock(), Blocks.PURPUR_BLOCK);
         // TODO: Texture for vertical quartz slab not working actually
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_QUARTZ_SLAB, Blocks.QUARTZ_BLOCK);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_RED_NETHER_BRICK_SLAB, Blocks.RED_NETHER_BRICKS);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_RED_SANDSTONE_SLAB, Blocks.RED_SANDSTONE);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_RESIN_BRICK_SLAB, Blocks.RESIN_BRICKS);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_SANDSTONE_SLAB, Blocks.SANDSTONE);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_QUARTZ_SLAB.getBlock(), Blocks.QUARTZ_BLOCK);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_RED_NETHER_BRICK_SLAB.getBlock(), Blocks.RED_NETHER_BRICKS);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_RED_SANDSTONE_SLAB.getBlock(), Blocks.RED_SANDSTONE);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_RESIN_BRICK_SLAB.getBlock(), Blocks.RESIN_BRICKS);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_SANDSTONE_SLAB.getBlock(), Blocks.SANDSTONE);
         // TODO: Texture for vertical smooth_quartz/smooth_red_sandstone/smooth_sandstone  slabs not working actually
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_SMOOTH_QUARTZ_SLAB, Blocks.SMOOTH_QUARTZ);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_SMOOTH_RED_SANDSTONE_SLAB, Blocks.SMOOTH_RED_SANDSTONE);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_SMOOTH_SANDSTONE_SLAB, Blocks.SMOOTH_SANDSTONE);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_SMOOTH_STONE_SLAB, Blocks.SMOOTH_STONE);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_SPRUCE_SLAB, Blocks.SPRUCE_PLANKS);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_STONE_BRICK_SLAB, Blocks.STONE_BRICKS);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_STONE_SLAB, Blocks.STONE);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_TUFF_BRICK_SLAB, Blocks.TUFF_BRICKS);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_TUFF_SLAB, Blocks.TUFF);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_WARPED_SLAB, Blocks.WARPED_PLANKS);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_WAXED_CUT_COPPER_SLAB, Blocks.CUT_COPPER);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_WAXED_EXPOSED_CUT_COPPER_SLAB, Blocks.EXPOSED_CUT_COPPER);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_WAXED_OXIDIZED_CUT_COPPER_SLAB, Blocks.OXIDIZED_CUT_COPPER);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_WAXED_WEATHERED_CUT_COPPER_SLAB, Blocks.WEATHERED_CUT_COPPER);
-        VERTICAL_SLAB_SOURCES.put(ModBlocks.VERTICAL_WEATHERED_CUT_COPPER_SLAB, Blocks.WEATHERED_CUT_COPPER);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_SMOOTH_QUARTZ_SLAB.getBlock(), Blocks.SMOOTH_QUARTZ);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_SMOOTH_RED_SANDSTONE_SLAB.getBlock(), Blocks.SMOOTH_RED_SANDSTONE);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_SMOOTH_SANDSTONE_SLAB.getBlock(), Blocks.SMOOTH_SANDSTONE);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_SMOOTH_STONE_SLAB.getBlock(), Blocks.SMOOTH_STONE);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_SPRUCE_SLAB.getBlock(), Blocks.SPRUCE_PLANKS);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_STONE_BRICK_SLAB.getBlock(), Blocks.STONE_BRICKS);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_STONE_SLAB.getBlock(), Blocks.STONE);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_TUFF_BRICK_SLAB.getBlock(), Blocks.TUFF_BRICKS);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_TUFF_SLAB.getBlock(), Blocks.TUFF);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_WARPED_SLAB.getBlock(), Blocks.WARPED_PLANKS);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_WAXED_CUT_COPPER_SLAB.getBlock(), Blocks.CUT_COPPER);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_WAXED_EXPOSED_CUT_COPPER_SLAB.getBlock(), Blocks.EXPOSED_CUT_COPPER);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_WAXED_OXIDIZED_CUT_COPPER_SLAB.getBlock(), Blocks.OXIDIZED_CUT_COPPER);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_WAXED_WEATHERED_CUT_COPPER_SLAB.getBlock(), Blocks.WEATHERED_CUT_COPPER);
+        VERTICAL_SLAB_SOURCES.put(VerticalSlabBlockEnum.VERTICAL_WEATHERED_CUT_COPPER_SLAB.getBlock(), Blocks.WEATHERED_CUT_COPPER);
     }
 
     /**
@@ -119,7 +119,7 @@ public class PearExpansionModelProvider extends FabricModelProvider {
      *
      * @param output the Fabric data output helper for writing generated files
      */
-    public PearExpansionModelProvider(FabricDataOutput output) {
+    public ModModelProvider(FabricDataOutput output) {
         super(output);
     }
 

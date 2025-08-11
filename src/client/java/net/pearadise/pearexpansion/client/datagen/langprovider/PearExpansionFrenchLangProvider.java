@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.registry.RegistryWrapper;
 import net.pearadise.pearexpansion.block.ModBlocks;
+import net.pearadise.pearexpansion.block.custom.VerticalSlabBlockEnum;
 import net.pearadise.pearexpansion.item.ModItems;
 
 import java.util.concurrent.CompletableFuture;
@@ -61,188 +62,188 @@ public class PearExpansionFrenchLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.ENCHANTED_GOLDEN_PEAR, "Poire dorée enchantée");
 
         // Add translations for all custom vertical slab blocks and their item forms
-        translationBuilder.add(ModBlocks.VERTICAL_ACACIA_SLAB, "Dalle verticale en acacia");
-        translationBuilder.add(ModBlocks.VERTICAL_ACACIA_SLAB.asItem(), "Dalle verticale en acacia");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_ACACIA_SLAB.getBlock(), "Dalle verticale en acacia");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_ACACIA_SLAB.getBlock().asItem(), "Dalle verticale en acacia");
 
-        translationBuilder.add(ModBlocks.VERTICAL_ANDESITE_SLAB, "Dalle verticale d'andésite");
-        translationBuilder.add(ModBlocks.VERTICAL_ANDESITE_SLAB.asItem(), "Dalle verticale d'andésite");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_ANDESITE_SLAB.getBlock(), "Dalle verticale d'andésite");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_ANDESITE_SLAB.getBlock().asItem(), "Dalle verticale d'andésite");
 
-        translationBuilder.add(ModBlocks.VERTICAL_BAMBOO_MOSAIC_SLAB, "Dalle verticale de mosaïque de bambou");
-        translationBuilder.add(ModBlocks.VERTICAL_BAMBOO_MOSAIC_SLAB.asItem(), "Dalle verticale de mosaïque de bambou");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_BAMBOO_MOSAIC_SLAB.getBlock(), "Dalle verticale de mosaïque de bambou");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_BAMBOO_MOSAIC_SLAB.getBlock().asItem(), "Dalle verticale de mosaïque de bambou");
 
-        translationBuilder.add(ModBlocks.VERTICAL_BAMBOO_SLAB, "Dalle verticale en bambou");
-        translationBuilder.add(ModBlocks.VERTICAL_BAMBOO_SLAB.asItem(), "Dalle verticale en bambou");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_BAMBOO_SLAB.getBlock(), "Dalle verticale en bambou");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_BAMBOO_SLAB.getBlock().asItem(), "Dalle verticale en bambou");
 
-        translationBuilder.add(ModBlocks.VERTICAL_BIRCH_SLAB, "Dalle verticale en bouleau");
-        translationBuilder.add(ModBlocks.VERTICAL_BIRCH_SLAB.asItem(), "Dalle verticale en bouleau");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_BIRCH_SLAB.getBlock(), "Dalle verticale en bouleau");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_BIRCH_SLAB.getBlock().asItem(), "Dalle verticale en bouleau");
 
-        translationBuilder.add(ModBlocks.VERTICAL_BLACKSTONE_SLAB, "Dalle verticale de roche noire");
-        translationBuilder.add(ModBlocks.VERTICAL_BLACKSTONE_SLAB.asItem(), "Dalle verticale de roche noire");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_BLACKSTONE_SLAB.getBlock(), "Dalle verticale de roche noire");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_BLACKSTONE_SLAB.getBlock().asItem(), "Dalle verticale de roche noire");
 
-        translationBuilder.add(ModBlocks.VERTICAL_BRICK_SLAB, "Dalle verticale de briques");
-        translationBuilder.add(ModBlocks.VERTICAL_BRICK_SLAB.asItem(), "Dalle verticale de briques");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_BRICK_SLAB.getBlock(), "Dalle verticale de briques");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_BRICK_SLAB.getBlock().asItem(), "Dalle verticale de briques");
 
-        translationBuilder.add(ModBlocks.VERTICAL_CHERRY_SLAB, "Dalle verticale en cerisier");
-        translationBuilder.add(ModBlocks.VERTICAL_CHERRY_SLAB.asItem(), "Dalle verticale en cerisier");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_CHERRY_SLAB.getBlock(), "Dalle verticale en cerisier");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_CHERRY_SLAB.getBlock().asItem(), "Dalle verticale en cerisier");
 
-        translationBuilder.add(ModBlocks.VERTICAL_COBBLED_DEEPSLATE_SLAB, "Dalle verticale de pierres des abîmes");
-        translationBuilder.add(ModBlocks.VERTICAL_COBBLED_DEEPSLATE_SLAB.asItem(), "Dalle verticale de pierres des abîmes");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_COBBLED_DEEPSLATE_SLAB.getBlock(), "Dalle verticale de pierres des abîmes");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_COBBLED_DEEPSLATE_SLAB.getBlock().asItem(), "Dalle verticale de pierres des abîmes");
 
-        translationBuilder.add(ModBlocks.VERTICAL_COBBLESTONE_SLAB, "Dalle verticale de pierres");
-        translationBuilder.add(ModBlocks.VERTICAL_COBBLESTONE_SLAB.asItem(), "Dalle verticale de pierres");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_COBBLESTONE_SLAB.getBlock(), "Dalle verticale de pierres");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_COBBLESTONE_SLAB.getBlock().asItem(), "Dalle verticale de pierres");
 
-        translationBuilder.add(ModBlocks.VERTICAL_CRIMSON_SLAB, "Dalle verticale carmin");
-        translationBuilder.add(ModBlocks.VERTICAL_CRIMSON_SLAB.asItem(), "Dalle verticale carmin");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_CRIMSON_SLAB.getBlock(), "Dalle verticale carmin");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_CRIMSON_SLAB.getBlock().asItem(), "Dalle verticale carmin");
 
-        translationBuilder.add(ModBlocks.VERTICAL_CUT_COPPER_SLAB, "Dalle verticale de cuivre taillé");
-        translationBuilder.add(ModBlocks.VERTICAL_CUT_COPPER_SLAB.asItem(), "Dalle verticale de cuivre taillé");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_CUT_COPPER_SLAB.getBlock(), "Dalle verticale de cuivre taillé");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_CUT_COPPER_SLAB.getBlock().asItem(), "Dalle verticale de cuivre taillé");
 
-        translationBuilder.add(ModBlocks.VERTICAL_CUT_RED_SANDSTONE_SLAB, "Dalle verticale de grès rouge taillé");
-        translationBuilder.add(ModBlocks.VERTICAL_CUT_RED_SANDSTONE_SLAB.asItem(), "Dalle verticale de grès rouge taillé");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_CUT_RED_SANDSTONE_SLAB.getBlock(), "Dalle verticale de grès rouge taillé");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_CUT_RED_SANDSTONE_SLAB.getBlock().asItem(), "Dalle verticale de grès rouge taillé");
 
-        translationBuilder.add(ModBlocks.VERTICAL_CUT_SANDSTONE_SLAB, "Dalle verticale de grès taillé");
-        translationBuilder.add(ModBlocks.VERTICAL_CUT_SANDSTONE_SLAB.asItem(), "Dalle verticale de grès taillé");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_CUT_SANDSTONE_SLAB.getBlock(), "Dalle verticale de grès taillé");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_CUT_SANDSTONE_SLAB.getBlock().asItem(), "Dalle verticale de grès taillé");
 
-        translationBuilder.add(ModBlocks.VERTICAL_DARK_OAK_SLAB, "Dalle verticale en chêne noir");
-        translationBuilder.add(ModBlocks.VERTICAL_DARK_OAK_SLAB.asItem(), "Dalle verticale en chêne noir");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_DARK_OAK_SLAB.getBlock(), "Dalle verticale en chêne noir");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_DARK_OAK_SLAB.getBlock().asItem(), "Dalle verticale en chêne noir");
 
-        translationBuilder.add(ModBlocks.VERTICAL_DARK_PRISMARINE_SLAB, "Dalle verticale de prismarine sombre");
-        translationBuilder.add(ModBlocks.VERTICAL_DARK_PRISMARINE_SLAB.asItem(), "Dalle verticale de prismarine sombre");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_DARK_PRISMARINE_SLAB.getBlock(), "Dalle verticale de prismarine sombre");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_DARK_PRISMARINE_SLAB.getBlock().asItem(), "Dalle verticale de prismarine sombre");
 
-        translationBuilder.add(ModBlocks.VERTICAL_DEEPSLATE_BRICK_SLAB, "Dalle verticale d'ardoise des abîmes taillée");
-        translationBuilder.add(ModBlocks.VERTICAL_DEEPSLATE_BRICK_SLAB.asItem(), "Dalle verticale d'ardoise des abîmes taillée");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_DEEPSLATE_BRICK_SLAB.getBlock(), "Dalle verticale d'ardoise des abîmes taillée");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_DEEPSLATE_BRICK_SLAB.getBlock().asItem(), "Dalle verticale d'ardoise des abîmes taillée");
 
-        translationBuilder.add(ModBlocks.VERTICAL_DEEPSLATE_TILE_SLAB, "Dalle verticale d'ardoise des abîmes carrelée");
-        translationBuilder.add(ModBlocks.VERTICAL_DEEPSLATE_TILE_SLAB.asItem(), "Dalle verticale d'ardoise des abîmes carrelée");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_DEEPSLATE_TILE_SLAB.getBlock(), "Dalle verticale d'ardoise des abîmes carrelée");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_DEEPSLATE_TILE_SLAB.getBlock().asItem(), "Dalle verticale d'ardoise des abîmes carrelée");
 
-        translationBuilder.add(ModBlocks.VERTICAL_DIORITE_SLAB, "Dalle verticale de diorite");
-        translationBuilder.add(ModBlocks.VERTICAL_DIORITE_SLAB.asItem(), "Dalle verticale de diorite");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_DIORITE_SLAB.getBlock(), "Dalle verticale de diorite");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_DIORITE_SLAB.getBlock().asItem(), "Dalle verticale de diorite");
 
-        translationBuilder.add(ModBlocks.VERTICAL_END_STONE_BRICK_SLAB, "Dalle verticale de pierre taillée de l'End");
-        translationBuilder.add(ModBlocks.VERTICAL_END_STONE_BRICK_SLAB.asItem(), "Dalle verticale de pierre taillée de l'End");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_END_STONE_BRICK_SLAB.getBlock(), "Dalle verticale de pierre taillée de l'End");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_END_STONE_BRICK_SLAB.getBlock().asItem(), "Dalle verticale de pierre taillée de l'End");
 
-        translationBuilder.add(ModBlocks.VERTICAL_EXPOSED_CUT_COPPER_SLAB, "Dalle verticale de cuivre taillé exposé");
-        translationBuilder.add(ModBlocks.VERTICAL_EXPOSED_CUT_COPPER_SLAB.asItem(), "Dalle verticale de cuivre taillé exposé");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_EXPOSED_CUT_COPPER_SLAB.getBlock(), "Dalle verticale de cuivre taillé exposé");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_EXPOSED_CUT_COPPER_SLAB.getBlock().asItem(), "Dalle verticale de cuivre taillé exposé");
 
-        translationBuilder.add(ModBlocks.VERTICAL_GRANITE_SLAB, "Dalle verticale de granite");
-        translationBuilder.add(ModBlocks.VERTICAL_GRANITE_SLAB.asItem(), "Dalle verticale de granite");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_GRANITE_SLAB.getBlock(), "Dalle verticale de granite");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_GRANITE_SLAB.getBlock().asItem(), "Dalle verticale de granite");
 
-        translationBuilder.add(ModBlocks.VERTICAL_JUNGLE_SLAB, "Dalle verticale en acajou");
-        translationBuilder.add(ModBlocks.VERTICAL_JUNGLE_SLAB.asItem(), "Dalle verticale en acajou");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_JUNGLE_SLAB.getBlock(), "Dalle verticale en acajou");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_JUNGLE_SLAB.getBlock().asItem(), "Dalle verticale en acajou");
 
-        translationBuilder.add(ModBlocks.VERTICAL_MANGROVE_SLAB, "Dalle verticale en palétuvier");
-        translationBuilder.add(ModBlocks.VERTICAL_MANGROVE_SLAB.asItem(), "Dalle verticale en palétuvier");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_MANGROVE_SLAB.getBlock(), "Dalle verticale en palétuvier");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_MANGROVE_SLAB.getBlock().asItem(), "Dalle verticale en palétuvier");
 
-        translationBuilder.add(ModBlocks.VERTICAL_MOSSY_COBBLESTONE_SLAB, "Dalle verticale de pierres moussues");
-        translationBuilder.add(ModBlocks.VERTICAL_MOSSY_COBBLESTONE_SLAB.asItem(), "Dalle verticale de pierres moussues");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_MOSSY_COBBLESTONE_SLAB.getBlock(), "Dalle verticale de pierres moussues");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_MOSSY_COBBLESTONE_SLAB.getBlock().asItem(), "Dalle verticale de pierres moussues");
 
-        translationBuilder.add(ModBlocks.VERTICAL_MOSSY_STONE_BRICK_SLAB, "Dalle verticale de pierre taillée moussue");
-        translationBuilder.add(ModBlocks.VERTICAL_MOSSY_STONE_BRICK_SLAB.asItem(), "Dalle verticale de pierre taillée moussue");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_MOSSY_STONE_BRICK_SLAB.getBlock(), "Dalle verticale de pierre taillée moussue");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_MOSSY_STONE_BRICK_SLAB.getBlock().asItem(), "Dalle verticale de pierre taillée moussue");
 
-        translationBuilder.add(ModBlocks.VERTICAL_MUD_BRICK_SLAB, "Dalle verticale de briques de terre crue");
-        translationBuilder.add(ModBlocks.VERTICAL_MUD_BRICK_SLAB.asItem(), "Dalle verticale de briques de terre crue");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_MUD_BRICK_SLAB.getBlock(), "Dalle verticale de briques de terre crue");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_MUD_BRICK_SLAB.getBlock().asItem(), "Dalle verticale de briques de terre crue");
 
-        translationBuilder.add(ModBlocks.VERTICAL_NETHER_BRICK_SLAB, "Dalle verticale de briques du Nether");
-        translationBuilder.add(ModBlocks.VERTICAL_NETHER_BRICK_SLAB.asItem(), "Dalle verticale de briques du Nether");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_NETHER_BRICK_SLAB.getBlock(), "Dalle verticale de briques du Nether");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_NETHER_BRICK_SLAB.getBlock().asItem(), "Dalle verticale de briques du Nether");
 
-        translationBuilder.add(ModBlocks.VERTICAL_OAK_SLAB, "Dalle verticale en chêne");
-        translationBuilder.add(ModBlocks.VERTICAL_OAK_SLAB.asItem(), "Dalle verticale en chêne");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_OAK_SLAB.getBlock(), "Dalle verticale en chêne");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_OAK_SLAB.getBlock().asItem(), "Dalle verticale en chêne");
 
-        translationBuilder.add(ModBlocks.VERTICAL_OXIDIZED_CUT_COPPER_SLAB, "Dalle verticale de cuivre taillé oxydé");
-        translationBuilder.add(ModBlocks.VERTICAL_OXIDIZED_CUT_COPPER_SLAB.asItem(), "Dalle verticale de cuivre taillé oxydé");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_OXIDIZED_CUT_COPPER_SLAB.getBlock(), "Dalle verticale de cuivre taillé oxydé");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_OXIDIZED_CUT_COPPER_SLAB.getBlock().asItem(), "Dalle verticale de cuivre taillé oxydé");
 
-        translationBuilder.add(ModBlocks.VERTICAL_PALE_OAK_SLAB, "Dalle verticale en chêne pâle");
-        translationBuilder.add(ModBlocks.VERTICAL_PALE_OAK_SLAB.asItem(), "Dalle verticale en chêne pâle");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_PALE_OAK_SLAB.getBlock(), "Dalle verticale en chêne pâle");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_PALE_OAK_SLAB.getBlock().asItem(), "Dalle verticale en chêne pâle");
 
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_ANDESITE_SLAB, "Dalle verticale d'andésite polie");
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_ANDESITE_SLAB.asItem(), "Dalle verticale d'andésite polie");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_POLISHED_ANDESITE_SLAB.getBlock(), "Dalle verticale d'andésite polie");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_POLISHED_ANDESITE_SLAB.getBlock().asItem(), "Dalle verticale d'andésite polie");
 
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_BRICK_SLAB, "Dalle verticale de pierre noire taillée");
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_BRICK_SLAB.asItem(), "Dalle verticale de pierre noire taillée");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_POLISHED_BLACKSTONE_BRICK_SLAB.getBlock(), "Dalle verticale de pierre noire taillée");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_POLISHED_BLACKSTONE_BRICK_SLAB.getBlock().asItem(), "Dalle verticale de pierre noire taillée");
 
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_SLAB, "Dalle verticale de pierre noire");
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_SLAB.asItem(), "Dalle verticale de pierre noire");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_POLISHED_BLACKSTONE_SLAB.getBlock(), "Dalle verticale de pierre noire");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_POLISHED_BLACKSTONE_SLAB.getBlock().asItem(), "Dalle verticale de pierre noire");
 
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_DEEPSLATE_SLAB, "Dalle verticale d'ardoise des abîmes polie");
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_DEEPSLATE_SLAB.asItem(), "Dalle verticale d'ardoise des abîmes polie");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_POLISHED_DEEPSLATE_SLAB.getBlock(), "Dalle verticale d'ardoise des abîmes polie");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_POLISHED_DEEPSLATE_SLAB.getBlock().asItem(), "Dalle verticale d'ardoise des abîmes polie");
 
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_DIORITE_SLAB, "Dalle verticale de diorite polie");
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_DIORITE_SLAB.asItem(), "Dalle verticale de diorite polie");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_POLISHED_DIORITE_SLAB.getBlock(), "Dalle verticale de diorite polie");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_POLISHED_DIORITE_SLAB.getBlock().asItem(), "Dalle verticale de diorite polie");
 
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_GRANITE_SLAB, "Dalle verticale de granite poli");
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_GRANITE_SLAB.asItem(), "Dalle verticale de granite poli");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_POLISHED_GRANITE_SLAB.getBlock(), "Dalle verticale de granite poli");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_POLISHED_GRANITE_SLAB.getBlock().asItem(), "Dalle verticale de granite poli");
 
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_TUFF_SLAB, "Dalle verticale de tuf poli");
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_TUFF_SLAB.asItem(), "Dalle verticale de tuf poli");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_POLISHED_TUFF_SLAB.getBlock(), "Dalle verticale de tuf poli");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_POLISHED_TUFF_SLAB.getBlock().asItem(), "Dalle verticale de tuf poli");
 
-        translationBuilder.add(ModBlocks.VERTICAL_PRISMARINE_BRICK_SLAB, "Dalle verticale de briques de prismarine");
-        translationBuilder.add(ModBlocks.VERTICAL_PRISMARINE_BRICK_SLAB.asItem(), "Dalle verticale de briques de prismarine");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_PRISMARINE_BRICK_SLAB.getBlock(), "Dalle verticale de briques de prismarine");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_PRISMARINE_BRICK_SLAB.getBlock().asItem(), "Dalle verticale de briques de prismarine");
 
-        translationBuilder.add(ModBlocks.VERTICAL_PRISMARINE_SLAB, "Dalle verticale de prismarine");
-        translationBuilder.add(ModBlocks.VERTICAL_PRISMARINE_SLAB.asItem(), "Dalle verticale de prismarine");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_PRISMARINE_SLAB.getBlock(), "Dalle verticale de prismarine");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_PRISMARINE_SLAB.getBlock().asItem(), "Dalle verticale de prismarine");
 
-        translationBuilder.add(ModBlocks.VERTICAL_PURPUR_SLAB, "Dalle verticale de purpur");
-        translationBuilder.add(ModBlocks.VERTICAL_PURPUR_SLAB.asItem(), "Dalle verticale de purpur");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_PURPUR_SLAB.getBlock(), "Dalle verticale de purpur");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_PURPUR_SLAB.getBlock().asItem(), "Dalle verticale de purpur");
 
-        translationBuilder.add(ModBlocks.VERTICAL_QUARTZ_SLAB, "Dalle verticale de quartz");
-        translationBuilder.add(ModBlocks.VERTICAL_QUARTZ_SLAB.asItem(), "Dalle verticale de quartz");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_QUARTZ_SLAB.getBlock(), "Dalle verticale de quartz");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_QUARTZ_SLAB.getBlock().asItem(), "Dalle verticale de quartz");
 
-        translationBuilder.add(ModBlocks.VERTICAL_RED_NETHER_BRICK_SLAB, "Dalle verticale de briques rouges du Nether");
-        translationBuilder.add(ModBlocks.VERTICAL_RED_NETHER_BRICK_SLAB.asItem(), "Dalle verticale de briques rouges du Nether");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_RED_NETHER_BRICK_SLAB.getBlock(), "Dalle verticale de briques rouges du Nether");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_RED_NETHER_BRICK_SLAB.getBlock().asItem(), "Dalle verticale de briques rouges du Nether");
 
-        translationBuilder.add(ModBlocks.VERTICAL_RED_SANDSTONE_SLAB, "Dalle verticale de grès rouge");
-        translationBuilder.add(ModBlocks.VERTICAL_RED_SANDSTONE_SLAB.asItem(), "Dalle verticale de grès rouge");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_RED_SANDSTONE_SLAB.getBlock(), "Dalle verticale de grès rouge");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_RED_SANDSTONE_SLAB.getBlock().asItem(), "Dalle verticale de grès rouge");
 
-        translationBuilder.add(ModBlocks.VERTICAL_RESIN_BRICK_SLAB, "Dalle verticale de briques de résine");
-        translationBuilder.add(ModBlocks.VERTICAL_RESIN_BRICK_SLAB.asItem(), "Dalle verticale de briques de résine");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_RESIN_BRICK_SLAB.getBlock(), "Dalle verticale de briques de résine");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_RESIN_BRICK_SLAB.getBlock().asItem(), "Dalle verticale de briques de résine");
 
-        translationBuilder.add(ModBlocks.VERTICAL_SANDSTONE_SLAB, "Dalle verticale de grès");
-        translationBuilder.add(ModBlocks.VERTICAL_SANDSTONE_SLAB.asItem(), "Dalle verticale de grès");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_SANDSTONE_SLAB.getBlock(), "Dalle verticale de grès");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_SANDSTONE_SLAB.getBlock().asItem(), "Dalle verticale de grès");
 
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_QUARTZ_SLAB, "Dalle verticale de quartz lisse");
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_QUARTZ_SLAB.asItem(), "Dalle verticale de quartz lisse");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_SMOOTH_QUARTZ_SLAB.getBlock(), "Dalle verticale de quartz lisse");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_SMOOTH_QUARTZ_SLAB.getBlock().asItem(), "Dalle verticale de quartz lisse");
 
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_RED_SANDSTONE_SLAB, "Dalle verticale de grès rouge lisse");
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_RED_SANDSTONE_SLAB.asItem(), "Dalle verticale de grès rouge lisse");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_SMOOTH_RED_SANDSTONE_SLAB.getBlock(), "Dalle verticale de grès rouge lisse");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_SMOOTH_RED_SANDSTONE_SLAB.getBlock().asItem(), "Dalle verticale de grès rouge lisse");
 
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_SANDSTONE_SLAB, "Dalle verticale de grès lisse");
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_SANDSTONE_SLAB.asItem(), "Dalle verticale de grès lisse");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_SMOOTH_SANDSTONE_SLAB.getBlock(), "Dalle verticale de grès lisse");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_SMOOTH_SANDSTONE_SLAB.getBlock().asItem(), "Dalle verticale de grès lisse");
 
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_STONE_SLAB, "Dalle verticale de roche lisse");
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_STONE_SLAB.asItem(), "Dalle verticale de roche lisse");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_SMOOTH_STONE_SLAB.getBlock(), "Dalle verticale de roche lisse");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_SMOOTH_STONE_SLAB.getBlock().asItem(), "Dalle verticale de roche lisse");
 
-        translationBuilder.add(ModBlocks.VERTICAL_SPRUCE_SLAB, "Dalle verticale en sapin");
-        translationBuilder.add(ModBlocks.VERTICAL_SPRUCE_SLAB.asItem(), "Dalle verticale en sapin");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_SPRUCE_SLAB.getBlock(), "Dalle verticale en sapin");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_SPRUCE_SLAB.getBlock().asItem(), "Dalle verticale en sapin");
 
-        translationBuilder.add(ModBlocks.VERTICAL_STONE_BRICK_SLAB, "Dalle verticale de pierre taillée");
-        translationBuilder.add(ModBlocks.VERTICAL_STONE_BRICK_SLAB.asItem(), "Dalle verticale de pierre taillée");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_STONE_BRICK_SLAB.getBlock(), "Dalle verticale de pierre taillée");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_STONE_BRICK_SLAB.getBlock().asItem(), "Dalle verticale de pierre taillée");
 
-        translationBuilder.add(ModBlocks.VERTICAL_STONE_SLAB, "Dalle verticale de roche");
-        translationBuilder.add(ModBlocks.VERTICAL_STONE_SLAB.asItem(), "Dalle verticale de roche");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_STONE_SLAB.getBlock(), "Dalle verticale de roche");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_STONE_SLAB.getBlock().asItem(), "Dalle verticale de roche");
 
-        translationBuilder.add(ModBlocks.VERTICAL_TUFF_BRICK_SLAB, "Dalle verticale de tuf taillé");
-        translationBuilder.add(ModBlocks.VERTICAL_TUFF_BRICK_SLAB.asItem(), "Dalle verticale de tuf taillé");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_TUFF_BRICK_SLAB.getBlock(), "Dalle verticale de tuf taillé");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_TUFF_BRICK_SLAB.getBlock().asItem(), "Dalle verticale de tuf taillé");
 
-        translationBuilder.add(ModBlocks.VERTICAL_TUFF_SLAB, "Dalle verticale de tuf");
-        translationBuilder.add(ModBlocks.VERTICAL_TUFF_SLAB.asItem(), "Dalle verticale de tuf");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_TUFF_SLAB.getBlock(), "Dalle verticale de tuf");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_TUFF_SLAB.getBlock().asItem(), "Dalle verticale de tuf");
 
-        translationBuilder.add(ModBlocks.VERTICAL_WARPED_SLAB, "Dalle verticale biscornue");
-        translationBuilder.add(ModBlocks.VERTICAL_WARPED_SLAB.asItem(), "Dalle verticale biscornue");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_WARPED_SLAB.getBlock(), "Dalle verticale biscornue");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_WARPED_SLAB.getBlock().asItem(), "Dalle verticale biscornue");
 
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_CUT_COPPER_SLAB, "Dalle verticale de cuivre taillé ciré");
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_CUT_COPPER_SLAB.asItem(), "Dalle verticale de cuivre taillé ciré");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_WAXED_CUT_COPPER_SLAB.getBlock(), "Dalle verticale de cuivre taillé ciré");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_WAXED_CUT_COPPER_SLAB.getBlock().asItem(), "Dalle verticale de cuivre taillé ciré");
 
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_EXPOSED_CUT_COPPER_SLAB, "Dalle verticale de cuivre taillé exposé ciré");
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_EXPOSED_CUT_COPPER_SLAB.asItem(), "Dalle verticale de cuivre taillé exposé ciré");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_WAXED_EXPOSED_CUT_COPPER_SLAB.getBlock(), "Dalle verticale de cuivre taillé exposé ciré");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_WAXED_EXPOSED_CUT_COPPER_SLAB.getBlock().asItem(), "Dalle verticale de cuivre taillé exposé ciré");
 
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_OXIDIZED_CUT_COPPER_SLAB, "Dalle verticale de cuivre taillé oxydé ciré");
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_OXIDIZED_CUT_COPPER_SLAB.asItem(), "Dalle verticale de cuivre taillé oxydé ciré");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_WAXED_OXIDIZED_CUT_COPPER_SLAB.getBlock(), "Dalle verticale de cuivre taillé oxydé ciré");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_WAXED_OXIDIZED_CUT_COPPER_SLAB.getBlock().asItem(), "Dalle verticale de cuivre taillé oxydé ciré");
 
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_WEATHERED_CUT_COPPER_SLAB, "Dalle verticale de cuivre taillé érodé ciré");
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_WEATHERED_CUT_COPPER_SLAB.asItem(), "Dalle verticale de cuivre taillé érodé ciré");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_WAXED_WEATHERED_CUT_COPPER_SLAB.getBlock(), "Dalle verticale de cuivre taillé érodé ciré");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_WAXED_WEATHERED_CUT_COPPER_SLAB.getBlock().asItem(), "Dalle verticale de cuivre taillé érodé ciré");
 
-        translationBuilder.add(ModBlocks.VERTICAL_WEATHERED_CUT_COPPER_SLAB, "Dalle verticale de cuivre taillé érodé");
-        translationBuilder.add(ModBlocks.VERTICAL_WEATHERED_CUT_COPPER_SLAB.asItem(), "Dalle verticale de cuivre taillé érodé");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_WEATHERED_CUT_COPPER_SLAB.getBlock(), "Dalle verticale de cuivre taillé érodé");
+        translationBuilder.add(VerticalSlabBlockEnum.VERTICAL_WEATHERED_CUT_COPPER_SLAB.getBlock().asItem(), "Dalle verticale de cuivre taillé érodé");
 
     }
 

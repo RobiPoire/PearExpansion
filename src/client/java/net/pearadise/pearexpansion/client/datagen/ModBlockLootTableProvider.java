@@ -28,7 +28,7 @@ import java.util.concurrent.CompletableFuture;
  * @see FabricBlockLootTableProvider
  * @see ModItems
  */
-public class PearExpansionBlockLootTableProvider extends FabricBlockLootTableProvider {
+public class ModBlockLootTableProvider extends FabricBlockLootTableProvider {
 
     /**
      * Constructs a new {@code PearExpansionBlockLootTableProvider}.
@@ -40,7 +40,7 @@ public class PearExpansionBlockLootTableProvider extends FabricBlockLootTablePro
      * @param dataOutput     the output destination for generated data (must not be null)
      * @param registryLookup a future providing access to the registry lookup (must not be null)
      */
-    protected PearExpansionBlockLootTableProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+    protected ModBlockLootTableProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
         super(dataOutput, registryLookup);
     }
 

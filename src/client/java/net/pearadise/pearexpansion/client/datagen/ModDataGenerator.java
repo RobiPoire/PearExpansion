@@ -16,7 +16,7 @@ import net.pearadise.pearexpansion.client.datagen.langprovider.PearExpansionLang
  * @see net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint
  * @see PearExpansionLangProvider
  */
-public class PearExpansionDataGenerator implements DataGeneratorEntrypoint {
+public class ModDataGenerator implements DataGeneratorEntrypoint {
 
     /**
      * Initializes the data generator and registers all required data providers.
@@ -35,10 +35,12 @@ public class PearExpansionDataGenerator implements DataGeneratorEntrypoint {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
         // Register the block loot table provider for custom block drops
-        pack.addProvider(PearExpansionBlockLootTableProvider::new);
+        pack.addProvider(ModBlockLootTableProvider::new);
 
         // Register the model provider for block and item models
-        pack.addProvider(PearExpansionModelProvider::new);
+        pack.addProvider(ModModelProvider::new);
+
+        pack.addProvider(ModTagProvider::new);
 
         // Register all language providers for supported languages
         PearExpansionLangProvider.addLangProviders(pack);

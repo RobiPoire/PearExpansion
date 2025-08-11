@@ -1,22 +1,15 @@
 package net.pearadise.pearexpansion.registry;
 
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
-import net.pearadise.pearexpansion.block.ModBlocks;
+import net.pearadise.pearexpansion.block.custom.VerticalSlabBlockEnum;
 
 public class OxidizableBlocks {
     public static void registerOxidizableBlocks() {
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(
-                ModBlocks.VERTICAL_CUT_COPPER_SLAB,
-                ModBlocks.VERTICAL_EXPOSED_CUT_COPPER_SLAB
-        );
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(
-                ModBlocks.VERTICAL_EXPOSED_CUT_COPPER_SLAB,
-                ModBlocks.VERTICAL_WEATHERED_CUT_COPPER_SLAB
-        );
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(
-                ModBlocks.VERTICAL_WEATHERED_CUT_COPPER_SLAB,
-                ModBlocks.VERTICAL_OXIDIZED_CUT_COPPER_SLAB
-        );
+        for (VerticalSlabBlockEnum verticalSlab : VerticalSlabBlockEnum.getAllVerticalSlabsWithOxidation()) {
+            OxidizableBlocksRegistry.registerOxidizableBlockPair(
+                    verticalSlab.getBlock(),
+                    verticalSlab.getOxidizesTo()
+            );
+        }
     }
-
 }
