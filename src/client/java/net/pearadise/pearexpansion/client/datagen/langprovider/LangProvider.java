@@ -26,15 +26,15 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
  *
  * @author RobiPoire
  * @see FabricDataGenerator.Pack
- * @see PearExpansionEnglishLangProvider
- * @see PearExpansionEsperantoLangProvider
- * @see PearExpansionFrenchLangProvider
- * @see PearExpansionGermanLangProvider
- * @see PearExpansionItalianLangProvider
- * @see PearExpansionSpanishLangProvider
- * @see PearExpansionTokiPonaLangProvider
+ * @see EnglishLangProvider
+ * @see EsperantoLangProvider
+ * @see FrenchLangProvider
+ * @see GermanLangProvider
+ * @see ItalianLangProvider
+ * @see SpanishLangProvider
+ * @see TokiPonaLangProvider
  */
-public class PearExpansionLangProvider {
+public class LangProvider {
 
     /**
      * Adds all language providers to the given data generator pack.
@@ -48,24 +48,24 @@ public class PearExpansionLangProvider {
      */
     public static void addLangProviders(FabricDataGenerator.Pack pack) {
         // Register English language provider (en_us)
-        pack.addProvider(PearExpansionEnglishLangProvider::new);
+        pack.addProvider(EnglishLangProvider::new);
 
         // Register Esperanto language provider (eo_uy)
-        pack.addProvider(PearExpansionEsperantoLangProvider::new);
+        pack.addProvider(EsperantoLangProvider::new);
 
         // Register French language provider (fr_fr)
-        pack.addProvider(PearExpansionFrenchLangProvider::new);
+        pack.addProvider(FrenchLangProvider::new);
 
         // Register German language provider (de_de)
-        pack.addProvider(PearExpansionGermanLangProvider::new);
+        pack.addProvider(GermanLangProvider::new);
 
         // Register Italian language provider (it_it)
-        pack.addProvider(PearExpansionItalianLangProvider::new);
+        pack.addProvider(ItalianLangProvider::new);
 
         // Register Spanish language provider (es_es)
-        pack.addProvider(PearExpansionSpanishLangProvider::new);
+        pack.addProvider(SpanishLangProvider::new);
 
         // Register Toki Pona language provider (tok)
-        pack.addProvider(PearExpansionTokiPonaLangProvider::new);
+        pack.addProvider(TokiPonaLangProvider::new);
     }
 }

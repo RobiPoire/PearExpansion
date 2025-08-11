@@ -23,7 +23,7 @@ import java.util.concurrent.CompletableFuture;
  * @see ModBlocks
  * @see ModItems
  */
-public class PearExpansionSpanishLangProvider extends FabricLanguageProvider {
+public class SpanishLangProvider extends FabricLanguageProvider {
 
     /**
      * Constructs a new Spanish language provider for Pear Expansion.
@@ -35,7 +35,7 @@ public class PearExpansionSpanishLangProvider extends FabricLanguageProvider {
      * @param dataOutput     the output destination for generated language data
      * @param registryLookup a future providing access to the registry lookup
      */
-    protected PearExpansionSpanishLangProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+    protected SpanishLangProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
         super(dataOutput, "es_es", registryLookup);
     }
 

@@ -3,7 +3,6 @@ package net.pearadise.pearexpansion.client.datagen.langprovider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.registry.RegistryWrapper;
-import net.pearadise.pearexpansion.block.ModBlocks;
 import net.pearadise.pearexpansion.block.custom.VerticalSlabBlockEnum;
 import net.pearadise.pearexpansion.item.ModItems;
 
@@ -20,9 +19,9 @@ import java.util.concurrent.CompletableFuture;
  *
  * @author RobiPoire
  * @see FabricLanguageProvider
- * @see PearExpansionLangProvider
+ * @see LangProvider
  */
-public class PearExpansionEsperantoLangProvider extends FabricLanguageProvider {
+public class EsperantoLangProvider extends FabricLanguageProvider {
 
     /**
      * Constructs a new Esperanto language provider for Pear Expansion.
@@ -34,7 +33,7 @@ public class PearExpansionEsperantoLangProvider extends FabricLanguageProvider {
      * @param dataOutput     the output destination for generated language data (must not be null)
      * @param registryLookup a future providing access to the registry lookup (must not be null)
      */
-    protected PearExpansionEsperantoLangProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+    protected EsperantoLangProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
         super(dataOutput, "eo_uy", registryLookup);
     }
 

@@ -23,7 +23,7 @@ import java.util.concurrent.CompletableFuture;
  * @see ModBlocks
  * @see ModItems
  */
-public class PearExpansionTokiPonaLangProvider extends FabricLanguageProvider {
+public class TokiPonaLangProvider extends FabricLanguageProvider {
 
     /**
      * Constructs a new Toki Pona language provider for Pear Expansion.
@@ -35,7 +35,7 @@ public class PearExpansionTokiPonaLangProvider extends FabricLanguageProvider {
      * @param dataOutput     the output destination for generated language data
      * @param registryLookup a future providing access to the registry lookup
      */
-    protected PearExpansionTokiPonaLangProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+    protected TokiPonaLangProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
         super(dataOutput, "tok", registryLookup);
     }
 

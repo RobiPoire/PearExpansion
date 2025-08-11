@@ -23,7 +23,7 @@ import java.util.concurrent.CompletableFuture;
  * @see ModBlocks
  * @see ModItems
  */
-public class PearExpansionFrenchLangProvider extends FabricLanguageProvider {
+public class FrenchLangProvider extends FabricLanguageProvider {
 
     /**
      * Constructs a new French language provider for Pear Expansion.
@@ -35,7 +35,7 @@ public class PearExpansionFrenchLangProvider extends FabricLanguageProvider {
      * @param dataOutput     the output destination for generated language data (must not be null)
      * @param registryLookup a future providing access to the registry lookup (must not be null)
      */
-    protected PearExpansionFrenchLangProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+    protected FrenchLangProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
         super(dataOutput, "fr_fr", registryLookup);
     }
 
