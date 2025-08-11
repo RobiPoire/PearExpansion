@@ -5,12 +5,42 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "condition": "minecraft:survives_explosion"
+          "block": "pear_expansion:vertical_polished_diorite_slab",
+          "condition": "minecraft:block_state_property",
+          "properties": {
+            "single": "true"
+          }
         }
       ],
       "entries": [
         {
           "type": "minecraft:item",
+          "name": "pear_expansion:vertical_polished_diorite_slab"
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "block": "pear_expansion:vertical_polished_diorite_slab",
+          "condition": "minecraft:block_state_property",
+          "properties": {
+            "single": "false"
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": 2.0,
+              "function": "minecraft:set_count"
+            }
+          ],
           "name": "pear_expansion:vertical_polished_diorite_slab"
         }
       ],
