@@ -21,13 +21,13 @@ public class ModTagProvider extends FabricTagProvider.BlockTagProvider {
     protected void configure(RegistryWrapper.WrapperLookup registries) {
         TagKey<Block> mineableWithAxe = TagKey.of(RegistryKeys.BLOCK, Identifier.of("minecraft", "mineable/axe"));
         ProvidedTagBuilder<Block, Block> builderMineableWithAxe = valueLookupBuilder(mineableWithAxe);
-        for (VerticalSlabBlockEnum verticalSlab : VerticalSlabBlockEnum.getAllVerticalSlabsAxeable()) {
+        for (VerticalSlabBlockEnum verticalSlab : VerticalSlabBlockEnum.allAxeable()) {
             builderMineableWithAxe.add(verticalSlab.getBlock());
         }
 
         TagKey<Block> mineableWithPickaxe = TagKey.of(RegistryKeys.BLOCK, Identifier.of("minecraft", "mineable/pickaxe"));
         ProvidedTagBuilder<Block, Block> builderMineableWithPickaxe = valueLookupBuilder(mineableWithPickaxe);
-        for (VerticalSlabBlockEnum verticalSlab : VerticalSlabBlockEnum.getAllVerticalSlabsPickaxable()) {
+        for (VerticalSlabBlockEnum verticalSlab : VerticalSlabBlockEnum.allPickaxable()) {
             builderMineableWithPickaxe.add(verticalSlab.getBlock());
         }
 

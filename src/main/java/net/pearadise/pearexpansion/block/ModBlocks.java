@@ -14,6 +14,7 @@ import net.pearadise.pearexpansion.PearExpansion;
 import net.pearadise.pearexpansion.block.custom.VerticalSlabBlockEnum;
 import net.pearadise.pearexpansion.item.ModItems;
 
+import java.util.List;
 import java.util.function.Function;
 
 /**
@@ -34,7 +35,7 @@ public class ModBlocks {
      *
      * <p>Used to populate the custom item group and for batch operations.
      */
-    public static final Block[] ALL_BLOCKS = VerticalSlabBlockEnum.getBlocksFromEnums(VerticalSlabBlockEnum.getAllVerticalSlabs());
+    public static final List<Block> ALL_BLOCKS = VerticalSlabBlockEnum.allBlocksList();
 
 
     /**

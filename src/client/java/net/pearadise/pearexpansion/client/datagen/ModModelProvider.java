@@ -81,7 +81,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         for (VerticalSlabBlockEnum slabEnum : VerticalSlabBlockEnum.values()) {
             Block modSlab = slabEnum.getBlock();
-            Block source = slabEnum.getTextureSource();
+            Block source = slabEnum.getTextureSourceBlock();
 
             if (modSlab == null || source == null) {
                 PearExpansion.LOGGER.warn("Skipping vertical slab with null block or source: {} -> {}", slabEnum, source);

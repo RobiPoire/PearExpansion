@@ -29,10 +29,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 // ---- SHAPED recipes (explicit RegistryKey to avoid collision with stonecutting)
                 for (VerticalSlabBlockEnum slabEnum : VerticalSlabBlockEnum.values()) {
                     Item slabItem = slabEnum.getBlock().asItem();
-                    Item baseItem = slabEnum.getTextureSource().asItem();
+                    Item baseItem = slabEnum.getTextureSourceBlock().asItem();
 
                     // Crée un RegistryKey<Recipe<?>> explicite => path: recipes/crafting/<name>.json
-                    Identifier craftingId = Identifier.of(PearExpansion.MOD_ID, "crafting/" + slabEnum.getId().toLowerCase());
+                    Identifier craftingId = Identifier.of(PearExpansion.MOD_ID, "crafting/" + slabEnum.getRegistryName());
                     RegistryKey<net.minecraft.recipe.Recipe<?>> recipeKey =
                             RegistryKey.of(RegistryKeys.RECIPE, craftingId);
 
@@ -46,9 +46,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 }
 
                 // ---- STONECUTTER recipes (default offerTo(exporter) - produces recipe id based on result)
-                for (VerticalSlabBlockEnum slabEnum : VerticalSlabBlockEnum.getAllVerticalSlabsPickaxable()) {
+                for (VerticalSlabBlockEnum slabEnum : VerticalSlabBlockEnum.allPickaxable()) {
                     Item slabItem = slabEnum.getBlock().asItem();
-                    Item baseItem = slabEnum.getTextureSource().asItem();
+                    Item baseItem = slabEnum.getTextureSourceBlock().asItem();
 
                     StonecuttingRecipeJsonBuilder.createStonecutting(Ingredient.ofItems(baseItem), RecipeCategory.BUILDING_BLOCKS, slabItem, 2)
                             .criterion(hasItem(baseItem), conditionsFromItem(baseItem))
