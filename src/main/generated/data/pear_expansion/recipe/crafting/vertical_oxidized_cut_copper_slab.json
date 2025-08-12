@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "x": "minecraft:oxidized_cut_copper"
+  },
+  "pattern": [
+    "x",
+    "x",
+    "x"
+  ],
+  "result": {
+    "count": 6,
+    "id": "pear_expansion:vertical_oxidized_cut_copper_slab"
+  }
+}

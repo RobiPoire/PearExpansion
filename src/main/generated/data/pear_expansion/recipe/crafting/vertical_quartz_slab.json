@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "x": "minecraft:quartz_block"
+  },
+  "pattern": [
+    "x",
+    "x",
+    "x"
+  ],
+  "result": {
+    "count": 6,
+    "id": "pear_expansion:vertical_quartz_slab"
+  }
+}

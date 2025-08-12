@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "x": "minecraft:mud_bricks"
+  },
+  "pattern": [
+    "x",
+    "x",
+    "x"
+  ],
+  "result": {
+    "count": 6,
+    "id": "pear_expansion:vertical_mud_brick_slab"
+  }
+}

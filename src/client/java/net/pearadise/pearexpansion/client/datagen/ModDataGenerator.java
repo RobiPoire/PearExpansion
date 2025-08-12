@@ -42,6 +42,8 @@ public class ModDataGenerator implements DataGeneratorEntrypoint {
 
         pack.addProvider(ModTagProvider::new);
 
+        pack.addProvider(ModRecipeProvider::new);
+
         // Register all language providers for supported languages
         ModLangProvider.addLangProviders(pack);
     }
