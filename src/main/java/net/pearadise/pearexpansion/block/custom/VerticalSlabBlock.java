@@ -2,7 +2,12 @@ package net.pearadise.pearexpansion.block.custom;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.FluidFillable;
 import net.minecraft.block.ShapeContext;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.fluid.Fluid;
+import net.minecraft.fluid.FluidState;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
@@ -13,27 +18,12 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.WorldAccess;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Objects;
 
-/**
- * Represents a vertical slab block for the Pear Expansion mod.
- *
- * <p>
- * This block allows placement of slabs in a vertical orientation, supporting both single and double slab states.
- * The collision and outline shapes depend on the facing direction and whether the slab is single or double.
- * Used to provide more creative building options for players.
- * </p>
- *
- * @author RobiPoire
- * @see net.pearadise.pearexpansion.block.ModBlocks
- */
-public class VerticalSlabBlock extends Block {
-
-    /**
-     * Property indicating if the slab is a single slab ({@code true}) or a double slab ({@code false}).
-     */
+public class VerticalSlabBlock extends Block implements FluidFillable {
     public static final BooleanProperty SINGLE = BooleanProperty.of("single");
 
     /**
@@ -75,57 +65,28 @@ public class VerticalSlabBlock extends Block {
         super(settings);
     }
 
-    /**
-     * Returns the voxel shape for the sides of the block based on its state.
-     *
-     * <p>
-     * If the block is a single slab, returns the shape corresponding to its facing direction.
-     * If it is a double slab, returns a full cube shape.
-     * </p>
-     *
-     * @param state the current block state
-     * @param world the block view
-     * @param pos   the block position
-     * @return the voxel shape for the block sides
-     */
     @Override
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+        builder.add(SINGLE, FACING, WATERLOGGED);
+    }
+
     protected VoxelShape getSidesShape(BlockState state, BlockView world, BlockPos pos) {
         boolean type = state.get(SINGLE);
         Direction direction = state.get(FACING);
-        VoxelShape voxelShape;
 
-        if (type) {
-            // Return the half-block shape based on facing direction
-            switch (direction) {
-                case WEST -> voxelShape = WEST_SHAPE.asCuboid();
-                case EAST -> voxelShape = EAST_SHAPE.asCuboid();
-                case SOUTH -> voxelShape = SOUTH_SHAPE.asCuboid();
-                case NORTH -> voxelShape = NORTH_SHAPE.asCuboid();
-                default -> throw new MatchException(null, null); // Should never occur
-            }
-            return voxelShape;
-        } else {
-            // Double slab: return full cube
-            return VoxelShapes.fullCube();
-        }
+        if (!type) return VoxelShapes.fullCube();
+
+        return switch (direction) {
+            case WEST -> WEST_SHAPE;
+            case EAST -> EAST_SHAPE;
+            case SOUTH -> SOUTH_SHAPE;
+            case NORTH -> NORTH_SHAPE;
+            default -> VoxelShapes.fullCube();
+        };
     }
 
-    /**
-     * Returns the outline shape of the block for rendering and interaction.
-     *
-     * <p>
-     * The outline shape is used for block selection and rendering highlights.
-     * </p>
-     *
-     * @param state   the current block state
-     * @param world   the block view
-     * @param pos     the block position
-     * @param context the shape context
-     * @return the outline voxel shape
-     */
     @Override
     protected VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        // Use the same shape as the sides for outline
         return this.getSidesShape(state, world, pos);
     }
 
@@ -144,7 +105,6 @@ public class VerticalSlabBlock extends Block {
      */
     @Override
     protected VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        // Use the same shape as the sides for collision
         return this.getSidesShape(state, world, pos);
     }
 
@@ -163,69 +123,67 @@ public class VerticalSlabBlock extends Block {
     @Override
     protected boolean canReplace(BlockState state, ItemPlacementContext context) {
         Direction direction = state.get(FACING);
-
-        // Only allow replacement if placing the same slab and the block is single
         if (context.getStack().isOf(this.asItem()) && state.get(SINGLE)) {
             if (context.canReplaceExisting()) {
-                // Only allow if the player is placing on the opposite side of the facing
                 return context.getSide().getOpposite() == direction;
             }
         }
         return false;
     }
 
-    /**
-     * Returns the block state to be placed based on the placement context.
-     *
-     * <p>
-     * Determines the facing and single/double state based on player interaction and placement position.
-     * If placing against an existing single slab of the same type and facing, creates a double slab.
-     * Otherwise, determines facing based on player direction and hit position.
-     * </p>
-     *
-     * @param ctx the item placement context
-     * @return the block state to be placed, or {@code null} if placement is not possible
-     */
-    @Override
     @Nullable
+    @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         BlockPos pos = ctx.getBlockPos();
-        Direction direction = ctx.getHorizontalPlayerFacing();
-        BlockState state = ctx.getWorld().getBlockState(pos);
-        BlockState state2 = Objects.requireNonNull(super.getPlacementState(ctx));
+        Direction playerFacing = ctx.getHorizontalPlayerFacing();
+        BlockState existing = ctx.getWorld().getBlockState(pos);
 
-        // If placing against an existing single slab of the same type and facing, make it double
-        if (state.isOf(this) && state.get(FACING) == ctx.getSide().getOpposite()) {
-            return state.isOf(this) ? state2.with(SINGLE, false) : super.getPlacementState(ctx);
+        BlockState base = Objects.requireNonNull(super.getPlacementState(ctx));
+
+        if (existing.isOf(this) && existing.get(FACING) == ctx.getSide().getOpposite() && existing.get(SINGLE)) {
+            return base.with(SINGLE, false).with(WATERLOGGED, false).with(FACING, existing.get(FACING));
         }
 
-        // Determine facing and single/double state based on hit position and player direction
-        if (direction == Direction.NORTH && ctx.getHitPos().z - pos.getZ() > 0.5) {
-            return state2.with(FACING, Direction.SOUTH).with(SINGLE, true);
-        } else if (direction == Direction.SOUTH && ctx.getHitPos().z - pos.getZ() < 0.5) {
-            return state2.with(FACING, Direction.NORTH).with(SINGLE, true);
-        } else if (direction == Direction.WEST && ctx.getHitPos().x - pos.getX() > 0.5) {
-            return state2.with(FACING, Direction.EAST).with(SINGLE, true);
-        } else if (direction == Direction.EAST && ctx.getHitPos().x - pos.getX() < 0.5) {
-            return state2.with(FACING, Direction.WEST).with(SINGLE, true);
+        FluidState fluidAtPos = ctx.getWorld().getFluidState(pos);
+        boolean waterPresent = fluidAtPos.isOf(Fluids.WATER);
+
+        double hitX = ctx.getHitPos().x - pos.getX();
+        double hitZ = ctx.getHitPos().z - pos.getZ();
+
+        BlockState resultBase = base.with(WATERLOGGED, waterPresent);
+
+        if (playerFacing == Direction.NORTH && hitZ > 0.5) {
+            return resultBase.with(FACING, Direction.SOUTH).with(SINGLE, true);
+        } else if (playerFacing == Direction.SOUTH && hitZ < 0.5) {
+            return resultBase.with(FACING, Direction.NORTH).with(SINGLE, true);
+        } else if (playerFacing == Direction.WEST && hitX > 0.5) {
+            return resultBase.with(FACING, Direction.EAST).with(SINGLE, true);
+        } else if (playerFacing == Direction.EAST && hitX < 0.5) {
+            return resultBase.with(FACING, Direction.WEST).with(SINGLE, true);
         } else {
-            // Default: use player facing
-            return state2.with(FACING, direction);
+            return resultBase.with(FACING, playerFacing).with(SINGLE, true);
         }
     }
 
-    /**
-     * Appends the block properties to the state manager.
-     *
-     * <p>
-     * Adds the {@link #SINGLE}, {@link #FACING}, and {@link #WATERLOGGED} properties to the block state.
-     * </p>
-     *
-     * @param builder the state manager builder
-     */
     @Override
-    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(SINGLE, FACING, WATERLOGGED);
+    public FluidState getFluidState(BlockState state) {
+        return state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
     }
 
+    @Override
+    public boolean tryFillWithFluid(WorldAccess world, BlockPos pos, BlockState state, FluidState fluidState) {
+        if (!state.get(SINGLE)) return false;
+        if (!fluidState.isOf(Fluids.WATER)) return false;
+        world.setBlockState(pos, state.with(WATERLOGGED, true), 3);
+        try {
+            world.scheduleFluidTick(pos, Fluids.WATER, 5);
+        } catch (Throwable ignored) {
+        }
+        return true;
+    }
+
+    @Override
+    public boolean canFillWithFluid(@Nullable LivingEntity filler, BlockView world, BlockPos pos, BlockState state, Fluid fluid) {
+        return state.get(SINGLE) && fluid == Fluids.WATER;
+    }
 }
