@@ -40,7 +40,9 @@ public class ModDataGenerator implements DataGeneratorEntrypoint {
         // Register the model provider for block and item models
         pack.addProvider(ModModelProvider::new);
 
-        pack.addProvider(ModTagProvider::new);
+        pack.addProvider(ModItemTagProvider::new);
+
+        pack.addProvider(ModBlockTagProvider::new);
 
         pack.addProvider(ModRecipeProvider::new);
 
