@@ -4,13 +4,16 @@ import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.block.Block;
 import net.minecraft.client.data.*;
+import net.minecraft.client.render.model.json.ModelVariantOperator;
 import net.minecraft.client.render.model.json.WeightedVariant;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.AxisRotation;
 import net.pearadise.pearexpansion.PearExpansion;
-import net.pearadise.pearexpansion.block.custom.VerticalSlabBlock;
-import net.pearadise.pearexpansion.block.custom.VerticalSlabBlockEnum;
+import net.pearadise.pearexpansion.block.ModBlocks;
+import net.pearadise.pearexpansion.block.VerticalSlabBlock;
+import net.pearadise.pearexpansion.block.enums.VerticalSlabType;
 import net.pearadise.pearexpansion.item.ModItems;
+import net.pearadise.pearexpansion.util.ModContentLists;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -18,56 +21,75 @@ import java.util.Optional;
 
 /**
  * Provides Fabric data generation for block and item models for Pear Expansion.
- * <p>
- * This class iterates over VerticalSlabBlockEnum.values() and uses the
- * enum's textureSource to generate slab models. Includes manual texture
- * overrides for vanilla texture names that don't match the simple heuristics.
+ * Adapted to the 1.21.x data-gen API (VariantsBlockModelDefinitionCreator.of(block, model) + BlockStateVariantMap.operations(...)).
  */
 public class ModModelProvider extends FabricModelProvider {
 
-    /**
-     * Manual texture overrides for problematic vanilla blocks whose texture names
-     * don't match ModelIds.getBlockModelId/getBlockSubModelId heuristics.
-     * <p>
-     * Add more entries if you see "Missing textures" for other slabs.
-     */
     private static final Map<Block, TextureMap> MANUAL_TEXTURE_OVERRIDES = new LinkedHashMap<>();
 
     static {
-        // quartz: side/top explicit
         MANUAL_TEXTURE_OVERRIDES.put(
-                VerticalSlabBlockEnum.VERTICAL_QUARTZ_SLAB.getBlock(),
+                ModBlocks.VERTICAL_QUARTZ_SLAB,
                 new TextureMap()
                         .put(TextureKey.TOP, Identifier.of("minecraft", "block/quartz_block_top"))
                         .put(TextureKey.BOTTOM, Identifier.of("minecraft", "block/quartz_block_top"))
                         .put(TextureKey.SIDE, Identifier.of("minecraft", "block/quartz_block_side"))
         );
 
-        // smooth quartz -> use quartz top/side
         MANUAL_TEXTURE_OVERRIDES.put(
-                VerticalSlabBlockEnum.VERTICAL_SMOOTH_QUARTZ_SLAB.getBlock(),
+                ModBlocks.VERTICAL_SMOOTH_QUARTZ_SLAB,
                 new TextureMap()
                         .put(TextureKey.TOP, Identifier.of("minecraft", "block/quartz_block_top"))
                         .put(TextureKey.BOTTOM, Identifier.of("minecraft", "block/quartz_block_top"))
                         .put(TextureKey.SIDE, Identifier.of("minecraft", "block/quartz_block_side"))
         );
 
-        // smooth red sandstone uses red_sandstone_top for all faces
         MANUAL_TEXTURE_OVERRIDES.put(
-                VerticalSlabBlockEnum.VERTICAL_SMOOTH_RED_SANDSTONE_SLAB.getBlock(),
+                ModBlocks.VERTICAL_SMOOTH_RED_SANDSTONE_SLAB,
                 new TextureMap()
                         .put(TextureKey.TOP, Identifier.of("minecraft", "block/red_sandstone_top"))
                         .put(TextureKey.BOTTOM, Identifier.of("minecraft", "block/red_sandstone_top"))
                         .put(TextureKey.SIDE, Identifier.of("minecraft", "block/red_sandstone_top"))
         );
 
-        // smooth sandstone uses sandstone_top for all faces
         MANUAL_TEXTURE_OVERRIDES.put(
-                VerticalSlabBlockEnum.VERTICAL_SMOOTH_SANDSTONE_SLAB.getBlock(),
+                ModBlocks.VERTICAL_SMOOTH_SANDSTONE_SLAB,
                 new TextureMap()
                         .put(TextureKey.TOP, Identifier.of("minecraft", "block/sandstone_top"))
                         .put(TextureKey.BOTTOM, Identifier.of("minecraft", "block/sandstone_top"))
                         .put(TextureKey.SIDE, Identifier.of("minecraft", "block/sandstone_top"))
+        );
+
+        MANUAL_TEXTURE_OVERRIDES.put(
+                ModBlocks.VERTICAL_WAXED_CUT_COPPER_SLAB,
+                new TextureMap()
+                        .put(TextureKey.TOP, Identifier.of("minecraft", "block/cut_copper_top"))
+                        .put(TextureKey.BOTTOM, Identifier.of("minecraft", "block/cut_copper_top"))
+                        .put(TextureKey.SIDE, Identifier.of("minecraft", "block/cut_copper"))
+        );
+
+        MANUAL_TEXTURE_OVERRIDES.put(
+                ModBlocks.VERTICAL_WAXED_EXPOSED_CUT_COPPER_SLAB,
+                new TextureMap()
+                        .put(TextureKey.TOP, Identifier.of("minecraft", "block/exposed_cut_copper_top"))
+                        .put(TextureKey.BOTTOM, Identifier.of("minecraft", "block/exposed_cut_copper_top"))
+                        .put(TextureKey.SIDE, Identifier.of("minecraft", "block/exposed_cut_copper"))
+        );
+
+        MANUAL_TEXTURE_OVERRIDES.put(
+                ModBlocks.VERTICAL_WAXED_WEATHERED_CUT_COPPER_SLAB,
+                new TextureMap()
+                        .put(TextureKey.TOP, Identifier.of("minecraft", "block/weathered_cut_copper_top"))
+                        .put(TextureKey.BOTTOM, Identifier.of("minecraft", "block/weathered_cut_copper_top"))
+                        .put(TextureKey.SIDE, Identifier.of("minecraft", "block/weathered_cut_copper"))
+        );
+
+        MANUAL_TEXTURE_OVERRIDES.put(
+                ModBlocks.VERTICAL_WAXED_OXIDIZED_CUT_COPPER_SLAB,
+                new TextureMap()
+                        .put(TextureKey.TOP, Identifier.of("minecraft", "block/oxidized_cut_copper_top"))
+                        .put(TextureKey.BOTTOM, Identifier.of("minecraft", "block/oxidized_cut_copper_top"))
+                        .put(TextureKey.SIDE, Identifier.of("minecraft", "block/oxidized_cut_copper"))
         );
     }
 
@@ -79,16 +101,14 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         PearExpansion.LOGGER.info("Generating blockstate models for vertical slabs...");
 
-        for (VerticalSlabBlockEnum slabEnum : VerticalSlabBlockEnum.values()) {
-            Block modSlab = slabEnum.getBlock();
-            Block source = slabEnum.getTextureSourceBlock();
+        for (Block modSlab : ModContentLists.ALL_VERTICAL_SLABS) {
+            Block source = ModContentLists.VERTICAL_TO_BASE_BLOCK.get(modSlab);
 
             if (modSlab == null || source == null) {
-                PearExpansion.LOGGER.warn("Skipping vertical slab with null block or source: {} -> {}", slabEnum, source);
+                PearExpansion.LOGGER.warn("Skipping vertical slab with null block or source: {} -> {}", modSlab, source);
                 continue;
             }
 
-            // use manual override if present, otherwise use default heuristic
             TextureMap textures = MANUAL_TEXTURE_OVERRIDES.getOrDefault(
                     modSlab,
                     CustomBlockStateModelGenerator.blockAndTopForEnds(source)
@@ -130,9 +150,6 @@ public class ModModelProvider extends FabricModelProvider {
             return new Model(Optional.of(Identifier.of(PearExpansion.MOD_ID, "block/" + parent)), Optional.of(variant), requiredTextureKeys);
         }
 
-        /**
-         * Default heuristic: use the block's "_top" submodel for both ends, and the block model for the side.
-         */
         public static TextureMap blockAndTopForEnds(Block block) {
             return new TextureMap()
                     .put(TextureKey.TOP, ModelIds.getBlockSubModelId(block, "_top"))
@@ -140,20 +157,43 @@ public class ModModelProvider extends FabricModelProvider {
                     .put(TextureKey.SIDE, ModelIds.getBlockModelId(block));
         }
 
+        /**
+         * Create blockstate variants for the vertical slab using the TYPE enum (VerticalSlabType).
+         * NORTH/EAST/SOUTH/WEST -> use the vertical slab model with rotation
+         * DOUBLE -> use the full block model
+         */
         private static BlockModelDefinitionCreator createVerticalSlabBlockStates(Block vertSlabBlock, Identifier vertSlabId, Identifier fullBlockId) {
             WeightedVariant vertSlabModel = BlockStateModelGenerator.createWeightedVariant(vertSlabId);
             WeightedVariant fullBlockModel = BlockStateModelGenerator.createWeightedVariant(fullBlockId);
 
-            return VariantsBlockModelDefinitionCreator.of(vertSlabBlock)
-                    .with(BlockStateVariantMap.models(VerticalSlabBlock.FACING, VerticalSlabBlock.SINGLE)
-                            .register(Direction.NORTH, true, vertSlabModel.apply(BlockStateModelGenerator.UV_LOCK))
-                            .register(Direction.EAST, true, vertSlabModel.apply(BlockStateModelGenerator.UV_LOCK).apply(BlockStateModelGenerator.ROTATE_Y_90))
-                            .register(Direction.SOUTH, true, vertSlabModel.apply(BlockStateModelGenerator.UV_LOCK).apply(BlockStateModelGenerator.ROTATE_Y_180))
-                            .register(Direction.WEST, true, vertSlabModel.apply(BlockStateModelGenerator.UV_LOCK).apply(BlockStateModelGenerator.ROTATE_Y_270))
-                            .register(Direction.NORTH, false, fullBlockModel.apply(BlockStateModelGenerator.UV_LOCK))
-                            .register(Direction.EAST, false, fullBlockModel.apply(BlockStateModelGenerator.UV_LOCK))
-                            .register(Direction.SOUTH, false, fullBlockModel.apply(BlockStateModelGenerator.UV_LOCK))
-                            .register(Direction.WEST, false, fullBlockModel.apply(BlockStateModelGenerator.UV_LOCK))
+            // Build ModelVariantOperator for each orientation/value using ModelVariantOperator.Settings.withValue(...)
+            ModelVariantOperator northOp = ModelVariantOperator.MODEL.withValue(vertSlabId)
+                    .then(ModelVariantOperator.UV_LOCK.withValue(true));
+
+            ModelVariantOperator eastOp = ModelVariantOperator.MODEL.withValue(vertSlabId)
+                    .then(ModelVariantOperator.ROTATION_Y.withValue(AxisRotation.R90))
+                    .then(ModelVariantOperator.UV_LOCK.withValue(true));
+
+            ModelVariantOperator southOp = ModelVariantOperator.MODEL.withValue(vertSlabId)
+                    .then(ModelVariantOperator.ROTATION_Y.withValue(AxisRotation.R180))
+                    .then(ModelVariantOperator.UV_LOCK.withValue(true));
+
+            ModelVariantOperator westOp = ModelVariantOperator.MODEL.withValue(vertSlabId)
+                    .then(ModelVariantOperator.ROTATION_Y.withValue(AxisRotation.R270))
+                    .then(ModelVariantOperator.UV_LOCK.withValue(true));
+
+            ModelVariantOperator doubleOp = ModelVariantOperator.MODEL.withValue(fullBlockId)
+                    .then(ModelVariantOperator.UV_LOCK.withValue(true)); // full block: uvlock true is fine (keeps textures consistent)
+
+            // Use operations(...) because coordinate(...) expects a BlockStateVariantMap<ModelVariantOperator>
+            return VariantsBlockModelDefinitionCreator.of(vertSlabBlock, fullBlockModel)
+                    .coordinate(
+                            BlockStateVariantMap.operations(VerticalSlabBlock.TYPE)
+                                    .register(VerticalSlabType.NORTH, northOp)
+                                    .register(VerticalSlabType.EAST, eastOp)
+                                    .register(VerticalSlabType.SOUTH, southOp)
+                                    .register(VerticalSlabType.WEST, westOp)
+                                    .register(VerticalSlabType.DOUBLE, doubleOp)
                     );
         }
 

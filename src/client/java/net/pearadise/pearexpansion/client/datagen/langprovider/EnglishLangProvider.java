@@ -8,6 +8,7 @@ import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
 import net.pearadise.pearexpansion.block.ModBlocks;
 import net.pearadise.pearexpansion.item.ModItems;
+import net.pearadise.pearexpansion.util.ModContentLists;
 
 import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
@@ -43,6 +44,31 @@ public class EnglishLangProvider extends FabricLanguageProvider {
     }
 
     /**
+     * Converts a registry path to a human-readable name.
+     *
+     * <p>
+     * Splits the path by underscores and capitalizes each word.
+     * For example, {@code "vertical_acacia_slab"} becomes {@code "Vertical Acacia Slab"}.
+     * </p>
+     *
+     * @param path the registry path (must not be null or empty)
+     * @return the pretty-printed name, or an empty string if the path is null or empty
+     */
+    private static String prettyNameFromPath(String path) {
+        if (path == null || path.isEmpty()) return "";
+        String[] parts = path.split("_");
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < parts.length; i++) {
+            String p = parts[i];
+            if (p.isEmpty()) continue;
+            sb.append(Character.toUpperCase(p.charAt(0)));
+            if (p.length() > 1) sb.append(p.substring(1));
+            if (i < parts.length - 1) sb.append(' ');
+        }
+        return sb.toString();
+    }
+
+    /**
      * Generates English translations for all custom items and blocks.
      *
      * <p>
@@ -67,9 +93,7 @@ public class EnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.ENCHANTED_GOLDEN_PEAR, "Enchanted Golden Pear");
 
         // Add translations for all blocks and their item forms
-        for (Block block : ModBlocks.ALL_BLOCKS) {
-            if (block == null) continue;
-
+        for (Block block : ModContentLists.ALL_BLOCKS) {
             Identifier id = Registries.BLOCK.getId(block);
 
             String path = id.getPath();
@@ -77,6 +101,8 @@ public class EnglishLangProvider extends FabricLanguageProvider {
 
             translationBuilder.add(block, pretty);
             translationBuilder.add(block.asItem(), pretty);
+
+
         }
     }
 
@@ -88,30 +114,5 @@ public class EnglishLangProvider extends FabricLanguageProvider {
     @Override
     public String getName() {
         return "Pear Expansion English Lang Provider";
-    }
-
-    /**
-     * Converts a registry path to a human-readable name.
-     *
-     * <p>
-     * Splits the path by underscores and capitalizes each word.
-     * For example, {@code "vertical_acacia_slab"} becomes {@code "Vertical Acacia Slab"}.
-     * </p>
-     *
-     * @param path the registry path (must not be null or empty)
-     * @return the pretty-printed name, or an empty string if the path is null or empty
-     */
-    private static String prettyNameFromPath(String path) {
-        if (path == null || path.isEmpty()) return "";
-        String[] parts = path.split("_");
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < parts.length; i++) {
-            String p = parts[i];
-            if (p.isEmpty()) continue;
-            sb.append(Character.toUpperCase(p.charAt(0)));
-            if (p.length() > 1) sb.append(p.substring(1));
-            if (i < parts.length - 1) sb.append(' ');
-        }
-        return sb.toString();
     }
 }

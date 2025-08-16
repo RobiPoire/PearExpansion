@@ -2,11 +2,12 @@ package net.pearadise.pearexpansion;
 
 import net.fabricmc.api.ModInitializer;
 import net.pearadise.pearexpansion.block.ModBlocks;
+import net.pearadise.pearexpansion.item.ModItemGroups;
 import net.pearadise.pearexpansion.item.ModItems;
 import net.pearadise.pearexpansion.registry.FlammableBlocks;
 import net.pearadise.pearexpansion.registry.FuelItems;
-import net.pearadise.pearexpansion.registry.OxidizableBlocks;
-import net.pearadise.pearexpansion.registry.WaxableBlocks;
+import net.pearadise.pearexpansion.registry.WeatheringBlocks;
+import net.pearadise.pearexpansion.util.ModContentLists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -57,8 +58,8 @@ public class PearExpansion implements ModInitializer {
     public void onInitialize() {
         ModItems.initialize();
         ModBlocks.initialize();
-        OxidizableBlocks.registerOxidizableBlocks();
-        WaxableBlocks.registerWaxableBlocks();
+        ModItemGroups.initialize();
+        WeatheringBlocks.registerWeatheringBlocks();
         FlammableBlocks.registerFlammableBlocks();
         FuelItems.registerFuelItems();
     }

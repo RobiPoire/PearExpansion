@@ -4,18 +4,23 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.enchantment.Enchantments;
+import net.minecraft.item.Item;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
-import net.minecraft.loot.condition.RandomChanceLootCondition;
+import net.minecraft.loot.condition.TableBonusLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.loot.entry.LeafEntry;
 import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.predicate.StatePredicate;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
-import net.pearadise.pearexpansion.block.custom.VerticalSlabBlock;
-import net.pearadise.pearexpansion.block.custom.VerticalSlabBlockEnum;
+import net.pearadise.pearexpansion.block.VerticalSlabBlock;
+import net.pearadise.pearexpansion.block.enums.VerticalSlabType;
 import net.pearadise.pearexpansion.item.ModItems;
+import net.pearadise.pearexpansion.util.ModContentLists;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -30,47 +35,48 @@ public class ModBlockLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        // Oak leaves / dark oak leaves: petit chance de drop pear
-        addDrop(Blocks.OAK_LEAVES, LootTable.builder().pool(LootPool.builder()
-                .rolls(ConstantLootNumberProvider.create(1))
-                .with(ItemEntry.builder(ModItems.PEAR)
-                        .conditionally(RandomChanceLootCondition.builder(0.005f)) // 0.5% chance
-                )
-        ));
 
-        addDrop(Blocks.DARK_OAK_LEAVES, LootTable.builder().pool(LootPool.builder()
-                .rolls(ConstantLootNumberProvider.create(1))
-                .with(ItemEntry.builder(ModItems.PEAR)
-                        .conditionally(RandomChanceLootCondition.builder(0.005f)) // 0.5% chance
-                )
-        ));
-
-        // Vertical slabs: 1 si single=true, 2 si single=false
-        for (VerticalSlabBlockEnum slabEnum : VerticalSlabBlockEnum.values()) {
-            Block slabBlock = slabEnum.getBlock();
-
-            LootPool.Builder poolSingle = LootPool.builder()
-                    .conditionally(
-                            BlockStatePropertyLootCondition.builder(slabBlock)
-                                    .properties(StatePredicate.Builder.create().exactMatch(VerticalSlabBlock.SINGLE, true))
-                    )
-                    .with(ItemEntry.builder(slabBlock.asItem()))
-                    .rolls(ConstantLootNumberProvider.create(1.0F));
-
-            LootPool.Builder poolDouble = LootPool.builder()
-                    .conditionally(
-                            BlockStatePropertyLootCondition.builder(slabBlock)
-                                    .properties(StatePredicate.Builder.create().exactMatch(VerticalSlabBlock.SINGLE, false))
-                    )
-                    .with(ItemEntry.builder(slabBlock.asItem())
-                            .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(2.0F))))
-                    .rolls(ConstantLootNumberProvider.create(1.0F));
-
-            LootTable.Builder table = LootTable.builder()
-                    .pool(poolSingle)
-                    .pool(poolDouble);
-
-            addDrop(slabBlock, table);
+        for (Block verticalSlab : ModContentLists.ALL_VERTICAL_SLABS) {
+            addDrop(verticalSlab, this::verticalSlabDrops);
         }
+
+        addDrop(Blocks.OAK_LEAVES, itemLeavesDrop(ModItems.PEAR));
+        addDrop(Blocks.DARK_OAK_LEAVES, itemLeavesDrop(ModItems.PEAR));
     }
+
+    public LootTable.Builder itemLeavesDrop(Item dropItem) {
+        return LootTable.builder()
+                .pool(
+                        LootPool.builder()
+                                .rolls(ConstantLootNumberProvider.create(1.0F))
+                                .conditionally(this.createWithoutShearsOrSilkTouchCondition())
+                                .with(
+                                        ((LeafEntry.Builder<?>) this.addSurvivesExplosionCondition(Blocks.OAK_LEAVES, ItemEntry.builder(dropItem)))
+                                                .conditionally(TableBonusLootCondition.builder(
+                                                        this.registries.getOrThrow(RegistryKeys.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE),
+                                                        0.005F, 0.0055555557F, 0.00625F, 0.008333334F, 0.025F
+                                                ))
+                                )
+                );
+    }
+
+    public LootTable.Builder verticalSlabDrops(Block drop) {
+        return LootTable.builder()
+                .pool(
+                        LootPool.builder()
+                                .rolls(ConstantLootNumberProvider.create(1.0F))
+                                .with(
+                                        this.applyExplosionDecay(
+                                                drop,
+                                                ItemEntry.builder(drop)
+                                                        .apply(
+                                                                SetCountLootFunction.builder(ConstantLootNumberProvider.create(2.0F))
+                                                                        .conditionally(BlockStatePropertyLootCondition.builder(drop).properties(StatePredicate.Builder.create().exactMatch(VerticalSlabBlock.TYPE, VerticalSlabType.DOUBLE)))
+                                                        )
+                                        )
+                                )
+                );
+    }
+
+
 }

@@ -1,36 +1,24 @@
 {
   "variants": {
-    "facing=east,single=false": {
+    "type=double": {
       "model": "minecraft:block/jungle_planks",
       "uvlock": true
     },
-    "facing=east,single=true": {
+    "type=east": {
       "model": "pear_expansion:block/vertical_jungle_slab",
       "uvlock": true,
       "y": 90
     },
-    "facing=north,single=false": {
-      "model": "minecraft:block/jungle_planks",
-      "uvlock": true
-    },
-    "facing=north,single=true": {
+    "type=north": {
       "model": "pear_expansion:block/vertical_jungle_slab",
       "uvlock": true
     },
-    "facing=south,single=false": {
-      "model": "minecraft:block/jungle_planks",
-      "uvlock": true
-    },
-    "facing=south,single=true": {
+    "type=south": {
       "model": "pear_expansion:block/vertical_jungle_slab",
       "uvlock": true,
       "y": 180
     },
-    "facing=west,single=false": {
-      "model": "minecraft:block/jungle_planks",
-      "uvlock": true
-    },
-    "facing=west,single=true": {
+    "type=west": {
       "model": "pear_expansion:block/vertical_jungle_slab",
       "uvlock": true,
       "y": 270
