@@ -60,188 +60,188 @@ public class GermanLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.ENCHANTED_GOLDEN_PEAR, "Verzauberte Goldene Birne");
 
         // Add translations for all custom vertical slab blocks and their item forms
-        translationBuilder.add(ModBlocks.VERTICAL_ACACIA_SLAB, "Vertikale Akazienholzstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_ACACIA_SLAB.asItem(), "Vertikale Akazienholzstufe");
+        translationBuilder.add(ModBlocks.ACACIA_VERTICAL_SLAB, "Vertikale Akazienholzstufe");
+        translationBuilder.add(ModBlocks.ACACIA_VERTICAL_SLAB.asItem(), "Vertikale Akazienholzstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_ANDESITE_SLAB, "Vertikale Andesitstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_ANDESITE_SLAB.asItem(), "Vertikale Andesitstufe");
+        translationBuilder.add(ModBlocks.ANDESITE_VERTICAL_SLAB, "Vertikale Andesitstufe");
+        translationBuilder.add(ModBlocks.ANDESITE_VERTICAL_SLAB.asItem(), "Vertikale Andesitstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_BAMBOO_MOSAIC_SLAB, "Vertikale Bambusmosaikstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_BAMBOO_MOSAIC_SLAB.asItem(), "Vertikale Bambusmosaikstufe");
+        translationBuilder.add(ModBlocks.BAMBOO_MOSAIC_VERTICAL_SLAB, "Vertikale Bambusmosaikstufe");
+        translationBuilder.add(ModBlocks.BAMBOO_MOSAIC_VERTICAL_SLAB.asItem(), "Vertikale Bambusmosaikstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_BAMBOO_SLAB, "Vertikale Bambusstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_BAMBOO_SLAB.asItem(), "Vertikale Bambusstufe");
+        translationBuilder.add(ModBlocks.BAMBOO_VERTICAL_SLAB, "Vertikale Bambusstufe");
+        translationBuilder.add(ModBlocks.BAMBOO_VERTICAL_SLAB.asItem(), "Vertikale Bambusstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_BIRCH_SLAB, "Vertikale Birkenholzstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_BIRCH_SLAB.asItem(), "Vertikale Birkenholzstufe");
+        translationBuilder.add(ModBlocks.BIRCH_VERTICAL_SLAB, "Vertikale Birkenholzstufe");
+        translationBuilder.add(ModBlocks.BIRCH_VERTICAL_SLAB.asItem(), "Vertikale Birkenholzstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_BLACKSTONE_SLAB, "Vertikale Schwarzsteinstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_BLACKSTONE_SLAB.asItem(), "Vertikale Schwarzsteinstufe");
+        translationBuilder.add(ModBlocks.BLACKSTONE_VERTICAL_SLAB, "Vertikale Schwarzsteinstufe");
+        translationBuilder.add(ModBlocks.BLACKSTONE_VERTICAL_SLAB.asItem(), "Vertikale Schwarzsteinstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_BRICK_SLAB, "Vertikale Ziegelstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_BRICK_SLAB.asItem(), "Vertikale Ziegelstufe");
+        translationBuilder.add(ModBlocks.BRICK_VERTICAL_SLAB, "Vertikale Ziegelstufe");
+        translationBuilder.add(ModBlocks.BRICK_VERTICAL_SLAB.asItem(), "Vertikale Ziegelstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_CHERRY_SLAB, "Vertikale Kirschholzstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_CHERRY_SLAB.asItem(), "Vertikale Kirschholzstufe");
+        translationBuilder.add(ModBlocks.CHERRY_VERTICAL_SLAB, "Vertikale Kirschholzstufe");
+        translationBuilder.add(ModBlocks.CHERRY_VERTICAL_SLAB.asItem(), "Vertikale Kirschholzstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_COBBLED_DEEPSLATE_SLAB, "Vertikale Bruchtiefenschieferstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_COBBLED_DEEPSLATE_SLAB.asItem(), "Vertikale Bruchtiefenschieferstufe");
+        translationBuilder.add(ModBlocks.COBBLED_DEEPSLATE_VERTICAL_SLAB, "Vertikale Bruchtiefenschieferstufe");
+        translationBuilder.add(ModBlocks.COBBLED_DEEPSLATE_VERTICAL_SLAB.asItem(), "Vertikale Bruchtiefenschieferstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_COBBLESTONE_SLAB, "Vertikale Bruchsteinstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_COBBLESTONE_SLAB.asItem(), "Vertikale Bruchsteinstufe");
+        translationBuilder.add(ModBlocks.COBBLESTONE_VERTICAL_SLAB, "Vertikale Bruchsteinstufe");
+        translationBuilder.add(ModBlocks.COBBLESTONE_VERTICAL_SLAB.asItem(), "Vertikale Bruchsteinstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_CRIMSON_SLAB, "Vertikale Karmesinstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_CRIMSON_SLAB.asItem(), "Vertikale Karmesinstufe");
+        translationBuilder.add(ModBlocks.CRIMSON_VERTICAL_SLAB, "Vertikale Karmesinstufe");
+        translationBuilder.add(ModBlocks.CRIMSON_VERTICAL_SLAB.asItem(), "Vertikale Karmesinstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_CUT_COPPER_SLAB, "Vertikale Geschnittene Kupferstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_CUT_COPPER_SLAB.asItem(), "Vertikale Geschnittene Kupferstufe");
+        translationBuilder.add(ModBlocks.CUT_COPPER_VERTICAL_SLAB, "Vertikale Geschnittene Kupferstufe");
+        translationBuilder.add(ModBlocks.CUT_COPPER_VERTICAL_SLAB.asItem(), "Vertikale Geschnittene Kupferstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_CUT_RED_SANDSTONE_SLAB, "Vertikale Geschnittene rote Sandsteinstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_CUT_RED_SANDSTONE_SLAB.asItem(), "Vertikale Geschnittene rote Sandsteinstufe");
+        translationBuilder.add(ModBlocks.CUT_RED_SANDSTONE_VERTICAL_SLAB, "Vertikale Geschnittene rote Sandsteinstufe");
+        translationBuilder.add(ModBlocks.CUT_RED_SANDSTONE_VERTICAL_SLAB.asItem(), "Vertikale Geschnittene rote Sandsteinstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_CUT_SANDSTONE_SLAB, "Vertikale Geschnittene Sandsteinstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_CUT_SANDSTONE_SLAB.asItem(), "Vertikale Geschnittene Sandsteinstufe");
+        translationBuilder.add(ModBlocks.CUT_SANDSTONE_VERTICAL_SLAB, "Vertikale Geschnittene Sandsteinstufe");
+        translationBuilder.add(ModBlocks.CUT_SANDSTONE_VERTICAL_SLAB.asItem(), "Vertikale Geschnittene Sandsteinstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_DARK_OAK_SLAB, "Vertikale Schwarzeichenholzstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_DARK_OAK_SLAB.asItem(), "Vertikale Schwarzeichenholzstufe");
+        translationBuilder.add(ModBlocks.DARK_OAK_VERTICAL_SLAB, "Vertikale Schwarzeichenholzstufe");
+        translationBuilder.add(ModBlocks.DARK_OAK_VERTICAL_SLAB.asItem(), "Vertikale Schwarzeichenholzstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_DARK_PRISMARINE_SLAB, "Vertikale Dunkle Prismarinstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_DARK_PRISMARINE_SLAB.asItem(), "Vertikale Dunkle Prismarinstufe");
+        translationBuilder.add(ModBlocks.DARK_PRISMARINE_VERTICAL_SLAB, "Vertikale Dunkle Prismarinstufe");
+        translationBuilder.add(ModBlocks.DARK_PRISMARINE_VERTICAL_SLAB.asItem(), "Vertikale Dunkle Prismarinstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_DEEPSLATE_BRICK_SLAB, "Vertikale Tiefenschieferziegelstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_DEEPSLATE_BRICK_SLAB.asItem(), "Vertikale Tiefenschieferziegelstufe");
+        translationBuilder.add(ModBlocks.DEEPSLATE_BRICK_VERTICAL_SLAB, "Vertikale Tiefenschieferziegelstufe");
+        translationBuilder.add(ModBlocks.DEEPSLATE_BRICK_VERTICAL_SLAB.asItem(), "Vertikale Tiefenschieferziegelstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_DEEPSLATE_TILE_SLAB, "Vertikale Tiefenschieferfliesenstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_DEEPSLATE_TILE_SLAB.asItem(), "Vertikale Tiefenschieferfliesenstufe");
+        translationBuilder.add(ModBlocks.DEEPSLATE_TILE_VERTICAL_SLAB, "Vertikale Tiefenschieferfliesenstufe");
+        translationBuilder.add(ModBlocks.DEEPSLATE_TILE_VERTICAL_SLAB.asItem(), "Vertikale Tiefenschieferfliesenstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_DIORITE_SLAB, "Vertikale Dioritstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_DIORITE_SLAB.asItem(), "Vertikale Dioritstufe");
+        translationBuilder.add(ModBlocks.DIORITE_VERTICAL_SLAB, "Vertikale Dioritstufe");
+        translationBuilder.add(ModBlocks.DIORITE_VERTICAL_SLAB.asItem(), "Vertikale Dioritstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_END_STONE_BRICK_SLAB, "Vertikale Endsteinziegelstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_END_STONE_BRICK_SLAB.asItem(), "Vertikale Endsteinziegelstufe");
+        translationBuilder.add(ModBlocks.END_STONE_BRICK_VERTICAL_SLAB, "Vertikale Endsteinziegelstufe");
+        translationBuilder.add(ModBlocks.END_STONE_BRICK_VERTICAL_SLAB.asItem(), "Vertikale Endsteinziegelstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_EXPOSED_CUT_COPPER_SLAB, "Vertikale Angelaufene geschnittene Kupferstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_EXPOSED_CUT_COPPER_SLAB.asItem(), "Vertikale Angelaufene geschnittene Kupferstufe");
+        translationBuilder.add(ModBlocks.EXPOSED_CUT_COPPER_VERTICAL_SLAB, "Vertikale Angelaufene geschnittene Kupferstufe");
+        translationBuilder.add(ModBlocks.EXPOSED_CUT_COPPER_VERTICAL_SLAB.asItem(), "Vertikale Angelaufene geschnittene Kupferstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_GRANITE_SLAB, "Vertikale Granitstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_GRANITE_SLAB.asItem(), "Vertikale Granitstufe");
+        translationBuilder.add(ModBlocks.GRANITE_VERTICAL_SLAB, "Vertikale Granitstufe");
+        translationBuilder.add(ModBlocks.GRANITE_VERTICAL_SLAB.asItem(), "Vertikale Granitstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_JUNGLE_SLAB, "Vertikale Tropenholzstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_JUNGLE_SLAB.asItem(), "Vertikale Tropenholzstufe");
+        translationBuilder.add(ModBlocks.JUNGLE_VERTICAL_SLAB, "Vertikale Tropenholzstufe");
+        translationBuilder.add(ModBlocks.JUNGLE_VERTICAL_SLAB.asItem(), "Vertikale Tropenholzstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_MANGROVE_SLAB, "Vertikale Mangrovenholzstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_MANGROVE_SLAB.asItem(), "Vertikale Mangrovenholzstufe");
+        translationBuilder.add(ModBlocks.MANGROVE_VERTICAL_SLAB, "Vertikale Mangrovenholzstufe");
+        translationBuilder.add(ModBlocks.MANGROVE_VERTICAL_SLAB.asItem(), "Vertikale Mangrovenholzstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_MOSSY_COBBLESTONE_SLAB, "Vertikale Bemooste Bruchsteinstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_MOSSY_COBBLESTONE_SLAB.asItem(), "Vertikale Bemooste Bruchsteinstufe");
+        translationBuilder.add(ModBlocks.MOSSY_COBBLESTONE_VERTICAL_SLAB, "Vertikale Bemooste Bruchsteinstufe");
+        translationBuilder.add(ModBlocks.MOSSY_COBBLESTONE_VERTICAL_SLAB.asItem(), "Vertikale Bemooste Bruchsteinstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_MOSSY_STONE_BRICK_SLAB, "Vertikale Bemooste Steinziegelstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_MOSSY_STONE_BRICK_SLAB.asItem(), "Vertikale Bemooste Steinziegelstufe");
+        translationBuilder.add(ModBlocks.MOSSY_STONE_BRICK_VERTICAL_SLAB, "Vertikale Bemooste Steinziegelstufe");
+        translationBuilder.add(ModBlocks.MOSSY_STONE_BRICK_VERTICAL_SLAB.asItem(), "Vertikale Bemooste Steinziegelstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_MUD_BRICK_SLAB, "Vertikale Schlammziegelstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_MUD_BRICK_SLAB.asItem(), "Vertikale Schlammziegelstufe");
+        translationBuilder.add(ModBlocks.MUD_BRICK_VERTICAL_SLAB, "Vertikale Schlammziegelstufe");
+        translationBuilder.add(ModBlocks.MUD_BRICK_VERTICAL_SLAB.asItem(), "Vertikale Schlammziegelstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_NETHER_BRICK_SLAB, "Vertikale Netherziegelstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_NETHER_BRICK_SLAB.asItem(), "Vertikale Netherziegelstufe");
+        translationBuilder.add(ModBlocks.NETHER_BRICK_VERTICAL_SLAB, "Vertikale Netherziegelstufe");
+        translationBuilder.add(ModBlocks.NETHER_BRICK_VERTICAL_SLAB.asItem(), "Vertikale Netherziegelstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_OAK_SLAB, "Vertikale Eichenholzstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_OAK_SLAB.asItem(), "Vertikale Eichenholzstufe");
+        translationBuilder.add(ModBlocks.OAK_VERTICAL_SLAB, "Vertikale Eichenholzstufe");
+        translationBuilder.add(ModBlocks.OAK_VERTICAL_SLAB.asItem(), "Vertikale Eichenholzstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_OXIDIZED_CUT_COPPER_SLAB, "Vertikale Oxidierte geschnittene Kupferstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_OXIDIZED_CUT_COPPER_SLAB.asItem(), "Vertikale Oxidierte geschnittene Kupferstufe");
+        translationBuilder.add(ModBlocks.OXIDIZED_CUT_COPPER_VERTICAL_SLAB, "Vertikale Oxidierte geschnittene Kupferstufe");
+        translationBuilder.add(ModBlocks.OXIDIZED_CUT_COPPER_VERTICAL_SLAB.asItem(), "Vertikale Oxidierte geschnittene Kupferstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_PALE_OAK_SLAB, "Vertikale Blasseichenholzstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_PALE_OAK_SLAB.asItem(), "Vertikale Blasseichenholzstufe");
+        translationBuilder.add(ModBlocks.PALE_OAK_VERTICAL_SLAB, "Vertikale Blasseichenholzstufe");
+        translationBuilder.add(ModBlocks.PALE_OAK_VERTICAL_SLAB.asItem(), "Vertikale Blasseichenholzstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_ANDESITE_SLAB, "Vertikale Polierte Andesitstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_ANDESITE_SLAB.asItem(), "Vertikale Polierte Andesitstufe");
+        translationBuilder.add(ModBlocks.POLISHED_ANDESITE_VERTICAL_SLAB, "Vertikale Polierte Andesitstufe");
+        translationBuilder.add(ModBlocks.POLISHED_ANDESITE_VERTICAL_SLAB.asItem(), "Vertikale Polierte Andesitstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_BRICK_SLAB, "Vertikale Polierte Schwarzsteinziegelstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_BRICK_SLAB.asItem(), "Vertikale Polierte Schwarzsteinziegelstufe");
+        translationBuilder.add(ModBlocks.POLISHED_BLACKSTONE_BRICK_VERTICAL_SLAB, "Vertikale Polierte Schwarzsteinziegelstufe");
+        translationBuilder.add(ModBlocks.POLISHED_BLACKSTONE_BRICK_VERTICAL_SLAB.asItem(), "Vertikale Polierte Schwarzsteinziegelstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_SLAB, "Vertikale Polierte Schwarzsteinstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_SLAB.asItem(), "Vertikale Polierte Schwarzsteinstufe");
+        translationBuilder.add(ModBlocks.POLISHED_BLACKSTONE_VERTICAL_SLAB, "Vertikale Polierte Schwarzsteinstufe");
+        translationBuilder.add(ModBlocks.POLISHED_BLACKSTONE_VERTICAL_SLAB.asItem(), "Vertikale Polierte Schwarzsteinstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_DEEPSLATE_SLAB, "Vertikale Polierte Tiefenschieferstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_DEEPSLATE_SLAB.asItem(), "Vertikale Polierte Tiefenschieferstufe");
+        translationBuilder.add(ModBlocks.POLISHED_DEEPSLATE_VERTICAL_SLAB, "Vertikale Polierte Tiefenschieferstufe");
+        translationBuilder.add(ModBlocks.POLISHED_DEEPSLATE_VERTICAL_SLAB.asItem(), "Vertikale Polierte Tiefenschieferstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_DIORITE_SLAB, "Vertikale Polierte Dioritstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_DIORITE_SLAB.asItem(), "Vertikale Polierte Dioritstufe");
+        translationBuilder.add(ModBlocks.POLISHED_DIORITE_VERTICAL_SLAB, "Vertikale Polierte Dioritstufe");
+        translationBuilder.add(ModBlocks.POLISHED_DIORITE_VERTICAL_SLAB.asItem(), "Vertikale Polierte Dioritstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_GRANITE_SLAB, "Vertikale Polierte Granitstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_GRANITE_SLAB.asItem(), "Vertikale Polierte Granitstufe");
+        translationBuilder.add(ModBlocks.POLISHED_GRANITE_VERTICAL_SLAB, "Vertikale Polierte Granitstufe");
+        translationBuilder.add(ModBlocks.POLISHED_GRANITE_VERTICAL_SLAB.asItem(), "Vertikale Polierte Granitstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_TUFF_SLAB, "Vertikale Polierte Tuffsteinstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_TUFF_SLAB.asItem(), "Vertikale Polierte Tuffsteinstufe");
+        translationBuilder.add(ModBlocks.POLISHED_TUFF_VERTICAL_SLAB, "Vertikale Polierte Tuffsteinstufe");
+        translationBuilder.add(ModBlocks.POLISHED_TUFF_VERTICAL_SLAB.asItem(), "Vertikale Polierte Tuffsteinstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_PRISMARINE_BRICK_SLAB, "Vertikale Prismarinziegelstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_PRISMARINE_BRICK_SLAB.asItem(), "Vertikale Prismarinziegelstufe");
+        translationBuilder.add(ModBlocks.PRISMARINE_BRICK_VERTICAL_SLAB, "Vertikale Prismarinziegelstufe");
+        translationBuilder.add(ModBlocks.PRISMARINE_BRICK_VERTICAL_SLAB.asItem(), "Vertikale Prismarinziegelstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_PRISMARINE_SLAB, "Vertikale Prismarinstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_PRISMARINE_SLAB.asItem(), "Vertikale Prismarinstufe");
+        translationBuilder.add(ModBlocks.PRISMARINE_VERTICAL_SLAB, "Vertikale Prismarinstufe");
+        translationBuilder.add(ModBlocks.PRISMARINE_VERTICAL_SLAB.asItem(), "Vertikale Prismarinstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_PURPUR_SLAB, "Vertikale Purpurstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_PURPUR_SLAB.asItem(), "Vertikale Purpurstufe");
+        translationBuilder.add(ModBlocks.PURPUR_VERTICAL_SLAB, "Vertikale Purpurstufe");
+        translationBuilder.add(ModBlocks.PURPUR_VERTICAL_SLAB.asItem(), "Vertikale Purpurstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_QUARTZ_SLAB, "Vertikale Quarzstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_QUARTZ_SLAB.asItem(), "Vertikale Quarzstufe");
+        translationBuilder.add(ModBlocks.QUARTZ_VERTICAL_SLAB, "Vertikale Quarzstufe");
+        translationBuilder.add(ModBlocks.QUARTZ_VERTICAL_SLAB.asItem(), "Vertikale Quarzstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_RED_NETHER_BRICK_SLAB, "Vertikale Rote Netherziegelstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_RED_NETHER_BRICK_SLAB.asItem(), "Vertikale Rote Netherziegelstufe");
+        translationBuilder.add(ModBlocks.RED_NETHER_BRICK_VERTICAL_SLAB, "Vertikale Rote Netherziegelstufe");
+        translationBuilder.add(ModBlocks.RED_NETHER_BRICK_VERTICAL_SLAB.asItem(), "Vertikale Rote Netherziegelstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_RED_SANDSTONE_SLAB, "Vertikale Rote Sandsteinstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_RED_SANDSTONE_SLAB.asItem(), "Vertikale Rote Sandsteinstufe");
+        translationBuilder.add(ModBlocks.RED_SANDSTONE_VERTICAL_SLAB, "Vertikale Rote Sandsteinstufe");
+        translationBuilder.add(ModBlocks.RED_SANDSTONE_VERTICAL_SLAB.asItem(), "Vertikale Rote Sandsteinstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_RESIN_BRICK_SLAB, "Vertikale Harzziegelstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_RESIN_BRICK_SLAB.asItem(), "Vertikale Harzziegelstufe");
+        translationBuilder.add(ModBlocks.RESIN_BRICK_VERTICAL_SLAB, "Vertikale Harzziegelstufe");
+        translationBuilder.add(ModBlocks.RESIN_BRICK_VERTICAL_SLAB.asItem(), "Vertikale Harzziegelstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_SANDSTONE_SLAB, "Vertikale Sandsteinstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_SANDSTONE_SLAB.asItem(), "Vertikale Sandsteinstufe");
+        translationBuilder.add(ModBlocks.SANDSTONE_VERTICAL_SLAB, "Vertikale Sandsteinstufe");
+        translationBuilder.add(ModBlocks.SANDSTONE_VERTICAL_SLAB.asItem(), "Vertikale Sandsteinstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_QUARTZ_SLAB, "Vertikale Glatte Quarzstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_QUARTZ_SLAB.asItem(), "Vertikale Glatte Quarzstufe");
+        translationBuilder.add(ModBlocks.SMOOTH_QUARTZ_VERTICAL_SLAB, "Vertikale Glatte Quarzstufe");
+        translationBuilder.add(ModBlocks.SMOOTH_QUARTZ_VERTICAL_SLAB.asItem(), "Vertikale Glatte Quarzstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_RED_SANDSTONE_SLAB, "Vertikale Glatte rote Sandsteinstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_RED_SANDSTONE_SLAB.asItem(), "Vertikale Glatte rote Sandsteinstufe");
+        translationBuilder.add(ModBlocks.SMOOTH_RED_SANDSTONE_VERTICAL_SLAB, "Vertikale Glatte rote Sandsteinstufe");
+        translationBuilder.add(ModBlocks.SMOOTH_RED_SANDSTONE_VERTICAL_SLAB.asItem(), "Vertikale Glatte rote Sandsteinstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_SANDSTONE_SLAB, "Vertikale Glatte Sandsteinstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_SANDSTONE_SLAB.asItem(), "Vertikale Glatte Sandsteinstufe");
+        translationBuilder.add(ModBlocks.SMOOTH_SANDSTONE_VERTICAL_SLAB, "Vertikale Glatte Sandsteinstufe");
+        translationBuilder.add(ModBlocks.SMOOTH_SANDSTONE_VERTICAL_SLAB.asItem(), "Vertikale Glatte Sandsteinstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_STONE_SLAB, "Vertikale Glatte Steinstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_STONE_SLAB.asItem(), "Vertikale Glatte Steinstufe");
+        translationBuilder.add(ModBlocks.SMOOTH_STONE_VERTICAL_SLAB, "Vertikale Glatte Steinstufe");
+        translationBuilder.add(ModBlocks.SMOOTH_STONE_VERTICAL_SLAB.asItem(), "Vertikale Glatte Steinstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_SPRUCE_SLAB, "Vertikale Fichtenholzstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_SPRUCE_SLAB.asItem(), "Vertikale Fichtenholzstufe");
+        translationBuilder.add(ModBlocks.SPRUCE_VERTICAL_SLAB, "Vertikale Fichtenholzstufe");
+        translationBuilder.add(ModBlocks.SPRUCE_VERTICAL_SLAB.asItem(), "Vertikale Fichtenholzstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_STONE_BRICK_SLAB, "Vertikale Steinziegelstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_STONE_BRICK_SLAB.asItem(), "Vertikale Steinziegelstufe");
+        translationBuilder.add(ModBlocks.STONE_BRICK_VERTICAL_SLAB, "Vertikale Steinziegelstufe");
+        translationBuilder.add(ModBlocks.STONE_BRICK_VERTICAL_SLAB.asItem(), "Vertikale Steinziegelstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_STONE_SLAB, "Vertikale Steinstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_STONE_SLAB.asItem(), "Vertikale Steinstufe");
+        translationBuilder.add(ModBlocks.STONE_VERTICAL_SLAB, "Vertikale Steinstufe");
+        translationBuilder.add(ModBlocks.STONE_VERTICAL_SLAB.asItem(), "Vertikale Steinstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_TUFF_BRICK_SLAB, "Vertikale Tuffsteinziegelstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_TUFF_BRICK_SLAB.asItem(), "Vertikale Tuffsteinziegelstufe");
+        translationBuilder.add(ModBlocks.TUFF_BRICK_VERTICAL_SLAB, "Vertikale Tuffsteinziegelstufe");
+        translationBuilder.add(ModBlocks.TUFF_BRICK_VERTICAL_SLAB.asItem(), "Vertikale Tuffsteinziegelstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_TUFF_SLAB, "Vertikale Tuffsteinstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_TUFF_SLAB.asItem(), "Vertikale Tuffsteinstufe");
+        translationBuilder.add(ModBlocks.TUFF_VERTICAL_SLAB, "Vertikale Tuffsteinstufe");
+        translationBuilder.add(ModBlocks.TUFF_VERTICAL_SLAB.asItem(), "Vertikale Tuffsteinstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_WARPED_SLAB, "Vertikale Wirrstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_WARPED_SLAB.asItem(), "Vertikale Wirrstufe");
+        translationBuilder.add(ModBlocks.WARPED_VERTICAL_SLAB, "Vertikale Wirrstufe");
+        translationBuilder.add(ModBlocks.WARPED_VERTICAL_SLAB.asItem(), "Vertikale Wirrstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_CUT_COPPER_SLAB, "Vertikale Gewachste geschnittene Kupferstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_CUT_COPPER_SLAB.asItem(), "Vertikale Gewachste geschnittene Kupferstufe");
+        translationBuilder.add(ModBlocks.WAXED_CUT_COPPER_VERTICAL_SLAB, "Vertikale Gewachste geschnittene Kupferstufe");
+        translationBuilder.add(ModBlocks.WAXED_CUT_COPPER_VERTICAL_SLAB.asItem(), "Vertikale Gewachste geschnittene Kupferstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_EXPOSED_CUT_COPPER_SLAB, "Vertikale Gewachste angelaufene geschnittene Kupferstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_EXPOSED_CUT_COPPER_SLAB.asItem(), "Vertikale Gewachste angelaufene geschnittene Kupferstufe");
+        translationBuilder.add(ModBlocks.WAXED_EXPOSED_CUT_COPPER_VERTICAL_SLAB, "Vertikale Gewachste angelaufene geschnittene Kupferstufe");
+        translationBuilder.add(ModBlocks.WAXED_EXPOSED_CUT_COPPER_VERTICAL_SLAB.asItem(), "Vertikale Gewachste angelaufene geschnittene Kupferstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_OXIDIZED_CUT_COPPER_SLAB, "Vertikale Gewachste oxidierte geschnittene Kupferstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_OXIDIZED_CUT_COPPER_SLAB.asItem(), "Vertikale Gewachste oxidierte geschnittene Kupferstufe");
+        translationBuilder.add(ModBlocks.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_SLAB, "Vertikale Gewachste oxidierte geschnittene Kupferstufe");
+        translationBuilder.add(ModBlocks.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_SLAB.asItem(), "Vertikale Gewachste oxidierte geschnittene Kupferstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_WEATHERED_CUT_COPPER_SLAB, "Vertikale Gewachste verwitterte geschnittene Kupferstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_WEATHERED_CUT_COPPER_SLAB.asItem(), "Vertikale Gewachste verwitterte geschnittene Kupferstufe");
+        translationBuilder.add(ModBlocks.WAXED_WEATHERED_CUT_COPPER_VERTICAL_SLAB, "Vertikale Gewachste verwitterte geschnittene Kupferstufe");
+        translationBuilder.add(ModBlocks.WAXED_WEATHERED_CUT_COPPER_VERTICAL_SLAB.asItem(), "Vertikale Gewachste verwitterte geschnittene Kupferstufe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_WEATHERED_CUT_COPPER_SLAB, "Vertikale Verwitterte geschnittene Kupferstufe");
-        translationBuilder.add(ModBlocks.VERTICAL_WEATHERED_CUT_COPPER_SLAB.asItem(), "Vertikale Verwitterte geschnittene Kupferstufe");
+        translationBuilder.add(ModBlocks.WEATHERED_CUT_COPPER_VERTICAL_SLAB, "Vertikale Verwitterte geschnittene Kupferstufe");
+        translationBuilder.add(ModBlocks.WEATHERED_CUT_COPPER_VERTICAL_SLAB.asItem(), "Vertikale Verwitterte geschnittene Kupferstufe");
     }
 
 }

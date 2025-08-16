@@ -35,20 +35,22 @@ public class ModRecipeProvider extends FabricRecipeProvider {
             @Override
             public void generate() {
 
+                generateVerticalSlabsRecipe();
+
+            }
+
+            private void generateVerticalSlabsRecipe() {
                 for (Map.Entry<Block, Block> verticalToBaseBlock : VERTICAL_TO_BASE_BLOCK.entrySet()) {
                     Block verticalSlab = verticalToBaseBlock.getKey();
                     Block baseBlock = verticalToBaseBlock.getValue();
 
-                    // id de base construit depuis le block vertical
-                    Identifier baseId = Registries.BLOCK.getId(verticalSlab); // ex: pear_expansion:vertical_prismarine_slab
+                    Identifier baseId = Registries.BLOCK.getId(verticalSlab);
 
-                    // crafting (shaped) -> id unique: ..._crafting
                     Identifier craftingId = Identifier.of(baseId.getNamespace(), baseId.getPath() + "_crafting");
                     createVerticalSlabRecipe(RecipeCategory.BUILDING_BLOCKS, verticalSlab.asItem(), Ingredient.ofItem(baseBlock.asItem()))
                             .criterion(hasItem(baseBlock.asItem()), conditionsFromItem(baseBlock.asItem()))
                             .offerTo(exporter, String.valueOf(craftingId));
 
-                    // stonecutting (si applicable) -> id unique: ..._stonecutting
                     if (ModContentLists.PICKAXE_MINEABLE_BLOCKS.contains(verticalSlab)) {
                         Identifier stonecutId = Identifier.of(baseId.getNamespace(), baseId.getPath() + "_stonecutting");
                         StonecuttingRecipeJsonBuilder.createStonecutting(Ingredient.ofItems(baseBlock.asItem()), RecipeCategory.BUILDING_BLOCKS, verticalSlab.asItem(), 2)

@@ -29,7 +29,7 @@ public class ModModelProvider extends FabricModelProvider {
 
     static {
         MANUAL_TEXTURE_OVERRIDES.put(
-                ModBlocks.VERTICAL_QUARTZ_SLAB,
+                ModBlocks.QUARTZ_VERTICAL_SLAB,
                 new TextureMap()
                         .put(TextureKey.TOP, Identifier.of("minecraft", "block/quartz_block_top"))
                         .put(TextureKey.BOTTOM, Identifier.of("minecraft", "block/quartz_block_top"))
@@ -37,7 +37,7 @@ public class ModModelProvider extends FabricModelProvider {
         );
 
         MANUAL_TEXTURE_OVERRIDES.put(
-                ModBlocks.VERTICAL_SMOOTH_QUARTZ_SLAB,
+                ModBlocks.SMOOTH_QUARTZ_VERTICAL_SLAB,
                 new TextureMap()
                         .put(TextureKey.TOP, Identifier.of("minecraft", "block/quartz_block_top"))
                         .put(TextureKey.BOTTOM, Identifier.of("minecraft", "block/quartz_block_top"))
@@ -45,7 +45,7 @@ public class ModModelProvider extends FabricModelProvider {
         );
 
         MANUAL_TEXTURE_OVERRIDES.put(
-                ModBlocks.VERTICAL_SMOOTH_RED_SANDSTONE_SLAB,
+                ModBlocks.SMOOTH_RED_SANDSTONE_VERTICAL_SLAB,
                 new TextureMap()
                         .put(TextureKey.TOP, Identifier.of("minecraft", "block/red_sandstone_top"))
                         .put(TextureKey.BOTTOM, Identifier.of("minecraft", "block/red_sandstone_top"))
@@ -53,7 +53,7 @@ public class ModModelProvider extends FabricModelProvider {
         );
 
         MANUAL_TEXTURE_OVERRIDES.put(
-                ModBlocks.VERTICAL_SMOOTH_SANDSTONE_SLAB,
+                ModBlocks.SMOOTH_SANDSTONE_VERTICAL_SLAB,
                 new TextureMap()
                         .put(TextureKey.TOP, Identifier.of("minecraft", "block/sandstone_top"))
                         .put(TextureKey.BOTTOM, Identifier.of("minecraft", "block/sandstone_top"))
@@ -61,7 +61,7 @@ public class ModModelProvider extends FabricModelProvider {
         );
 
         MANUAL_TEXTURE_OVERRIDES.put(
-                ModBlocks.VERTICAL_WAXED_CUT_COPPER_SLAB,
+                ModBlocks.WAXED_CUT_COPPER_VERTICAL_SLAB,
                 new TextureMap()
                         .put(TextureKey.TOP, Identifier.of("minecraft", "block/cut_copper_top"))
                         .put(TextureKey.BOTTOM, Identifier.of("minecraft", "block/cut_copper_top"))
@@ -69,7 +69,7 @@ public class ModModelProvider extends FabricModelProvider {
         );
 
         MANUAL_TEXTURE_OVERRIDES.put(
-                ModBlocks.VERTICAL_WAXED_EXPOSED_CUT_COPPER_SLAB,
+                ModBlocks.WAXED_EXPOSED_CUT_COPPER_VERTICAL_SLAB,
                 new TextureMap()
                         .put(TextureKey.TOP, Identifier.of("minecraft", "block/exposed_cut_copper_top"))
                         .put(TextureKey.BOTTOM, Identifier.of("minecraft", "block/exposed_cut_copper_top"))
@@ -77,7 +77,7 @@ public class ModModelProvider extends FabricModelProvider {
         );
 
         MANUAL_TEXTURE_OVERRIDES.put(
-                ModBlocks.VERTICAL_WAXED_WEATHERED_CUT_COPPER_SLAB,
+                ModBlocks.WAXED_WEATHERED_CUT_COPPER_VERTICAL_SLAB,
                 new TextureMap()
                         .put(TextureKey.TOP, Identifier.of("minecraft", "block/weathered_cut_copper_top"))
                         .put(TextureKey.BOTTOM, Identifier.of("minecraft", "block/weathered_cut_copper_top"))
@@ -85,7 +85,7 @@ public class ModModelProvider extends FabricModelProvider {
         );
 
         MANUAL_TEXTURE_OVERRIDES.put(
-                ModBlocks.VERTICAL_WAXED_OXIDIZED_CUT_COPPER_SLAB,
+                ModBlocks.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_SLAB,
                 new TextureMap()
                         .put(TextureKey.TOP, Identifier.of("minecraft", "block/oxidized_cut_copper_top"))
                         .put(TextureKey.BOTTOM, Identifier.of("minecraft", "block/oxidized_cut_copper_top"))

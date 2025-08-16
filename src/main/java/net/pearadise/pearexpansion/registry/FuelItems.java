@@ -11,18 +11,18 @@ public class FuelItems {
 
 
         FuelRegistryEvents.BUILD.register((builder, context) -> {
-            builder.add(ModBlocks.VERTICAL_OAK_SLAB, DEFAULT_WOOD_BURN_TIME);
-            builder.add(ModBlocks.VERTICAL_SPRUCE_SLAB, DEFAULT_WOOD_BURN_TIME);
-            builder.add(ModBlocks.VERTICAL_BIRCH_SLAB, DEFAULT_WOOD_BURN_TIME);
-            builder.add(ModBlocks.VERTICAL_JUNGLE_SLAB, DEFAULT_WOOD_BURN_TIME);
-            builder.add(ModBlocks.VERTICAL_ACACIA_SLAB, DEFAULT_WOOD_BURN_TIME);
-            builder.add(ModBlocks.VERTICAL_DARK_OAK_SLAB, DEFAULT_WOOD_BURN_TIME);
-            builder.add(ModBlocks.VERTICAL_MANGROVE_SLAB, DEFAULT_WOOD_BURN_TIME);
-            builder.add(ModBlocks.VERTICAL_CHERRY_SLAB, DEFAULT_WOOD_BURN_TIME);
-            builder.add(ModBlocks.VERTICAL_PALE_OAK_SLAB, DEFAULT_WOOD_BURN_TIME);
+            builder.add(ModBlocks.OAK_VERTICAL_SLAB, DEFAULT_WOOD_BURN_TIME);
+            builder.add(ModBlocks.SPRUCE_VERTICAL_SLAB, DEFAULT_WOOD_BURN_TIME);
+            builder.add(ModBlocks.BIRCH_VERTICAL_SLAB, DEFAULT_WOOD_BURN_TIME);
+            builder.add(ModBlocks.JUNGLE_VERTICAL_SLAB, DEFAULT_WOOD_BURN_TIME);
+            builder.add(ModBlocks.ACACIA_VERTICAL_SLAB, DEFAULT_WOOD_BURN_TIME);
+            builder.add(ModBlocks.DARK_OAK_VERTICAL_SLAB, DEFAULT_WOOD_BURN_TIME);
+            builder.add(ModBlocks.MANGROVE_VERTICAL_SLAB, DEFAULT_WOOD_BURN_TIME);
+            builder.add(ModBlocks.CHERRY_VERTICAL_SLAB, DEFAULT_WOOD_BURN_TIME);
+            builder.add(ModBlocks.PALE_OAK_VERTICAL_SLAB, DEFAULT_WOOD_BURN_TIME);
 
-            builder.add(ModBlocks.VERTICAL_BAMBOO_SLAB, BAMBOO_BURN_TIME);
-            builder.add(ModBlocks.VERTICAL_BAMBOO_MOSAIC_SLAB, BAMBOO_BURN_TIME);
+            builder.add(ModBlocks.BAMBOO_VERTICAL_SLAB, BAMBOO_BURN_TIME);
+            builder.add(ModBlocks.BAMBOO_MOSAIC_VERTICAL_SLAB, BAMBOO_BURN_TIME);
         });
     }
 }

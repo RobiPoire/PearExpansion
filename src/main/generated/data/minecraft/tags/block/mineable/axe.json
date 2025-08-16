@@ -1,17 +1,17 @@
 {
   "values": [
-    "pear_expansion:vertical_acacia_slab",
-    "pear_expansion:vertical_bamboo_mosaic_slab",
-    "pear_expansion:vertical_bamboo_slab",
-    "pear_expansion:vertical_birch_slab",
-    "pear_expansion:vertical_cherry_slab",
-    "pear_expansion:vertical_crimson_slab",
-    "pear_expansion:vertical_dark_oak_slab",
-    "pear_expansion:vertical_jungle_slab",
-    "pear_expansion:vertical_mangrove_slab",
-    "pear_expansion:vertical_oak_slab",
-    "pear_expansion:vertical_pale_oak_slab",
-    "pear_expansion:vertical_spruce_slab",
-    "pear_expansion:vertical_warped_slab"
+    "pear_expansion:acacia_vertical_slab",
+    "pear_expansion:bamboo_mosaic_vertical_slab",
+    "pear_expansion:bamboo_vertical_slab",
+    "pear_expansion:birch_vertical_slab",
+    "pear_expansion:cherry_vertical_slab",
+    "pear_expansion:crimson_vertical_slab",
+    "pear_expansion:dark_oak_vertical_slab",
+    "pear_expansion:jungle_vertical_slab",
+    "pear_expansion:mangrove_vertical_slab",
+    "pear_expansion:oak_vertical_slab",
+    "pear_expansion:pale_oak_vertical_slab",
+    "pear_expansion:spruce_vertical_slab",
+    "pear_expansion:warped_vertical_slab"
   ]
 }

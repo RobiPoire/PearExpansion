@@ -1,6 +1,9 @@
 package net.pearadise.pearexpansion.block;
 
-import net.minecraft.block.*;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.Oxidizable;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -14,313 +17,313 @@ import java.util.function.Function;
 
 public class ModBlocks {
 
-    public static final Block VERTICAL_OAK_SLAB =
+    public static final Block OAK_VERTICAL_SLAB =
             register(
-                    "vertical_oak_slab",
+                    "oak_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.OAK_SLAB));
 
-    public static final Block VERTICAL_SPRUCE_SLAB =
+    public static final Block SPRUCE_VERTICAL_SLAB =
             register(
-                    "vertical_spruce_slab",
+                    "spruce_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.SPRUCE_SLAB));
-    public static final Block VERTICAL_BIRCH_SLAB =
+    public static final Block BIRCH_VERTICAL_SLAB =
             register(
-                    "vertical_birch_slab",
+                    "birch_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.BIRCH_SLAB));
-    public static final Block VERTICAL_JUNGLE_SLAB =
+    public static final Block JUNGLE_VERTICAL_SLAB =
             register(
-                    "vertical_jungle_slab",
+                    "jungle_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.JUNGLE_SLAB));
-    public static final Block VERTICAL_ACACIA_SLAB =
+    public static final Block ACACIA_VERTICAL_SLAB =
             register(
-                    "vertical_acacia_slab",
+                    "acacia_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.ACACIA_SLAB));
-    public static final Block VERTICAL_DARK_OAK_SLAB =
+    public static final Block DARK_OAK_VERTICAL_SLAB =
             register(
-                    "vertical_dark_oak_slab",
+                    "dark_oak_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.DARK_OAK_SLAB));
-    public static final Block VERTICAL_MANGROVE_SLAB =
+    public static final Block MANGROVE_VERTICAL_SLAB =
             register(
-                    "vertical_mangrove_slab",
+                    "mangrove_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.MANGROVE_SLAB));
-    public static final Block VERTICAL_CHERRY_SLAB =
+    public static final Block CHERRY_VERTICAL_SLAB =
             register(
-                    "vertical_cherry_slab",
+                    "cherry_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.CHERRY_SLAB));
-    public static final Block VERTICAL_CRIMSON_SLAB =
+    public static final Block CRIMSON_VERTICAL_SLAB =
             register(
-                    "vertical_crimson_slab",
+                    "crimson_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.CRIMSON_SLAB));
-    public static final Block VERTICAL_WARPED_SLAB =
+    public static final Block WARPED_VERTICAL_SLAB =
             register(
-                    "vertical_warped_slab",
+                    "warped_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.WARPED_SLAB));
-    public static final Block VERTICAL_BAMBOO_SLAB =
+    public static final Block BAMBOO_VERTICAL_SLAB =
             register(
-                    "vertical_bamboo_slab",
+                    "bamboo_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.BAMBOO_SLAB));
-    public static final Block VERTICAL_BAMBOO_MOSAIC_SLAB =
+    public static final Block BAMBOO_MOSAIC_VERTICAL_SLAB =
             register(
-                    "vertical_bamboo_mosaic_slab",
+                    "bamboo_mosaic_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.BAMBOO_MOSAIC_SLAB));
-    public static final Block VERTICAL_PALE_OAK_SLAB =
+    public static final Block PALE_OAK_VERTICAL_SLAB =
             register(
-                    "vertical_pale_oak_slab",
+                    "pale_oak_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.PALE_OAK_SLAB));
 
-    public static final Block VERTICAL_CUT_COPPER_SLAB =
+    public static final Block CUT_COPPER_VERTICAL_SLAB =
             register(
-                    "vertical_cut_copper_slab",
+                    "cut_copper_vertical_slab",
                     settings -> new OxidizableVerticalSlabBlock(Oxidizable.OxidationLevel.UNAFFECTED, settings),
                     AbstractBlock.Settings.copy(Blocks.CUT_COPPER_SLAB));
 
-    public static final Block VERTICAL_EXPOSED_CUT_COPPER_SLAB =
+    public static final Block EXPOSED_CUT_COPPER_VERTICAL_SLAB =
             register(
-                    "vertical_exposed_cut_copper_slab",
+                    "exposed_cut_copper_vertical_slab",
                     settings -> new OxidizableVerticalSlabBlock(Oxidizable.OxidationLevel.EXPOSED, settings),
                     AbstractBlock.Settings.copy(Blocks.EXPOSED_CUT_COPPER_SLAB));
-    public static final Block VERTICAL_WEATHERED_CUT_COPPER_SLAB =
+    public static final Block WEATHERED_CUT_COPPER_VERTICAL_SLAB =
             register(
-                    "vertical_weathered_cut_copper_slab",
+                    "weathered_cut_copper_vertical_slab",
                     settings -> new OxidizableVerticalSlabBlock(Oxidizable.OxidationLevel.WEATHERED, settings),
                     AbstractBlock.Settings.copy(Blocks.WEATHERED_CUT_COPPER_SLAB));
-    public static final Block VERTICAL_OXIDIZED_CUT_COPPER_SLAB =
+    public static final Block OXIDIZED_CUT_COPPER_VERTICAL_SLAB =
             register(
-                    "vertical_oxidized_cut_copper_slab",
+                    "oxidized_cut_copper_vertical_slab",
                     settings -> new OxidizableVerticalSlabBlock(Oxidizable.OxidationLevel.OXIDIZED, settings),
                     AbstractBlock.Settings.copy(Blocks.OXIDIZED_CUT_COPPER_SLAB));
-    public static final Block VERTICAL_WAXED_CUT_COPPER_SLAB =
+    public static final Block WAXED_CUT_COPPER_VERTICAL_SLAB =
             register(
-                    "vertical_waxed_cut_copper_slab",
+                    "waxed_cut_copper_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.WAXED_CUT_COPPER_SLAB));
-    public static final Block VERTICAL_WAXED_EXPOSED_CUT_COPPER_SLAB =
+    public static final Block WAXED_EXPOSED_CUT_COPPER_VERTICAL_SLAB =
             register(
-                    "vertical_waxed_exposed_cut_copper_slab",
+                    "waxed_exposed_cut_copper_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.WAXED_EXPOSED_CUT_COPPER_SLAB));
-    public static final Block VERTICAL_WAXED_WEATHERED_CUT_COPPER_SLAB =
+    public static final Block WAXED_WEATHERED_CUT_COPPER_VERTICAL_SLAB =
             register(
-                    "vertical_waxed_weathered_cut_copper_slab",
+                    "waxed_weathered_cut_copper_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.WAXED_WEATHERED_CUT_COPPER_SLAB));
-    public static final Block VERTICAL_WAXED_OXIDIZED_CUT_COPPER_SLAB =
+    public static final Block WAXED_OXIDIZED_CUT_COPPER_VERTICAL_SLAB =
             register(
-                    "vertical_waxed_oxidized_cut_copper_slab",
+                    "waxed_oxidized_cut_copper_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.WAXED_OXIDIZED_CUT_COPPER_SLAB));
 
-    public static final Block VERTICAL_STONE_SLAB =
+    public static final Block STONE_VERTICAL_SLAB =
             register(
-                    "vertical_stone_slab",
+                    "stone_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.STONE_SLAB));
-    public static final Block VERTICAL_SMOOTH_STONE_SLAB =
+    public static final Block SMOOTH_STONE_VERTICAL_SLAB =
             register(
-                    "vertical_smooth_stone_slab",
+                    "smooth_stone_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.SMOOTH_STONE_SLAB));
-    public static final Block VERTICAL_SANDSTONE_SLAB =
+    public static final Block SANDSTONE_VERTICAL_SLAB =
             register(
-                    "vertical_sandstone_slab",
+                    "sandstone_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.SANDSTONE_SLAB));
-    public static final Block VERTICAL_CUT_SANDSTONE_SLAB =
+    public static final Block CUT_SANDSTONE_VERTICAL_SLAB =
             register(
-                    "vertical_cut_sandstone_slab",
+                    "cut_sandstone_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.CUT_SANDSTONE_SLAB));
-    public static final Block VERTICAL_COBBLESTONE_SLAB =
+    public static final Block COBBLESTONE_VERTICAL_SLAB =
             register(
-                    "vertical_cobblestone_slab",
+                    "cobblestone_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.COBBLESTONE_SLAB));
-    public static final Block VERTICAL_BRICK_SLAB =
+    public static final Block BRICK_VERTICAL_SLAB =
             register(
-                    "vertical_brick_slab",
+                    "brick_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.BRICK_SLAB));
-    public static final Block VERTICAL_STONE_BRICK_SLAB =
+    public static final Block STONE_BRICK_VERTICAL_SLAB =
             register(
-                    "vertical_stone_brick_slab",
+                    "stone_brick_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.STONE_BRICK_SLAB));
-    public static final Block VERTICAL_QUARTZ_SLAB =
+    public static final Block QUARTZ_VERTICAL_SLAB =
             register(
-                    "vertical_quartz_slab",
+                    "quartz_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.QUARTZ_SLAB));
-    public static final Block VERTICAL_SMOOTH_QUARTZ_SLAB =
+    public static final Block SMOOTH_QUARTZ_VERTICAL_SLAB =
             register(
-                    "vertical_smooth_quartz_slab",
+                    "smooth_quartz_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.SMOOTH_QUARTZ_SLAB));
-    public static final Block VERTICAL_RED_SANDSTONE_SLAB =
+    public static final Block RED_SANDSTONE_VERTICAL_SLAB =
             register(
-                    "vertical_red_sandstone_slab",
+                    "red_sandstone_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.RED_SANDSTONE_SLAB));
-    public static final Block VERTICAL_CUT_RED_SANDSTONE_SLAB =
+    public static final Block CUT_RED_SANDSTONE_VERTICAL_SLAB =
             register(
-                    "vertical_cut_red_sandstone_slab",
+                    "cut_red_sandstone_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.CUT_RED_SANDSTONE_SLAB));
-    public static final Block VERTICAL_PURPUR_SLAB =
+    public static final Block PURPUR_VERTICAL_SLAB =
             register(
-                    "vertical_purpur_slab",
+                    "purpur_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.PURPUR_SLAB));
-    public static final Block VERTICAL_PRISMARINE_SLAB =
+    public static final Block PRISMARINE_VERTICAL_SLAB =
             register(
-                    "vertical_prismarine_slab",
+                    "prismarine_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.PRISMARINE_SLAB));
-    public static final Block VERTICAL_PRISMARINE_BRICK_SLAB =
+    public static final Block PRISMARINE_BRICK_VERTICAL_SLAB =
             register(
-                    "vertical_prismarine_brick_slab",
+                    "prismarine_brick_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.PRISMARINE_BRICK_SLAB));
-    public static final Block VERTICAL_DARK_PRISMARINE_SLAB =
+    public static final Block DARK_PRISMARINE_VERTICAL_SLAB =
             register(
-                    "vertical_dark_prismarine_slab",
+                    "dark_prismarine_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.DARK_PRISMARINE_SLAB));
-    public static final Block VERTICAL_POLISHED_GRANITE_SLAB =
+    public static final Block POLISHED_GRANITE_VERTICAL_SLAB =
             register(
-                    "vertical_polished_granite_slab",
+                    "polished_granite_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.POLISHED_GRANITE_SLAB));
-    public static final Block VERTICAL_SMOOTH_RED_SANDSTONE_SLAB =
+    public static final Block SMOOTH_RED_SANDSTONE_VERTICAL_SLAB =
             register(
-                    "vertical_smooth_red_sandstone_slab",
+                    "smooth_red_sandstone_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.SMOOTH_RED_SANDSTONE_SLAB));
-    public static final Block VERTICAL_MOSSY_STONE_BRICK_SLAB =
+    public static final Block MOSSY_STONE_BRICK_VERTICAL_SLAB =
             register(
-                    "vertical_mossy_stone_brick_slab",
+                    "mossy_stone_brick_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.MOSSY_STONE_BRICK_SLAB));
-    public static final Block VERTICAL_POLISHED_DIORITE_SLAB =
+    public static final Block POLISHED_DIORITE_VERTICAL_SLAB =
             register(
-                    "vertical_polished_diorite_slab",
+                    "polished_diorite_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.POLISHED_DIORITE_SLAB));
-    public static final Block VERTICAL_MOSSY_COBBLESTONE_SLAB =
+    public static final Block MOSSY_COBBLESTONE_VERTICAL_SLAB =
             register(
-                    "vertical_mossy_cobblestone_slab",
+                    "mossy_cobblestone_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.MOSSY_COBBLESTONE_SLAB));
-    public static final Block VERTICAL_SMOOTH_SANDSTONE_SLAB =
+    public static final Block SMOOTH_SANDSTONE_VERTICAL_SLAB =
             register(
-                    "vertical_smooth_sandstone_slab",
+                    "smooth_sandstone_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.SMOOTH_SANDSTONE_SLAB));
-    public static final Block VERTICAL_GRANITE_SLAB =
+    public static final Block GRANITE_VERTICAL_SLAB =
             register(
-                    "vertical_granite_slab",
+                    "granite_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.GRANITE_SLAB));
-    public static final Block VERTICAL_ANDESITE_SLAB =
+    public static final Block ANDESITE_VERTICAL_SLAB =
             register(
-                    "vertical_andesite_slab",
+                    "andesite_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.ANDESITE_SLAB));
-    public static final Block VERTICAL_POLISHED_ANDESITE_SLAB =
+    public static final Block POLISHED_ANDESITE_VERTICAL_SLAB =
             register(
-                    "vertical_polished_andesite_slab",
+                    "polished_andesite_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.POLISHED_ANDESITE_SLAB));
-    public static final Block VERTICAL_DIORITE_SLAB =
+    public static final Block DIORITE_VERTICAL_SLAB =
             register(
-                    "vertical_diorite_slab",
+                    "diorite_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.DIORITE_SLAB));
-    public static final Block VERTICAL_RED_NETHER_BRICK_SLAB =
+    public static final Block RED_NETHER_BRICK_VERTICAL_SLAB =
             register(
-                    "vertical_red_nether_brick_slab",
+                    "red_nether_brick_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.RED_NETHER_BRICK_SLAB));
-    public static final Block VERTICAL_NETHER_BRICK_SLAB =
+    public static final Block NETHER_BRICK_VERTICAL_SLAB =
             register(
-                    "vertical_nether_brick_slab",
+                    "nether_brick_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.NETHER_BRICK_SLAB));
-    public static final Block VERTICAL_COBBLED_DEEPSLATE_SLAB =
+    public static final Block COBBLED_DEEPSLATE_VERTICAL_SLAB =
             register(
-                    "vertical_cobbled_deepslate_slab",
+                    "cobbled_deepslate_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.COBBLED_DEEPSLATE_SLAB));
-    public static final Block VERTICAL_POLISHED_DEEPSLATE_SLAB =
+    public static final Block POLISHED_DEEPSLATE_VERTICAL_SLAB =
             register(
-                    "vertical_polished_deepslate_slab",
+                    "polished_deepslate_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.POLISHED_DEEPSLATE_SLAB));
-    public static final Block VERTICAL_DEEPSLATE_BRICK_SLAB =
+    public static final Block DEEPSLATE_BRICK_VERTICAL_SLAB =
             register(
-                    "vertical_deepslate_brick_slab",
+                    "deepslate_brick_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.DEEPSLATE_BRICK_SLAB));
-    public static final Block VERTICAL_DEEPSLATE_TILE_SLAB =
+    public static final Block DEEPSLATE_TILE_VERTICAL_SLAB =
             register(
-                    "vertical_deepslate_tile_slab",
+                    "deepslate_tile_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.DEEPSLATE_TILE_SLAB));
-    public static final Block VERTICAL_BLACKSTONE_SLAB =
+    public static final Block BLACKSTONE_VERTICAL_SLAB =
             register(
-                    "vertical_blackstone_slab",
+                    "blackstone_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.BLACKSTONE_SLAB));
-    public static final Block VERTICAL_POLISHED_BLACKSTONE_SLAB =
+    public static final Block POLISHED_BLACKSTONE_VERTICAL_SLAB =
             register(
-                    "vertical_polished_blackstone_slab",
+                    "polished_blackstone_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.POLISHED_BLACKSTONE_SLAB));
-    public static final Block VERTICAL_POLISHED_BLACKSTONE_BRICK_SLAB =
+    public static final Block POLISHED_BLACKSTONE_BRICK_VERTICAL_SLAB =
             register(
-                    "vertical_polished_blackstone_brick_slab",
+                    "polished_blackstone_brick_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.POLISHED_BLACKSTONE_BRICK_SLAB));
-    public static final Block VERTICAL_MUD_BRICK_SLAB =
+    public static final Block MUD_BRICK_VERTICAL_SLAB =
             register(
-                    "vertical_mud_brick_slab",
+                    "mud_brick_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.MUD_BRICK_SLAB));
-    public static final Block VERTICAL_RESIN_BRICK_SLAB =
+    public static final Block RESIN_BRICK_VERTICAL_SLAB =
             register(
-                    "vertical_resin_brick_slab",
+                    "resin_brick_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.RESIN_BRICK_SLAB));
-    public static final Block VERTICAL_TUFF_SLAB =
+    public static final Block TUFF_VERTICAL_SLAB =
             register(
-                    "vertical_tuff_slab",
+                    "tuff_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.TUFF_SLAB));
-    public static final Block VERTICAL_POLISHED_TUFF_SLAB =
+    public static final Block POLISHED_TUFF_VERTICAL_SLAB =
             register(
-                    "vertical_polished_tuff_slab",
+                    "polished_tuff_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.POLISHED_TUFF_SLAB));
-    public static final Block VERTICAL_TUFF_BRICK_SLAB =
+    public static final Block TUFF_BRICK_VERTICAL_SLAB =
             register(
-                    "vertical_tuff_brick_slab",
+                    "tuff_brick_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.TUFF_BRICK_SLAB));
-    public static final Block VERTICAL_END_STONE_BRICK_SLAB =
+    public static final Block END_STONE_BRICK_VERTICAL_SLAB =
             register(
-                    "vertical_end_stone_brick_slab",
+                    "end_stone_brick_vertical_slab",
                     VerticalSlabBlock::new,
                     AbstractBlock.Settings.copy(Blocks.END_STONE_BRICK_SLAB));
 
@@ -352,5 +355,3 @@ public class ModBlocks {
     }
 
 }
-
-

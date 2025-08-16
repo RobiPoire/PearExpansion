@@ -60,187 +60,187 @@ public class SpanishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.ENCHANTED_GOLDEN_PEAR, "Pera Dorada Encantada");
 
         // Add translations for all custom vertical slab blocks and their item forms
-        translationBuilder.add(ModBlocks.VERTICAL_ACACIA_SLAB, "Losa vertical de acacia");
-        translationBuilder.add(ModBlocks.VERTICAL_ACACIA_SLAB.asItem(), "Losa vertical de acacia");
+        translationBuilder.add(ModBlocks.ACACIA_VERTICAL_SLAB, "Losa vertical de acacia");
+        translationBuilder.add(ModBlocks.ACACIA_VERTICAL_SLAB.asItem(), "Losa vertical de acacia");
 
-        translationBuilder.add(ModBlocks.VERTICAL_ANDESITE_SLAB, "Losa vertical de andesita");
-        translationBuilder.add(ModBlocks.VERTICAL_ANDESITE_SLAB.asItem(), "Losa vertical de andesita");
+        translationBuilder.add(ModBlocks.ANDESITE_VERTICAL_SLAB, "Losa vertical de andesita");
+        translationBuilder.add(ModBlocks.ANDESITE_VERTICAL_SLAB.asItem(), "Losa vertical de andesita");
 
-        translationBuilder.add(ModBlocks.VERTICAL_BAMBOO_MOSAIC_SLAB, "Losa vertical de mosaico de bambú");
-        translationBuilder.add(ModBlocks.VERTICAL_BAMBOO_MOSAIC_SLAB.asItem(), "Losa vertical de mosaico de bambú");
+        translationBuilder.add(ModBlocks.BAMBOO_MOSAIC_VERTICAL_SLAB, "Losa vertical de mosaico de bambú");
+        translationBuilder.add(ModBlocks.BAMBOO_MOSAIC_VERTICAL_SLAB.asItem(), "Losa vertical de mosaico de bambú");
 
-        translationBuilder.add(ModBlocks.VERTICAL_BAMBOO_SLAB, "Losa vertical de bambú");
-        translationBuilder.add(ModBlocks.VERTICAL_BAMBOO_SLAB.asItem(), "Losa vertical de bambú");
+        translationBuilder.add(ModBlocks.BAMBOO_VERTICAL_SLAB, "Losa vertical de bambú");
+        translationBuilder.add(ModBlocks.BAMBOO_VERTICAL_SLAB.asItem(), "Losa vertical de bambú");
 
-        translationBuilder.add(ModBlocks.VERTICAL_BIRCH_SLAB, "Losa vertical de abedul");
-        translationBuilder.add(ModBlocks.VERTICAL_BIRCH_SLAB.asItem(), "Losa vertical de abedul");
+        translationBuilder.add(ModBlocks.BIRCH_VERTICAL_SLAB, "Losa vertical de abedul");
+        translationBuilder.add(ModBlocks.BIRCH_VERTICAL_SLAB.asItem(), "Losa vertical de abedul");
 
-        translationBuilder.add(ModBlocks.VERTICAL_BLACKSTONE_SLAB, "Losa vertical de piedra negra");
-        translationBuilder.add(ModBlocks.VERTICAL_BLACKSTONE_SLAB.asItem(), "Losa vertical de piedra negra");
+        translationBuilder.add(ModBlocks.BLACKSTONE_VERTICAL_SLAB, "Losa vertical de piedra negra");
+        translationBuilder.add(ModBlocks.BLACKSTONE_VERTICAL_SLAB.asItem(), "Losa vertical de piedra negra");
 
-        translationBuilder.add(ModBlocks.VERTICAL_BRICK_SLAB, "Losa vertical de ladrillos");
-        translationBuilder.add(ModBlocks.VERTICAL_BRICK_SLAB.asItem(), "Losa vertical de ladrillos");
+        translationBuilder.add(ModBlocks.BRICK_VERTICAL_SLAB, "Losa vertical de ladrillos");
+        translationBuilder.add(ModBlocks.BRICK_VERTICAL_SLAB.asItem(), "Losa vertical de ladrillos");
 
-        translationBuilder.add(ModBlocks.VERTICAL_CHERRY_SLAB, "Losa vertical de cerezo");
-        translationBuilder.add(ModBlocks.VERTICAL_CHERRY_SLAB.asItem(), "Losa vertical de cerezo");
+        translationBuilder.add(ModBlocks.CHERRY_VERTICAL_SLAB, "Losa vertical de cerezo");
+        translationBuilder.add(ModBlocks.CHERRY_VERTICAL_SLAB.asItem(), "Losa vertical de cerezo");
 
-        translationBuilder.add(ModBlocks.VERTICAL_COBBLED_DEEPSLATE_SLAB, "Losa vertical de pizarra profunda rocosa");
-        translationBuilder.add(ModBlocks.VERTICAL_COBBLED_DEEPSLATE_SLAB.asItem(), "Losa vertical de pizarra profunda rocosa");
+        translationBuilder.add(ModBlocks.COBBLED_DEEPSLATE_VERTICAL_SLAB, "Losa vertical de pizarra profunda rocosa");
+        translationBuilder.add(ModBlocks.COBBLED_DEEPSLATE_VERTICAL_SLAB.asItem(), "Losa vertical de pizarra profunda rocosa");
 
-        translationBuilder.add(ModBlocks.VERTICAL_COBBLESTONE_SLAB, "Losa vertical de roca");
-        translationBuilder.add(ModBlocks.VERTICAL_COBBLESTONE_SLAB.asItem(), "Losa vertical de roca");
+        translationBuilder.add(ModBlocks.COBBLESTONE_VERTICAL_SLAB, "Losa vertical de roca");
+        translationBuilder.add(ModBlocks.COBBLESTONE_VERTICAL_SLAB.asItem(), "Losa vertical de roca");
 
-        translationBuilder.add(ModBlocks.VERTICAL_CRIMSON_SLAB, "Losa vertical carmesí");
-        translationBuilder.add(ModBlocks.VERTICAL_CRIMSON_SLAB.asItem(), "Losa vertical carmesí");
+        translationBuilder.add(ModBlocks.CRIMSON_VERTICAL_SLAB, "Losa vertical carmesí");
+        translationBuilder.add(ModBlocks.CRIMSON_VERTICAL_SLAB.asItem(), "Losa vertical carmesí");
 
-        translationBuilder.add(ModBlocks.VERTICAL_CUT_COPPER_SLAB, "Losa vertical de cobre cortado");
-        translationBuilder.add(ModBlocks.VERTICAL_CUT_COPPER_SLAB.asItem(), "Losa vertical de cobre cortado");
+        translationBuilder.add(ModBlocks.CUT_COPPER_VERTICAL_SLAB, "Losa vertical de cobre cortado");
+        translationBuilder.add(ModBlocks.CUT_COPPER_VERTICAL_SLAB.asItem(), "Losa vertical de cobre cortado");
 
-        translationBuilder.add(ModBlocks.VERTICAL_CUT_RED_SANDSTONE_SLAB, "Losa vertical de arenisca roja cortada");
-        translationBuilder.add(ModBlocks.VERTICAL_CUT_RED_SANDSTONE_SLAB.asItem(), "Losa vertical de arenisca roja cortada");
+        translationBuilder.add(ModBlocks.CUT_RED_SANDSTONE_VERTICAL_SLAB, "Losa vertical de arenisca roja cortada");
+        translationBuilder.add(ModBlocks.CUT_RED_SANDSTONE_VERTICAL_SLAB.asItem(), "Losa vertical de arenisca roja cortada");
 
-        translationBuilder.add(ModBlocks.VERTICAL_CUT_SANDSTONE_SLAB, "Losa vertical de arenisca cortada");
-        translationBuilder.add(ModBlocks.VERTICAL_CUT_SANDSTONE_SLAB.asItem(), "Losa vertical de arenisca cortada");
+        translationBuilder.add(ModBlocks.CUT_SANDSTONE_VERTICAL_SLAB, "Losa vertical de arenisca cortada");
+        translationBuilder.add(ModBlocks.CUT_SANDSTONE_VERTICAL_SLAB.asItem(), "Losa vertical de arenisca cortada");
 
-        translationBuilder.add(ModBlocks.VERTICAL_DARK_OAK_SLAB, "Losa vertical de roble oscuro");
-        translationBuilder.add(ModBlocks.VERTICAL_DARK_OAK_SLAB.asItem(), "Losa vertical de roble oscuro");
+        translationBuilder.add(ModBlocks.DARK_OAK_VERTICAL_SLAB, "Losa vertical de roble oscuro");
+        translationBuilder.add(ModBlocks.DARK_OAK_VERTICAL_SLAB.asItem(), "Losa vertical de roble oscuro");
 
-        translationBuilder.add(ModBlocks.VERTICAL_DARK_PRISMARINE_SLAB, "Losa vertical de prismarina oscura");
-        translationBuilder.add(ModBlocks.VERTICAL_DARK_PRISMARINE_SLAB.asItem(), "Losa vertical de prismarina oscura");
+        translationBuilder.add(ModBlocks.DARK_PRISMARINE_VERTICAL_SLAB, "Losa vertical de prismarina oscura");
+        translationBuilder.add(ModBlocks.DARK_PRISMARINE_VERTICAL_SLAB.asItem(), "Losa vertical de prismarina oscura");
 
-        translationBuilder.add(ModBlocks.VERTICAL_DEEPSLATE_BRICK_SLAB, "Losa vertical de ladrillos de pizarra profunda");
-        translationBuilder.add(ModBlocks.VERTICAL_DEEPSLATE_BRICK_SLAB.asItem(), "Losa vertical de ladrillos de pizarra profunda");
+        translationBuilder.add(ModBlocks.DEEPSLATE_BRICK_VERTICAL_SLAB, "Losa vertical de ladrillos de pizarra profunda");
+        translationBuilder.add(ModBlocks.DEEPSLATE_BRICK_VERTICAL_SLAB.asItem(), "Losa vertical de ladrillos de pizarra profunda");
 
-        translationBuilder.add(ModBlocks.VERTICAL_DEEPSLATE_TILE_SLAB, "Losa vertical de baldosas de pizarra profunda");
-        translationBuilder.add(ModBlocks.VERTICAL_DEEPSLATE_TILE_SLAB.asItem(), "Losa vertical de baldosas de pizarra profunda");
+        translationBuilder.add(ModBlocks.DEEPSLATE_TILE_VERTICAL_SLAB, "Losa vertical de baldosas de pizarra profunda");
+        translationBuilder.add(ModBlocks.DEEPSLATE_TILE_VERTICAL_SLAB.asItem(), "Losa vertical de baldosas de pizarra profunda");
 
-        translationBuilder.add(ModBlocks.VERTICAL_DIORITE_SLAB, "Losa vertical de diorita");
-        translationBuilder.add(ModBlocks.VERTICAL_DIORITE_SLAB.asItem(), "Losa vertical de diorita");
+        translationBuilder.add(ModBlocks.DIORITE_VERTICAL_SLAB, "Losa vertical de diorita");
+        translationBuilder.add(ModBlocks.DIORITE_VERTICAL_SLAB.asItem(), "Losa vertical de diorita");
 
-        translationBuilder.add(ModBlocks.VERTICAL_END_STONE_BRICK_SLAB, "Losa vertical de ladrillos de piedra del End");
-        translationBuilder.add(ModBlocks.VERTICAL_END_STONE_BRICK_SLAB.asItem(), "Losa vertical de ladrillos de piedra del End");
+        translationBuilder.add(ModBlocks.END_STONE_BRICK_VERTICAL_SLAB, "Losa vertical de ladrillos de piedra del End");
+        translationBuilder.add(ModBlocks.END_STONE_BRICK_VERTICAL_SLAB.asItem(), "Losa vertical de ladrillos de piedra del End");
 
-        translationBuilder.add(ModBlocks.VERTICAL_EXPOSED_CUT_COPPER_SLAB, "Losa vertical de cobre cortado expuesto");
-        translationBuilder.add(ModBlocks.VERTICAL_EXPOSED_CUT_COPPER_SLAB.asItem(), "Losa vertical de cobre cortado expuesto");
+        translationBuilder.add(ModBlocks.EXPOSED_CUT_COPPER_VERTICAL_SLAB, "Losa vertical de cobre cortado expuesto");
+        translationBuilder.add(ModBlocks.EXPOSED_CUT_COPPER_VERTICAL_SLAB.asItem(), "Losa vertical de cobre cortado expuesto");
 
-        translationBuilder.add(ModBlocks.VERTICAL_GRANITE_SLAB, "Losa vertical de granito");
-        translationBuilder.add(ModBlocks.VERTICAL_GRANITE_SLAB.asItem(), "Losa vertical de granito");
+        translationBuilder.add(ModBlocks.GRANITE_VERTICAL_SLAB, "Losa vertical de granito");
+        translationBuilder.add(ModBlocks.GRANITE_VERTICAL_SLAB.asItem(), "Losa vertical de granito");
 
-        translationBuilder.add(ModBlocks.VERTICAL_JUNGLE_SLAB, "Losa vertical de jungla");
-        translationBuilder.add(ModBlocks.VERTICAL_JUNGLE_SLAB.asItem(), "Losa vertical de jungla");
+        translationBuilder.add(ModBlocks.JUNGLE_VERTICAL_SLAB, "Losa vertical de jungla");
+        translationBuilder.add(ModBlocks.JUNGLE_VERTICAL_SLAB.asItem(), "Losa vertical de jungla");
 
-        translationBuilder.add(ModBlocks.VERTICAL_MANGROVE_SLAB, "Losa vertical de mangle");
-        translationBuilder.add(ModBlocks.VERTICAL_MANGROVE_SLAB.asItem(), "Losa vertical de mangle");
+        translationBuilder.add(ModBlocks.MANGROVE_VERTICAL_SLAB, "Losa vertical de mangle");
+        translationBuilder.add(ModBlocks.MANGROVE_VERTICAL_SLAB.asItem(), "Losa vertical de mangle");
 
-        translationBuilder.add(ModBlocks.VERTICAL_MOSSY_COBBLESTONE_SLAB, "Losa vertical de roca musgosa");
-        translationBuilder.add(ModBlocks.VERTICAL_MOSSY_COBBLESTONE_SLAB.asItem(), "Losa vertical de roca musgosa");
+        translationBuilder.add(ModBlocks.MOSSY_COBBLESTONE_VERTICAL_SLAB, "Losa vertical de roca musgosa");
+        translationBuilder.add(ModBlocks.MOSSY_COBBLESTONE_VERTICAL_SLAB.asItem(), "Losa vertical de roca musgosa");
 
-        translationBuilder.add(ModBlocks.VERTICAL_MOSSY_STONE_BRICK_SLAB, "Losa vertical de ladrillos de piedra musgosos");
-        translationBuilder.add(ModBlocks.VERTICAL_MOSSY_STONE_BRICK_SLAB.asItem(), "Losa vertical de ladrillos de piedra musgosos");
+        translationBuilder.add(ModBlocks.MOSSY_STONE_BRICK_VERTICAL_SLAB, "Losa vertical de ladrillos de piedra musgosos");
+        translationBuilder.add(ModBlocks.MOSSY_STONE_BRICK_VERTICAL_SLAB.asItem(), "Losa vertical de ladrillos de piedra musgosos");
 
-        translationBuilder.add(ModBlocks.VERTICAL_MUD_BRICK_SLAB, "Losa vertical de ladrillos de adobe");
-        translationBuilder.add(ModBlocks.VERTICAL_MUD_BRICK_SLAB.asItem(), "Losa vertical de ladrillos de adobe");
+        translationBuilder.add(ModBlocks.MUD_BRICK_VERTICAL_SLAB, "Losa vertical de ladrillos de adobe");
+        translationBuilder.add(ModBlocks.MUD_BRICK_VERTICAL_SLAB.asItem(), "Losa vertical de ladrillos de adobe");
 
-        translationBuilder.add(ModBlocks.VERTICAL_NETHER_BRICK_SLAB, "Losa vertical de ladrillos del Nether");
-        translationBuilder.add(ModBlocks.VERTICAL_NETHER_BRICK_SLAB.asItem(), "Losa vertical de ladrillos del Nether");
+        translationBuilder.add(ModBlocks.NETHER_BRICK_VERTICAL_SLAB, "Losa vertical de ladrillos del Nether");
+        translationBuilder.add(ModBlocks.NETHER_BRICK_VERTICAL_SLAB.asItem(), "Losa vertical de ladrillos del Nether");
 
-        translationBuilder.add(ModBlocks.VERTICAL_OAK_SLAB, "Losa vertical de roble");
-        translationBuilder.add(ModBlocks.VERTICAL_OAK_SLAB.asItem(), "Losa vertical de roble");
+        translationBuilder.add(ModBlocks.OAK_VERTICAL_SLAB, "Losa vertical de roble");
+        translationBuilder.add(ModBlocks.OAK_VERTICAL_SLAB.asItem(), "Losa vertical de roble");
 
-        translationBuilder.add(ModBlocks.VERTICAL_OXIDIZED_CUT_COPPER_SLAB, "Losa vertical de cobre cortado oxidado");
-        translationBuilder.add(ModBlocks.VERTICAL_OXIDIZED_CUT_COPPER_SLAB.asItem(), "Losa vertical de cobre cortado oxidado");
+        translationBuilder.add(ModBlocks.OXIDIZED_CUT_COPPER_VERTICAL_SLAB, "Losa vertical de cobre cortado oxidado");
+        translationBuilder.add(ModBlocks.OXIDIZED_CUT_COPPER_VERTICAL_SLAB.asItem(), "Losa vertical de cobre cortado oxidado");
 
-        translationBuilder.add(ModBlocks.VERTICAL_PALE_OAK_SLAB, "Losa vertical de roble pálido");
-        translationBuilder.add(ModBlocks.VERTICAL_PALE_OAK_SLAB.asItem(), "Losa vertical de roble pálido");
+        translationBuilder.add(ModBlocks.PALE_OAK_VERTICAL_SLAB, "Losa vertical de roble pálido");
+        translationBuilder.add(ModBlocks.PALE_OAK_VERTICAL_SLAB.asItem(), "Losa vertical de roble pálido");
 
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_ANDESITE_SLAB, "Losa vertical de andesita pulida");
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_ANDESITE_SLAB.asItem(), "Losa vertical de andesita pulida");
+        translationBuilder.add(ModBlocks.POLISHED_ANDESITE_VERTICAL_SLAB, "Losa vertical de andesita pulida");
+        translationBuilder.add(ModBlocks.POLISHED_ANDESITE_VERTICAL_SLAB.asItem(), "Losa vertical de andesita pulida");
 
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_BRICK_SLAB, "Losa vertical de ladrillos de piedra negra pulida");
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_BRICK_SLAB.asItem(), "Losa vertical de ladrillos de piedra negra pulida");
+        translationBuilder.add(ModBlocks.POLISHED_BLACKSTONE_BRICK_VERTICAL_SLAB, "Losa vertical de ladrillos de piedra negra pulida");
+        translationBuilder.add(ModBlocks.POLISHED_BLACKSTONE_BRICK_VERTICAL_SLAB.asItem(), "Losa vertical de ladrillos de piedra negra pulida");
 
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_SLAB, "Losa vertical de piedra negra pulida");
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_SLAB.asItem(), "Losa vertical de piedra negra pulida");
+        translationBuilder.add(ModBlocks.POLISHED_BLACKSTONE_VERTICAL_SLAB, "Losa vertical de piedra negra pulida");
+        translationBuilder.add(ModBlocks.POLISHED_BLACKSTONE_VERTICAL_SLAB.asItem(), "Losa vertical de piedra negra pulida");
 
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_DIORITE_SLAB, "Losa vertical de diorita pulida");
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_DIORITE_SLAB.asItem(), "Losa vertical de diorita pulida");
+        translationBuilder.add(ModBlocks.POLISHED_DIORITE_VERTICAL_SLAB, "Losa vertical de diorita pulida");
+        translationBuilder.add(ModBlocks.POLISHED_DIORITE_VERTICAL_SLAB.asItem(), "Losa vertical de diorita pulida");
 
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_GRANITE_SLAB, "Losa vertical de granito pulido");
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_GRANITE_SLAB.asItem(), "Losa vertical de granito pulido");
+        translationBuilder.add(ModBlocks.POLISHED_GRANITE_VERTICAL_SLAB, "Losa vertical de granito pulido");
+        translationBuilder.add(ModBlocks.POLISHED_GRANITE_VERTICAL_SLAB.asItem(), "Losa vertical de granito pulido");
 
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_DEEPSLATE_SLAB, "Losa vertical de pizarra profunda pulida");
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_DEEPSLATE_SLAB.asItem(), "Losa vertical de pizarra profunda pulida");
+        translationBuilder.add(ModBlocks.POLISHED_DEEPSLATE_VERTICAL_SLAB, "Losa vertical de pizarra profunda pulida");
+        translationBuilder.add(ModBlocks.POLISHED_DEEPSLATE_VERTICAL_SLAB.asItem(), "Losa vertical de pizarra profunda pulida");
 
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_TUFF_SLAB, "Losa vertical de toba pulida");
-        translationBuilder.add(ModBlocks.VERTICAL_POLISHED_TUFF_SLAB.asItem(), "Losa vertical de toba pulida");
+        translationBuilder.add(ModBlocks.POLISHED_TUFF_VERTICAL_SLAB, "Losa vertical de toba pulida");
+        translationBuilder.add(ModBlocks.POLISHED_TUFF_VERTICAL_SLAB.asItem(), "Losa vertical de toba pulida");
 
-        translationBuilder.add(ModBlocks.VERTICAL_PRISMARINE_BRICK_SLAB, "Losa vertical de ladrillos de prismarina");
-        translationBuilder.add(ModBlocks.VERTICAL_PRISMARINE_BRICK_SLAB.asItem(), "Losa vertical de ladrillos de prismarina");
+        translationBuilder.add(ModBlocks.PRISMARINE_BRICK_VERTICAL_SLAB, "Losa vertical de ladrillos de prismarina");
+        translationBuilder.add(ModBlocks.PRISMARINE_BRICK_VERTICAL_SLAB.asItem(), "Losa vertical de ladrillos de prismarina");
 
-        translationBuilder.add(ModBlocks.VERTICAL_PRISMARINE_SLAB, "Losa vertical de prismarina");
-        translationBuilder.add(ModBlocks.VERTICAL_PRISMARINE_SLAB.asItem(), "Losa vertical de prismarina");
+        translationBuilder.add(ModBlocks.PRISMARINE_VERTICAL_SLAB, "Losa vertical de prismarina");
+        translationBuilder.add(ModBlocks.PRISMARINE_VERTICAL_SLAB.asItem(), "Losa vertical de prismarina");
 
-        translationBuilder.add(ModBlocks.VERTICAL_PURPUR_SLAB, "Losa vertical de purpur");
-        translationBuilder.add(ModBlocks.VERTICAL_PURPUR_SLAB.asItem(), "Losa vertical de purpur");
+        translationBuilder.add(ModBlocks.PURPUR_VERTICAL_SLAB, "Losa vertical de purpur");
+        translationBuilder.add(ModBlocks.PURPUR_VERTICAL_SLAB.asItem(), "Losa vertical de purpur");
 
-        translationBuilder.add(ModBlocks.VERTICAL_QUARTZ_SLAB, "Losa vertical de cuarzo");
-        translationBuilder.add(ModBlocks.VERTICAL_QUARTZ_SLAB.asItem(), "Losa vertical de cuarzo");
+        translationBuilder.add(ModBlocks.QUARTZ_VERTICAL_SLAB, "Losa vertical de cuarzo");
+        translationBuilder.add(ModBlocks.QUARTZ_VERTICAL_SLAB.asItem(), "Losa vertical de cuarzo");
 
-        translationBuilder.add(ModBlocks.VERTICAL_RED_NETHER_BRICK_SLAB, "Losa vertical de ladrillos del Nether rojos");
-        translationBuilder.add(ModBlocks.VERTICAL_RED_NETHER_BRICK_SLAB.asItem(), "Losa vertical de ladrillos del Nether rojos");
+        translationBuilder.add(ModBlocks.RED_NETHER_BRICK_VERTICAL_SLAB, "Losa vertical de ladrillos del Nether rojos");
+        translationBuilder.add(ModBlocks.RED_NETHER_BRICK_VERTICAL_SLAB.asItem(), "Losa vertical de ladrillos del Nether rojos");
 
-        translationBuilder.add(ModBlocks.VERTICAL_RED_SANDSTONE_SLAB, "Losa vertical de arenisca roja");
-        translationBuilder.add(ModBlocks.VERTICAL_RED_SANDSTONE_SLAB.asItem(), "Losa vertical de arenisca roja");
+        translationBuilder.add(ModBlocks.RED_SANDSTONE_VERTICAL_SLAB, "Losa vertical de arenisca roja");
+        translationBuilder.add(ModBlocks.RED_SANDSTONE_VERTICAL_SLAB.asItem(), "Losa vertical de arenisca roja");
 
-        translationBuilder.add(ModBlocks.VERTICAL_RESIN_BRICK_SLAB, "Losa vertical de ladrillos de resina");
-        translationBuilder.add(ModBlocks.VERTICAL_RESIN_BRICK_SLAB.asItem(), "Losa vertical de ladrillos de resina");
+        translationBuilder.add(ModBlocks.RESIN_BRICK_VERTICAL_SLAB, "Losa vertical de ladrillos de resina");
+        translationBuilder.add(ModBlocks.RESIN_BRICK_VERTICAL_SLAB.asItem(), "Losa vertical de ladrillos de resina");
 
-        translationBuilder.add(ModBlocks.VERTICAL_SANDSTONE_SLAB, "Losa vertical de arenisca");
-        translationBuilder.add(ModBlocks.VERTICAL_SANDSTONE_SLAB.asItem(), "Losa vertical de arenisca");
+        translationBuilder.add(ModBlocks.SANDSTONE_VERTICAL_SLAB, "Losa vertical de arenisca");
+        translationBuilder.add(ModBlocks.SANDSTONE_VERTICAL_SLAB.asItem(), "Losa vertical de arenisca");
 
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_QUARTZ_SLAB, "Losa vertical de cuarzo liso");
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_QUARTZ_SLAB.asItem(), "Losa vertical de cuarzo liso");
+        translationBuilder.add(ModBlocks.SMOOTH_QUARTZ_VERTICAL_SLAB, "Losa vertical de cuarzo liso");
+        translationBuilder.add(ModBlocks.SMOOTH_QUARTZ_VERTICAL_SLAB.asItem(), "Losa vertical de cuarzo liso");
 
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_RED_SANDSTONE_SLAB, "Losa vertical de arenisca roja lisa");
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_RED_SANDSTONE_SLAB.asItem(), "Losa vertical de arenisca roja lisa");
+        translationBuilder.add(ModBlocks.SMOOTH_RED_SANDSTONE_VERTICAL_SLAB, "Losa vertical de arenisca roja lisa");
+        translationBuilder.add(ModBlocks.SMOOTH_RED_SANDSTONE_VERTICAL_SLAB.asItem(), "Losa vertical de arenisca roja lisa");
 
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_SANDSTONE_SLAB, "Losa vertical de arenisca lisa");
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_SANDSTONE_SLAB.asItem(), "Losa vertical de arenisca lisa");
+        translationBuilder.add(ModBlocks.SMOOTH_SANDSTONE_VERTICAL_SLAB, "Losa vertical de arenisca lisa");
+        translationBuilder.add(ModBlocks.SMOOTH_SANDSTONE_VERTICAL_SLAB.asItem(), "Losa vertical de arenisca lisa");
 
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_STONE_SLAB, "Losa vertical de piedra lisa");
-        translationBuilder.add(ModBlocks.VERTICAL_SMOOTH_STONE_SLAB.asItem(), "Losa vertical de piedra lisa");
+        translationBuilder.add(ModBlocks.SMOOTH_STONE_VERTICAL_SLAB, "Losa vertical de piedra lisa");
+        translationBuilder.add(ModBlocks.SMOOTH_STONE_VERTICAL_SLAB.asItem(), "Losa vertical de piedra lisa");
 
-        translationBuilder.add(ModBlocks.VERTICAL_SPRUCE_SLAB, "Losa vertical de abeto");
-        translationBuilder.add(ModBlocks.VERTICAL_SPRUCE_SLAB.asItem(), "Losa vertical de abeto");
+        translationBuilder.add(ModBlocks.SPRUCE_VERTICAL_SLAB, "Losa vertical de abeto");
+        translationBuilder.add(ModBlocks.SPRUCE_VERTICAL_SLAB.asItem(), "Losa vertical de abeto");
 
-        translationBuilder.add(ModBlocks.VERTICAL_STONE_BRICK_SLAB, "Losa vertical de ladrillos de piedra");
-        translationBuilder.add(ModBlocks.VERTICAL_STONE_BRICK_SLAB.asItem(), "Losa vertical de ladrillos de piedra");
+        translationBuilder.add(ModBlocks.STONE_BRICK_VERTICAL_SLAB, "Losa vertical de ladrillos de piedra");
+        translationBuilder.add(ModBlocks.STONE_BRICK_VERTICAL_SLAB.asItem(), "Losa vertical de ladrillos de piedra");
 
-        translationBuilder.add(ModBlocks.VERTICAL_STONE_SLAB, "Losa vertical de piedra");
-        translationBuilder.add(ModBlocks.VERTICAL_STONE_SLAB.asItem(), "Losa vertical de piedra");
+        translationBuilder.add(ModBlocks.STONE_VERTICAL_SLAB, "Losa vertical de piedra");
+        translationBuilder.add(ModBlocks.STONE_VERTICAL_SLAB.asItem(), "Losa vertical de piedra");
 
-        translationBuilder.add(ModBlocks.VERTICAL_TUFF_BRICK_SLAB, "Losa vertical de ladrillos de toba");
-        translationBuilder.add(ModBlocks.VERTICAL_TUFF_BRICK_SLAB.asItem(), "Losa vertical de ladrillos de toba");
+        translationBuilder.add(ModBlocks.TUFF_BRICK_VERTICAL_SLAB, "Losa vertical de ladrillos de toba");
+        translationBuilder.add(ModBlocks.TUFF_BRICK_VERTICAL_SLAB.asItem(), "Losa vertical de ladrillos de toba");
 
-        translationBuilder.add(ModBlocks.VERTICAL_TUFF_SLAB, "Losa vertical de toba");
-        translationBuilder.add(ModBlocks.VERTICAL_TUFF_SLAB.asItem(), "Losa vertical de toba");
+        translationBuilder.add(ModBlocks.TUFF_VERTICAL_SLAB, "Losa vertical de toba");
+        translationBuilder.add(ModBlocks.TUFF_VERTICAL_SLAB.asItem(), "Losa vertical de toba");
 
-        translationBuilder.add(ModBlocks.VERTICAL_WARPED_SLAB, "Losa vertical distorsionada");
-        translationBuilder.add(ModBlocks.VERTICAL_WARPED_SLAB.asItem(), "Losa vertical distorsionada");
+        translationBuilder.add(ModBlocks.WARPED_VERTICAL_SLAB, "Losa vertical distorsionada");
+        translationBuilder.add(ModBlocks.WARPED_VERTICAL_SLAB.asItem(), "Losa vertical distorsionada");
 
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_CUT_COPPER_SLAB, "Losa vertical de cobre cortado encerado");
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_CUT_COPPER_SLAB.asItem(), "Losa vertical de cobre cortado encerado");
+        translationBuilder.add(ModBlocks.WAXED_CUT_COPPER_VERTICAL_SLAB, "Losa vertical de cobre cortado encerado");
+        translationBuilder.add(ModBlocks.WAXED_CUT_COPPER_VERTICAL_SLAB.asItem(), "Losa vertical de cobre cortado encerado");
 
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_EXPOSED_CUT_COPPER_SLAB, "Losa vertical de cobre cortado expuesto encerado");
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_EXPOSED_CUT_COPPER_SLAB.asItem(), "Losa vertical de cobre cortado expuesto encerado");
+        translationBuilder.add(ModBlocks.WAXED_EXPOSED_CUT_COPPER_VERTICAL_SLAB, "Losa vertical de cobre cortado expuesto encerado");
+        translationBuilder.add(ModBlocks.WAXED_EXPOSED_CUT_COPPER_VERTICAL_SLAB.asItem(), "Losa vertical de cobre cortado expuesto encerado");
 
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_OXIDIZED_CUT_COPPER_SLAB, "Losa vertical de cobre cortado oxidado encerado");
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_OXIDIZED_CUT_COPPER_SLAB.asItem(), "Losa vertical de cobre cortado oxidado encerado");
+        translationBuilder.add(ModBlocks.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_SLAB, "Losa vertical de cobre cortado oxidado encerado");
+        translationBuilder.add(ModBlocks.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_SLAB.asItem(), "Losa vertical de cobre cortado oxidado encerado");
 
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_WEATHERED_CUT_COPPER_SLAB, "Losa vertical de cobre cortado degradado encerado");
-        translationBuilder.add(ModBlocks.VERTICAL_WAXED_WEATHERED_CUT_COPPER_SLAB.asItem(), "Losa vertical de cobre cortado degradado encerado");
+        translationBuilder.add(ModBlocks.WAXED_WEATHERED_CUT_COPPER_VERTICAL_SLAB, "Losa vertical de cobre cortado degradado encerado");
+        translationBuilder.add(ModBlocks.WAXED_WEATHERED_CUT_COPPER_VERTICAL_SLAB.asItem(), "Losa vertical de cobre cortado degradado encerado");
 
-        translationBuilder.add(ModBlocks.VERTICAL_WEATHERED_CUT_COPPER_SLAB, "Losa vertical de cobre cortado degradado");
-        translationBuilder.add(ModBlocks.VERTICAL_WEATHERED_CUT_COPPER_SLAB.asItem(), "Losa vertical de cobre cortado degradado");
+        translationBuilder.add(ModBlocks.WEATHERED_CUT_COPPER_VERTICAL_SLAB, "Losa vertical de cobre cortado degradado");
+        translationBuilder.add(ModBlocks.WEATHERED_CUT_COPPER_VERTICAL_SLAB.asItem(), "Losa vertical de cobre cortado degradado");
     }
 }
