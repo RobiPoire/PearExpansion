@@ -8,10 +8,12 @@ import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
 import net.minecraft.data.recipe.StonecuttingRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
+import net.pearadise.pearexpansion.item.ModItems;
 import net.pearadise.pearexpansion.util.ModContentLists;
 
 import java.util.Map;
@@ -34,6 +36,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
             @Override
             public void generate() {
+
+                this.createShaped(RecipeCategory.FOOD, ModItems.GOLDEN_PEAR)
+                        .input('#', Items.GOLD_INGOT)
+                        .input('X', ModItems.PEAR)
+                        .pattern("###")
+                        .pattern("#X#")
+                        .pattern("###")
+                        .criterion("has_gold_ingot", this.conditionsFromItem(Items.GOLD_INGOT))
+                        .offerTo(this.exporter);
 
                 generateVerticalSlabsRecipe();
 
