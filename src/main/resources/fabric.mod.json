@@ -4,20 +4,29 @@
   "version": "${version}",
   "name": "Pear Expansion",
   "description": "Pear Expansion is a small Minecraft mod that adds various features, blocks, items, and tweaks — just things I felt like adding.",
-  "authors": [],
+  "authors": ["RobiPoire"],
   "contact": {},
   "license": "GPL-3.0",
   "icon": "assets/pear_expansion/icon.png",
   "environment": "*",
   "entrypoints": {
     "fabric-datagen": [
-      "net.pearadise.pearexpansion.client.PearExpansionDataGenerator"
+      {
+        "adapter": "kotlin",
+        "value": "net.pearadise.pearexpansion.client.PearExpansionDataGenerator"
+      }
     ],
     "client": [
-      "net.pearadise.pearexpansion.client.PearExpansionClient"
+      {
+        "adapter": "kotlin",
+        "value": "net.pearadise.pearexpansion.client.PearExpansionClient"
+      }
     ],
     "main": [
-      "net.pearadise.pearexpansion.PearExpansion"
+      {
+        "adapter": "kotlin",
+        "value": "net.pearadise.pearexpansion.PearExpansion"
+      }
     ]
   },
   "mixins": [

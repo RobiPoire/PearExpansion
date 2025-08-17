@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "type=double": {
+      "model": "minecraft:block/deepslate_tiles",
+      "uvlock": true
+    },
+    "type=east": {
+      "model": "pear_expansion:block/deepslate_tile_vertical_slab",
+      "uvlock": true,
+      "y": 90
+    },
+    "type=north": {
+      "model": "pear_expansion:block/deepslate_tile_vertical_slab",
+      "uvlock": true
+    },
+    "type=south": {
+      "model": "pear_expansion:block/deepslate_tile_vertical_slab",
+      "uvlock": true,
+      "y": 180
+    },
+    "type=west": {
+      "model": "pear_expansion:block/deepslate_tile_vertical_slab",
+      "uvlock": true,
+      "y": 270
+    }
+  }
+}

@@ -118,3 +118,4 @@ replay_pid*
 *.stackdump
 run/
 runs/
+/src/main/generated/.cache/
