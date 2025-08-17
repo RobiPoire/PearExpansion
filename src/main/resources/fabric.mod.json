@@ -4,7 +4,9 @@
   "version": "${version}",
   "name": "Pear Expansion",
   "description": "Pear Expansion is a small Minecraft mod that adds various features, blocks, items, and tweaks — just things I felt like adding.",
-  "authors": ["RobiPoire"],
+  "authors": [
+    "RobiPoire"
+  ],
   "contact": {},
   "license": "GPL-3.0",
   "icon": "assets/pear_expansion/icon.png",

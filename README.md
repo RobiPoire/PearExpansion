@@ -1,8 +1,10 @@
-⚠️ **Mod in development** — I add things when I feel like it. In other words: it’s not finished, and I don’t know when it will be.
+⚠️ **Mod in development** — I add things when I feel like it. In other words: it’s not finished, and I don’t know when
+it will be.
 
 # 🍐 Pear Expansion
 
-**Pear Expansion** is a small Minecraft mod that adds all kinds of stuff — blocks, items, random features — just things I thought were fun to make. No special theme, just… pears, some chaos, and strange ideas.
+**Pear Expansion** is a small Minecraft mod that adds all kinds of stuff — blocks, items, random features — just things
+I thought were fun to make. No special theme, just… pears, some chaos, and strange ideas.
 
 ## 🎯 Ideas and goals (list 100% subject to change):
 
