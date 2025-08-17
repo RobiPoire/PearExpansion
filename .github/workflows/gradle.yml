@@ -20,7 +20,7 @@ jobs:
       - name: Set up JDK 21
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
+          distribution: temurin
           java-version: '21'
 
       - name: Ensure gradlew is executable
@@ -32,19 +32,17 @@ jobs:
           path: |
             ~/.gradle/caches
             ~/.gradle/wrapper/dists
-          key: gradle-cache-${{ runner.os }}-${{ hashFiles('**/gradle-wrapper.properties', '**/*.gradle*', '**/gradle.lockfile') }}
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/gradle-wrapper.properties', '**/*.gradle*', '**/gradle.lockfile') }}
           restore-keys: |
-            gradle-cache-${{ runner.os }}-
+            ${{ runner.os }}-gradle-
 
       - name: Show Java info
         run: java -version
 
       - name: Build with Gradle (verbose)
-        # --no-daemon to avoid background daemons in CI; detailed logs for debugging
         run: ./gradlew clean build --no-daemon --stacktrace --info
         env:
-          # Optional: tweak JVM memory for Gradle if necessary
-          GRADLE_OPTS: "-Xmx2g -Dorg.gradle.jvmargs=-Xmx2g"
+          GRADLE_OPTS: -Xmx2g -Dorg.gradle.jvmargs=-Xmx2g
 
   dependency-submission:
     name: Generate & submit dependency graph
@@ -59,17 +57,13 @@ jobs:
       - name: Set up JDK 21 (for dependency submission)
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
+          distribution: temurin
           java-version: '21'
 
       - name: Ensure gradlew is executable
         run: chmod +x ./gradlew
 
       - name: Generate and submit dependency graph
-        # Use the official Gradle dependency submission action (v4)
         uses: gradle/actions/dependency-submission@v4
-        with:
-          # no inputs required in many repos; keep default config
-          # if you need to customize, add inputs here (see action docs)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
