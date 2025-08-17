@@ -1,4 +1,4 @@
-name: CI - Gradle Build (Java 21)
+name: CI - Gradle Build (Java 21) + runDatagen
 
 on:
   push:
@@ -39,10 +39,16 @@ jobs:
       - name: Show Java info
         run: java -version
 
+      - name: Run datagen (runDatagen)
+        # Exécute la task runDatagen (doit exister dans ton build)
+        run: ./gradlew runDatagen --no-daemon --stacktrace --info
+        env:
+          GRADLE_OPTS: "-Xmx2g -Dorg.gradle.jvmargs=-Xmx2g"
+
       - name: Build with Gradle (verbose)
         run: ./gradlew clean build --no-daemon --stacktrace --info
         env:
-          GRADLE_OPTS: -Xmx2g -Dorg.gradle.jvmargs=-Xmx2g
+          GRADLE_OPTS: "-Xmx2g -Dorg.gradle.jvmargs=-Xmx2g"
 
   dependency-submission:
     name: Generate & submit dependency graph
