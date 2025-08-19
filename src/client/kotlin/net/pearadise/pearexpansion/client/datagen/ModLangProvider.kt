@@ -2,10 +2,7 @@ package net.pearadise.pearexpansion.client.datagen
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator
 import net.pearadise.pearexpansion.client.datagen.ModLangProvider.addLangProviders
-import net.pearadise.pearexpansion.client.datagen.language.DeDeLangProvider
-import net.pearadise.pearexpansion.client.datagen.language.EnUsLangProvider
-import net.pearadise.pearexpansion.client.datagen.language.EoUyLangProvider
-import net.pearadise.pearexpansion.client.datagen.language.FrFrLangProvider
+import net.pearadise.pearexpansion.client.datagen.language.*
 
 /**
  * Registers all language providers for the Pear Expansion mod.
@@ -35,12 +32,12 @@ object ModLangProvider {
         pack.addProvider(::DeDeLangProvider)
 
         // Italian (it_it)
-        // pack.addProvider(::ItItLangProvider)
+        pack.addProvider(::ItItLangProvider)
 
         // Spanish (es_es)
-        // pack.addProvider(::EsEsLangProvider)
+        pack.addProvider(::EsEsLangProvider)
 
         // Toki Pona (tok)
-        // pack.addProvider(::TokLangProvider)
+        pack.addProvider(::TokLangProvider)
     }
 }

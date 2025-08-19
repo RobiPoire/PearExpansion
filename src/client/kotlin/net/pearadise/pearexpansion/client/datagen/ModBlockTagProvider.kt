@@ -13,13 +13,9 @@ import net.pearadise.pearexpansion.util.ModContentLists
 import java.util.concurrent.CompletableFuture
 
 /**
- * Provides and generates block tags for the Pear Expansion mod.
+ * Provides custom block tags for the Pear Expansion mod.
  *
- * Adds custom tags for vertical slabs and registers mineable tags for custom blocks.
- *
- * @constructor Creates a new block tag provider.
- * @param output The data output for generated files.
- * @param registriesFuture Future for registry lookup.
+ * Registers tags for vertical slabs and adds mining tags for custom blocks.
  */
 class ModBlockTagProvider(
     output: FabricDataOutput,
@@ -27,48 +23,27 @@ class ModBlockTagProvider(
 ) : FabricTagProvider.BlockTagProvider(output, registriesFuture) {
 
     companion object {
-        /** Tag for all vertical slab blocks. */
-        val VERTICAL_SLABS: TagKey<Block> = of("vertical_slabs")
+        /** All vertical slab blocks. */
+        val VERTICAL_SLABS: TagKey<Block> = tag("vertical_slabs")
 
-        /** Tag for all wooden vertical slab blocks. */
-        val WOODEN_VERTICAL_SLABS: TagKey<Block> = of("wooden_vertical_slabs")
+        /** All wooden vertical slab blocks. */
+        val WOODEN_VERTICAL_SLABS: TagKey<Block> = tag("wooden_vertical_slabs")
 
-        /**
-         * Creates a [TagKey] for a block tag with the given ID.
-         *
-         * @param id The tag ID.
-         * @return The [TagKey] for the block tag.
-         */
-        private fun of(id: String): TagKey<Block> =
+        /** Creates a [TagKey] for a block tag with the given ID. */
+        private fun tag(id: String): TagKey<Block> =
             TagKey.of(RegistryKeys.BLOCK, Identifier.of(MOD_ID, id))
     }
 
     /**
      * Configures and adds blocks to custom and vanilla tags.
-     *
-     * Registers all vertical slabs, axe-mineable, wooden vertical slabs,
-     * and pickaxe-mineable blocks.
-     *
-     * @param registries The registry lookup.
      */
     override fun configure(registries: RegistryWrapper.WrapperLookup) {
-        // Add all vertical slabs to the custom tag
-        val allVertical = ModContentLists.ALL_VERTICAL_SLABS.toTypedArray()
-        valueLookupBuilder(VERTICAL_SLABS)
-            .add(*allVertical)
+        // Custom tags
+        valueLookupBuilder(VERTICAL_SLABS).add(*ModContentLists.ALL_VERTICAL_SLABS.toTypedArray())
+        valueLookupBuilder(WOODEN_VERTICAL_SLABS).add(*ModContentLists.AXE_MINEABLE_BLOCKS.toTypedArray())
 
-        // Add axe-mineable blocks to the vanilla tag
-        val axeMineable = ModContentLists.AXE_MINEABLE_BLOCKS.toTypedArray()
-        valueLookupBuilder(BlockTags.AXE_MINEABLE)
-            .add(*axeMineable)
-
-        // Add wooden vertical slabs to the custom tag
-        valueLookupBuilder(WOODEN_VERTICAL_SLABS)
-            .add(*axeMineable)
-
-        // Add pickaxe-mineable blocks to the vanilla tag
-        val pickMineable = ModContentLists.PICKAXE_MINEABLE_BLOCKS.toTypedArray()
-        valueLookupBuilder(BlockTags.PICKAXE_MINEABLE)
-            .add(*pickMineable)
+        // Vanilla tags
+        valueLookupBuilder(BlockTags.AXE_MINEABLE).add(*ModContentLists.AXE_MINEABLE_BLOCKS.toTypedArray())
+        valueLookupBuilder(BlockTags.PICKAXE_MINEABLE).add(*ModContentLists.PICKAXE_MINEABLE_BLOCKS.toTypedArray())
     }
 }

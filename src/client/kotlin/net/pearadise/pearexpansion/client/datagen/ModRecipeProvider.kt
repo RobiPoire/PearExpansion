@@ -11,6 +11,7 @@ import net.minecraft.item.Items
 import net.minecraft.recipe.Ingredient
 import net.minecraft.recipe.book.RecipeCategory
 import net.minecraft.registry.Registries
+import net.minecraft.registry.RegistryWrapper
 import net.minecraft.util.Identifier
 import net.pearadise.pearexpansion.item.ModItems
 import net.pearadise.pearexpansion.util.ModContentLists
@@ -27,7 +28,7 @@ import java.util.concurrent.CompletableFuture
  */
 class ModRecipeProvider(
     output: FabricDataOutput,
-    registriesFuture: CompletableFuture<net.minecraft.registry.RegistryWrapper.WrapperLookup>
+    registriesFuture: CompletableFuture<RegistryWrapper.WrapperLookup>
 ) : FabricRecipeProvider(output, registriesFuture) {
 
     /**
@@ -38,30 +39,29 @@ class ModRecipeProvider(
      * @return The [RecipeGenerator] instance.
      */
     override fun getRecipeGenerator(
-        registryLookup: net.minecraft.registry.RegistryWrapper.WrapperLookup,
+        registryLookup: RegistryWrapper.WrapperLookup,
         exporter: RecipeExporter
     ): RecipeGenerator {
         return object : RecipeGenerator(registryLookup, exporter) {
 
             /**
-             * Creates a shaped recipe for vertical slabs.
+             * Creates a shaped recipe for vertical slabs (6 output).
              *
              * @param category The recipe category.
              * @param output The output item.
              * @param input The input ingredient.
              * @return The [CraftingRecipeJsonBuilder] for the recipe.
              */
-            fun createVerticalSlabRecipe(
+            private fun createVerticalSlabRecipe(
                 category: RecipeCategory,
                 output: ItemConvertible,
                 input: Ingredient
-            ): CraftingRecipeJsonBuilder {
-                return createShaped(category, output, 6)
+            ): CraftingRecipeJsonBuilder =
+                createShaped(category, output, 6)
                     .input('#', input)
                     .pattern("#")
                     .pattern("#")
                     .pattern("#")
-            }
 
             /**
              * Generates all custom recipes for the mod.
@@ -77,6 +77,7 @@ class ModRecipeProvider(
                     .criterion("has_gold_ingot", conditionsFromItem(Items.GOLD_INGOT))
                     .offerTo(exporter)
 
+                // Vertical slab crafting and stonecutting recipes
                 generateVerticalSlabsRecipe()
             }
 
@@ -84,11 +85,13 @@ class ModRecipeProvider(
              * Generates crafting and stonecutting recipes for all vertical slab blocks.
              */
             private fun generateVerticalSlabsRecipe() {
-                for ((verticalSlab, baseBlock) in ModContentLists.VERTICAL_TO_BASE_BLOCK) {
+                ModContentLists.VERTICAL_TO_BASE_BLOCK.forEach { (verticalSlab, baseBlock) ->
                     val baseId = Registries.BLOCK.getId(verticalSlab)
+                    val namespace = baseId.namespace
+                    val path = baseId.path
 
-                    // Crafting recipe for vertical slab
-                    val craftingId = Identifier.of(baseId.namespace, "${baseId.path}_crafting")
+                    // Crafting recipe
+                    val craftingId = Identifier.of(namespace, "${path}_crafting")
                     createVerticalSlabRecipe(
                         RecipeCategory.BUILDING_BLOCKS,
                         verticalSlab.asItem(),
@@ -98,8 +101,8 @@ class ModRecipeProvider(
                         .offerTo(exporter, craftingId.toString())
 
                     // Stonecutting recipe if slab is pickaxe-mineable
-                    if (ModContentLists.PICKAXE_MINEABLE_BLOCKS.contains(verticalSlab)) {
-                        val stonecutId = Identifier.of(baseId.namespace, "${baseId.path}_stonecutting")
+                    if (verticalSlab in ModContentLists.PICKAXE_MINEABLE_BLOCKS) {
+                        val stonecutId = Identifier.of(namespace, "${path}_stonecutting")
                         StonecuttingRecipeJsonBuilder.createStonecutting(
                             Ingredient.ofItems(baseBlock.asItem()),
                             RecipeCategory.BUILDING_BLOCKS,

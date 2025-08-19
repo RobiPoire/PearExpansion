@@ -31,12 +31,12 @@ class EnUsLangProvider(
      * @param path The registry path string.
      * @return The formatted name, or an empty string if the path is null or empty.
      */
-    private fun prettyNameFromPath(path: String?): String {
-        if (path.isNullOrEmpty()) return ""
-        return path.split("_").joinToString(" ") { part ->
-            part.replaceFirstChar { if (it.isLowerCase()) it.titlecase() else it.toString() }
-        }
-    }
+    private fun prettyNameFromPath(path: String?): String =
+        path
+            ?.takeIf { it.isNotEmpty() }
+            ?.split('_')
+            ?.joinToString(" ") { part -> part.replaceFirstChar { c -> c.uppercaseChar() } }
+            ?: ""
 
     /**
      * Generates English translations for all custom items and blocks.
@@ -50,24 +50,23 @@ class EnUsLangProvider(
         wrapperLookup: RegistryWrapper.WrapperLookup,
         translationBuilder: TranslationBuilder
     ) {
-        // Add translation for the custom item group
-        translationBuilder.add("itemGroup.pear_expansion", "Pear Expansion")
+        translationBuilder.apply {
+            // Item group
+            add("itemGroup.pear_expansion", "Pear Expansion")
 
-        // Add translations for all blocks and their item forms
-        for (block in ModContentLists.ALL_BLOCKS) {
-            val id: Identifier = Registries.BLOCK.getId(block)
-            val pretty = prettyNameFromPath(id.path)
+            // Blocks and their item forms
+            ModContentLists.ALL_BLOCKS.forEach { block ->
+                val id: Identifier = Registries.BLOCK.getId(block)
+                val pretty = prettyNameFromPath(id.path)
+                add(block, pretty)
+                add(block.asItem(), pretty)
+            }
 
-            translationBuilder.add(block, pretty)
-            translationBuilder.add(block.asItem(), pretty)
-        }
-
-        // Add translations for all items
-        for (item in ModContentLists.ALL_ITEMS) {
-            val id: Identifier = Registries.ITEM.getId(item)
-            val pretty = prettyNameFromPath(id.path)
-
-            translationBuilder.add(item, pretty)
+            // Items
+            ModContentLists.ALL_ITEMS.forEach { item ->
+                val id: Identifier = Registries.ITEM.getId(item)
+                add(item, prettyNameFromPath(id.path))
+            }
         }
     }
 
