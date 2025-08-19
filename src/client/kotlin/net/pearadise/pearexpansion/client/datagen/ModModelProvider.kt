@@ -1,5 +1,6 @@
 package net.pearadise.pearexpansion.client.datagen
 
+import com.sun.tools.javac.jvm.Items
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput
 import net.minecraft.block.Block
@@ -8,6 +9,7 @@ import net.minecraft.util.Identifier
 import net.pearadise.pearexpansion.PearExpansion
 import net.pearadise.pearexpansion.block.ModBlocks
 import net.pearadise.pearexpansion.client.datagen.modelgnerator.VerticalSlabModelGenerator
+import net.pearadise.pearexpansion.item.ModItems
 import net.pearadise.pearexpansion.util.ModContentLists
 
 /**
@@ -129,7 +131,17 @@ class ModModelProvider(output: FabricDataOutput) : FabricModelProvider(output) {
      */
     override fun generateItemModels(itemModelGenerator: ItemModelGenerator) {
         PearExpansion.LOGGER.info("Generating blockstate models for items...")
-        ModContentLists.ALL_ITEMS.forEach { itemModelGenerator.register(it, Models.GENERATED) }
+        ModContentLists.ALL_ITEMS.forEach {
+            if (it == ModItems.ENCHANTED_GOLDEN_PEAR) {
+                itemModelGenerator.registerWithTextureSource(
+                    ModItems.ENCHANTED_GOLDEN_PEAR,
+                    ModItems.GOLDEN_PEAR,
+                    Models.GENERATED
+                )
+                return@forEach
+            }
+            itemModelGenerator.register(it, Models.GENERATED)
+        }
     }
 
     /**

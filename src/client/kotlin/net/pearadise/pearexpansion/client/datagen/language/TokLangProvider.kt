@@ -95,10 +95,7 @@ class TokLangProvider(
                 ModBlocks.WEATHERED_CUT_COPPER_VERTICAL_SLAB to "supa pi linja sewi pi kiwen ante pi laso lili"
             )
 
-            translations.forEach { (block, name) ->
-                add(block, name)
-                add(block.asItem(), name)
-            }
+            translations.forEach { add(it.key, it.value) }
         }
     }
 }

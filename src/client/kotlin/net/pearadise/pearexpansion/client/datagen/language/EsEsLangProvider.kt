@@ -93,10 +93,9 @@ class EsEsLangProvider(
                 ModBlocks.WEATHERED_CUT_COPPER_VERTICAL_SLAB to "Losa vertical de cobre cortado degradado"
             )
 
-            translations.forEach { (block, name) ->
-                add(block, name)
-                add(block.asItem(), name)
-            }
+            translations.forEach { add(it.key, it.value) }
+
         }
     }
 }
+

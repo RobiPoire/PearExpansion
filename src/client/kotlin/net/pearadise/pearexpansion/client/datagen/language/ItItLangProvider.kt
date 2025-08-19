@@ -93,10 +93,7 @@ class ItItLangProvider(
                 ModBlocks.WEATHERED_CUT_COPPER_VERTICAL_SLAB to "Lastra verticale di rame inciso corroso"
             )
 
-            translations.forEach { (block, name) ->
-                translationBuilder.add(block, name)
-                translationBuilder.add(block.asItem(), name)
-            }
+            translations.forEach { add(it.key, it.value) }
         }
     }
 }

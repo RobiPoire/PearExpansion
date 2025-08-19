@@ -107,10 +107,7 @@ class EoUyLangProvider(
                 ModBlocks.WEATHERED_CUT_COPPER_VERTICAL_SLAB to "Vertikala Verdigra tranĉita kupra ŝtupo"
             )
 
-            translations.forEach { (block, name) ->
-                add(block, name)
-                add(block.asItem(), name)
-            }
+            translations.forEach { add(it.key, it.value) }
         }
     }
 }
