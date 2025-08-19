@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "pear_expansion:item/copper_crab_claw"
+  }
+}

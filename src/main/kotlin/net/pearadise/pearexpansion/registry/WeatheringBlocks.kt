@@ -11,42 +11,31 @@ import net.pearadise.pearexpansion.block.ModBlocks
  */
 object WeatheringBlocks {
 
+    private val OXIDIZABLE_PAIRS = listOf(
+        ModBlocks.CUT_COPPER_VERTICAL_SLAB to ModBlocks.EXPOSED_CUT_COPPER_VERTICAL_SLAB,
+        ModBlocks.EXPOSED_CUT_COPPER_VERTICAL_SLAB to ModBlocks.WEATHERED_CUT_COPPER_VERTICAL_SLAB,
+        ModBlocks.WEATHERED_CUT_COPPER_VERTICAL_SLAB to ModBlocks.OXIDIZED_CUT_COPPER_VERTICAL_SLAB
+    )
+
+    private val WAXABLE_PAIRS = listOf(
+        ModBlocks.CUT_COPPER_VERTICAL_SLAB to ModBlocks.WAXED_CUT_COPPER_VERTICAL_SLAB,
+        ModBlocks.EXPOSED_CUT_COPPER_VERTICAL_SLAB to ModBlocks.WAXED_EXPOSED_CUT_COPPER_VERTICAL_SLAB,
+        ModBlocks.WEATHERED_CUT_COPPER_VERTICAL_SLAB to ModBlocks.WAXED_WEATHERED_CUT_COPPER_VERTICAL_SLAB,
+        ModBlocks.OXIDIZED_CUT_COPPER_VERTICAL_SLAB to ModBlocks.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_SLAB
+    )
+
     /**
      * Registers all weathering and waxable block pairs for the mod.
      *
-     * This function sets up how copper vertical slabs oxidize and can be waxed.
+     * Sets up how copper vertical slabs oxidize and can be waxed.
      */
     fun registerWeatheringBlocks() {
-        // Register weathering (oxidation) pairs
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(
-            ModBlocks.CUT_COPPER_VERTICAL_SLAB,
-            ModBlocks.EXPOSED_CUT_COPPER_VERTICAL_SLAB
-        )
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(
-            ModBlocks.EXPOSED_CUT_COPPER_VERTICAL_SLAB,
-            ModBlocks.WEATHERED_CUT_COPPER_VERTICAL_SLAB
-        )
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(
-            ModBlocks.WEATHERED_CUT_COPPER_VERTICAL_SLAB,
-            ModBlocks.OXIDIZED_CUT_COPPER_VERTICAL_SLAB
-        )
+        OXIDIZABLE_PAIRS.forEach { (from, to) ->
+            OxidizableBlocksRegistry.registerOxidizableBlockPair(from, to)
+        }
 
-        // Register waxable pairs
-        OxidizableBlocksRegistry.registerWaxableBlockPair(
-            ModBlocks.CUT_COPPER_VERTICAL_SLAB,
-            ModBlocks.WAXED_CUT_COPPER_VERTICAL_SLAB
-        )
-        OxidizableBlocksRegistry.registerWaxableBlockPair(
-            ModBlocks.EXPOSED_CUT_COPPER_VERTICAL_SLAB,
-            ModBlocks.WAXED_EXPOSED_CUT_COPPER_VERTICAL_SLAB
-        )
-        OxidizableBlocksRegistry.registerWaxableBlockPair(
-            ModBlocks.WEATHERED_CUT_COPPER_VERTICAL_SLAB,
-            ModBlocks.WAXED_WEATHERED_CUT_COPPER_VERTICAL_SLAB
-        )
-        OxidizableBlocksRegistry.registerWaxableBlockPair(
-            ModBlocks.OXIDIZED_CUT_COPPER_VERTICAL_SLAB,
-            ModBlocks.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_SLAB
-        )
+        WAXABLE_PAIRS.forEach { (from, to) ->
+            OxidizableBlocksRegistry.registerWaxableBlockPair(from, to)
+        }
     }
 }

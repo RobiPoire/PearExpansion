@@ -46,6 +46,19 @@ repositories {
     // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
     // See https://docs.gradle.org/current/userguide/declaring_repositories.html
     // for more information about repositories.
+    maven("https://maven.ladysnake.org/releases")
+    mavenCentral()
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = uri("https://api.modrinth.com/maven")
+            }
+        }
+        filter {
+            includeGroup("maven.modrinth")
+        }
+    }
 }
 
 dependencies {
@@ -56,12 +69,19 @@ dependencies {
     modImplementation("net.fabricmc:fabric-language-kotlin:${project.property("kotlin_loader_version")}")
 
     modImplementation("net.fabricmc.fabric-api:fabric-api:${project.property("fabric_version")}")
+    modImplementation("maven.modrinth:trinkets-canary:${project.property("trinkets_version")}")
+    modImplementation("org.ladysnake.cardinal-components-api:cardinal-components-base:${project.property("cardinal_components_version")}")
+    modImplementation("org.ladysnake.cardinal-components-api:cardinal-components-entity:${project.property("cardinal_components_version")}")
 }
 
 tasks.processResources {
     inputs.property("version", project.version)
     inputs.property("minecraft_version", project.property("minecraft_version"))
     inputs.property("loader_version", project.property("loader_version"))
+    inputs.property("kotlin_loader_version", project.property("kotlin_loader_version"))
+    inputs.property("trinkets_version", project.property("trinkets_version")) // si utilisé dans fabric.mod.json
+    inputs.property("cardinal_components_version", project.property("cardinal_components_version")) // <-- ajouté
+
     filteringCharset = "UTF-8"
 
     filesMatching("fabric.mod.json") {
@@ -69,7 +89,9 @@ tasks.processResources {
             "version" to project.version,
             "minecraft_version" to project.property("minecraft_version"),
             "loader_version" to project.property("loader_version"),
-            "kotlin_loader_version" to project.property("kotlin_loader_version")
+            "kotlin_loader_version" to project.property("kotlin_loader_version"),
+            "trinkets_version" to project.property("trinkets_version"), // si tu l'utilises dans ton JSON
+            "cardinal_components_version" to project.property("cardinal_components_version") // <-- ajouté
         )
     }
 }

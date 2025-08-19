@@ -55,6 +55,28 @@ object ModItems {
             .component(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true)
     )
 
+    val COPPER_CRAB_CLAW: Item = register(
+        "copper_crab_claw",
+        { settings -> CrabClaw(settings, CrabClawLevel.COPPER_LEVEL) },
+        Item.Settings().maxCount(1).rarity(Rarity.UNCOMMON)
+    )
+
+    val DIAMOND_CRAB_CLAW: Item = register(
+        "diamond_crab_claw",
+        { settings -> CrabClaw(settings, CrabClawLevel.DIAMOND_LEVEL) },
+        Item.Settings().maxCount(1).rarity(Rarity.RARE)
+    )
+
+    val NETHERITE_CRAB_CLAW: Item = register(
+        "netherite_crab_claw",
+        { settings -> CrabClaw(settings, CrabClawLevel.NETHERITE_LEVEL) },
+        Item.Settings().maxCount(1).rarity(Rarity.EPIC)
+    )
+
+    // -----------------------
+    // Registration helpers
+    // -----------------------
+
     /**
      * Register a plain item with the default Item factory.
      */

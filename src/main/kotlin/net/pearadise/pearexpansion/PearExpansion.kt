@@ -2,6 +2,7 @@ package net.pearadise.pearexpansion
 
 import net.fabricmc.api.ModInitializer
 import net.pearadise.pearexpansion.block.ModBlocks
+import net.pearadise.pearexpansion.entity.effect.ModStatusEffects
 import net.pearadise.pearexpansion.item.ModItemGroups
 import net.pearadise.pearexpansion.item.ModItems
 import net.pearadise.pearexpansion.registry.FlammableBlocks
@@ -45,6 +46,8 @@ object PearExpansion : ModInitializer {
         FlammableBlocks.registerFlammableBlocks()
         // Register items that can be used as fuel
         FuelItems.registerFuelItems()
+        // Register custom effects
+        ModStatusEffects.initialize()
         // Log mod initialization
         LOGGER.info("Pear Expansion initialisé")
     }

@@ -8,6 +8,8 @@ import net.minecraft.item.BlockItem
 import net.minecraft.item.Item
 import net.minecraft.registry.Registries
 import net.minecraft.registry.Registry
+import net.minecraft.registry.RegistryKey
+import net.minecraft.registry.RegistryKeys
 import net.minecraft.util.Identifier
 import net.pearadise.pearexpansion.MOD_ID
 import net.pearadise.pearexpansion.PearExpansion
@@ -152,15 +154,20 @@ object ModBlocks {
     ): Block {
         val identifier = Identifier.of(MOD_ID, id)
 
-        // Create the block instance
-        val block = factory(settings)
+        val blockKey: RegistryKey<Block> = RegistryKey.of(RegistryKeys.BLOCK, identifier)
+        val settingsWithKey = settings.registryKey(blockKey)
 
-        // Register block
-        val registered = Registry.register(Registries.BLOCK, identifier, block)
+        val block = factory(settingsWithKey)
 
-        // Register BlockItem with the same id
-        val item = BlockItem(registered, Item.Settings())
-        Registry.register(Registries.ITEM, identifier, item)
+        val registered = Registry.register(Registries.BLOCK, blockKey, block)
+
+        val itemKey: RegistryKey<Item> = RegistryKey.of(RegistryKeys.ITEM, identifier)
+        val itemSettings = Item.Settings()
+            .useBlockPrefixedTranslationKey()
+            .registryKey(itemKey)
+
+        val item = BlockItem(registered, itemSettings)
+        Registry.register(Registries.ITEM, itemKey, item)
 
         return registered
     }
