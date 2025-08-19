@@ -13,6 +13,7 @@ import net.minecraft.util.Identifier
 import net.minecraft.util.Rarity
 import net.pearadise.pearexpansion.MOD_ID
 import net.pearadise.pearexpansion.PearExpansion
+import net.pearadise.pearexpansion.item.enums.CrabClawLevel
 
 /**
  * Handles registration of all custom items for the mod.
@@ -55,40 +56,35 @@ object ModItems {
     )
 
     /**
-     * Registers an item with the given ID and settings.
-     *
-     * @param id The string ID for the item.
-     * @param settings The item settings.
-     * @return The registered [Item].
+     * Register a plain item with the default Item factory.
      */
-    fun register(id: String, settings: Item.Settings): Item =
+    private fun register(id: String, settings: Item.Settings): Item =
         register(keyOf(id), ::Item, settings)
 
     /**
+     * Register an item with a custom factory.
+     */
+    private fun register(id: String, factory: (Item.Settings) -> Item, settings: Item.Settings): Item =
+        register(keyOf(id), factory, settings)
+
+    /**
+     * Core register implementation that builds the item with its registry key,
+     * registers the item, and ensures BlockItem entries are appended when needed.
+     */
+    private fun register(key: RegistryKey<Item>, factory: (Item.Settings) -> Item, settings: Item.Settings): Item {
+        val item = factory(settings.registryKey(key))
+
+        // If a BlockItem, ensure it's registered in Item.BLOCK_ITEMS
+        if (item is BlockItem) item.appendBlocks(Item.BLOCK_ITEMS, item)
+
+        return Registry.register(Registries.ITEM, key, item)
+    }
+
+    /**
      * Creates a registry key for an item using its ID.
-     *
-     * @param id The string ID for the item.
-     * @return The [RegistryKey] for the item.
      */
     private fun keyOf(id: String): RegistryKey<Item> =
         RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MOD_ID, id))
-
-    /**
-     * Registers an item with a custom factory and settings.
-     *
-     * @param key The registry key for the item.
-     * @param factory The function to create the item.
-     * @param settings The item settings.
-     * @return The registered [Item].
-     */
-    fun register(key: RegistryKey<Item>, factory: (Item.Settings) -> Item, settings: Item.Settings): Item {
-        val item = factory(settings.registryKey(key))
-        // If the item is a BlockItem, add it to the block items map
-        if (item is BlockItem) {
-            item.appendBlocks(Item.BLOCK_ITEMS, item)
-        }
-        return Registry.register(Registries.ITEM, key, item)
-    }
 
     /**
      * Initializes the mod items.

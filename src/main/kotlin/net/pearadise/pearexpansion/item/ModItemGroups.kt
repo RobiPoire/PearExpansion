@@ -2,8 +2,6 @@ package net.pearadise.pearexpansion.item
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents
-import net.minecraft.block.Block
-import net.minecraft.item.ItemConvertible
 import net.minecraft.item.ItemGroup
 import net.minecraft.item.ItemGroups
 import net.minecraft.item.ItemStack
@@ -48,23 +46,17 @@ object ModItemGroups {
 
         // Add all mod items and blocks to the custom item group
         ItemGroupEvents.modifyEntriesEvent(PEAR_EXPANSION).register { entries ->
-            for (itemConvertible: ItemConvertible in ModContentLists.ALL_ITEMS_CONVERTIBLE) {
-                entries.add(itemConvertible)
-            }
+            ModContentLists.ALL_ITEMS_CONVERTIBLE.forEach(entries::add)
         }
 
         // Add pear items to the Food & Drink creative tab
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register { entries ->
-            entries.add(ModItems.PEAR)
-            entries.add(ModItems.GOLDEN_PEAR)
-            entries.add(ModItems.ENCHANTED_GOLDEN_PEAR)
+            listOf(ModItems.PEAR, ModItems.GOLDEN_PEAR, ModItems.ENCHANTED_GOLDEN_PEAR).forEach(entries::add)
         }
 
         // Add all vertical slab blocks to the Building Blocks creative tab
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register { entries ->
-            for (verticalSlab: Block in ModContentLists.ALL_VERTICAL_SLABS) {
-                entries.add(verticalSlab)
-            }
+            ModContentLists.ALL_VERTICAL_SLABS.forEach(entries::add)
         }
     }
 }
