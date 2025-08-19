@@ -8,8 +8,6 @@ import net.minecraft.item.BlockItem
 import net.minecraft.item.Item
 import net.minecraft.registry.Registries
 import net.minecraft.registry.Registry
-import net.minecraft.registry.RegistryKey
-import net.minecraft.registry.RegistryKeys
 import net.minecraft.util.Identifier
 import net.pearadise.pearexpansion.MOD_ID
 import net.pearadise.pearexpansion.PearExpansion
@@ -22,493 +20,122 @@ import net.pearadise.pearexpansion.PearExpansion
  */
 object ModBlocks {
 
-    /** Oak vertical slab block. */
-    val OAK_VERTICAL_SLAB: Block =
-        register(
-            "oak_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.OAK_SLAB)
-        )
+    // ---------------------------
+    // Wood-based vertical slabs
+    // ---------------------------
+    val OAK_VERTICAL_SLAB = registerVerticalslab("oak_vertical_slab", Blocks.OAK_SLAB)
+    val SPRUCE_VERTICAL_SLAB = registerVerticalslab("spruce_vertical_slab", Blocks.SPRUCE_SLAB)
+    val BIRCH_VERTICAL_SLAB = registerVerticalslab("birch_vertical_slab", Blocks.BIRCH_SLAB)
+    val JUNGLE_VERTICAL_SLAB = registerVerticalslab("jungle_vertical_slab", Blocks.JUNGLE_SLAB)
+    val ACACIA_VERTICAL_SLAB = registerVerticalslab("acacia_vertical_slab", Blocks.ACACIA_SLAB)
+    val DARK_OAK_VERTICAL_SLAB = registerVerticalslab("dark_oak_vertical_slab", Blocks.DARK_OAK_SLAB)
+    val MANGROVE_VERTICAL_SLAB = registerVerticalslab("mangrove_vertical_slab", Blocks.MANGROVE_SLAB)
+    val CHERRY_VERTICAL_SLAB = registerVerticalslab("cherry_vertical_slab", Blocks.CHERRY_SLAB)
+    val CRIMSON_VERTICAL_SLAB = registerVerticalslab("crimson_vertical_slab", Blocks.CRIMSON_SLAB)
+    val WARPED_VERTICAL_SLAB = registerVerticalslab("warped_vertical_slab", Blocks.WARPED_SLAB)
+    val BAMBOO_VERTICAL_SLAB = registerVerticalslab("bamboo_vertical_slab", Blocks.BAMBOO_SLAB)
+    val BAMBOO_MOSAIC_VERTICAL_SLAB = registerVerticalslab("bamboo_mosaic_vertical_slab", Blocks.BAMBOO_MOSAIC_SLAB)
+    val PALE_OAK_VERTICAL_SLAB = registerVerticalslab("pale_oak_vertical_slab", Blocks.PALE_OAK_SLAB)
 
-    /** Spruce vertical slab block. */
-    val SPRUCE_VERTICAL_SLAB: Block =
-        register(
-            "spruce_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.SPRUCE_SLAB)
-        )
+    // ---------------------------
+    // Copper / Waxed copper slabs (oxidizable)
+    // ---------------------------
+    val CUT_COPPER_VERTICAL_SLAB = registerOxidizableVerticalSlab(
+        "cut_copper_vertical_slab",
+        Oxidizable.OxidationLevel.UNAFFECTED,
+        Blocks.CUT_COPPER_SLAB
+    )
 
-    /** Birch vertical slab block. */
-    val BIRCH_VERTICAL_SLAB: Block =
-        register(
-            "birch_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.BIRCH_SLAB)
-        )
+    val EXPOSED_CUT_COPPER_VERTICAL_SLAB = registerOxidizableVerticalSlab(
+        "exposed_cut_copper_vertical_slab",
+        Oxidizable.OxidationLevel.EXPOSED,
+        Blocks.EXPOSED_CUT_COPPER_SLAB
+    )
 
-    /** Jungle vertical slab block. */
-    val JUNGLE_VERTICAL_SLAB: Block =
-        register(
-            "jungle_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.JUNGLE_SLAB)
-        )
+    val WEATHERED_CUT_COPPER_VERTICAL_SLAB = registerOxidizableVerticalSlab(
+        "weathered_cut_copper_vertical_slab",
+        Oxidizable.OxidationLevel.WEATHERED,
+        Blocks.WEATHERED_CUT_COPPER_SLAB
+    )
 
-    /** Acacia vertical slab block. */
-    val ACACIA_VERTICAL_SLAB: Block =
-        register(
-            "acacia_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.ACACIA_SLAB)
-        )
+    val OXIDIZED_CUT_COPPER_VERTICAL_SLAB = registerOxidizableVerticalSlab(
+        "oxidized_cut_copper_vertical_slab",
+        Oxidizable.OxidationLevel.OXIDIZED,
+        Blocks.OXIDIZED_CUT_COPPER_SLAB
+    )
 
-    /** Dark oak vertical slab block. */
-    val DARK_OAK_VERTICAL_SLAB: Block =
-        register(
-            "dark_oak_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.DARK_OAK_SLAB)
-        )
+    val WAXED_CUT_COPPER_VERTICAL_SLAB = registerVerticalslab("waxed_cut_copper_vertical_slab", Blocks.WAXED_CUT_COPPER_SLAB)
+    val WAXED_EXPOSED_CUT_COPPER_VERTICAL_SLAB = registerVerticalslab("waxed_exposed_cut_copper_vertical_slab", Blocks.WAXED_EXPOSED_CUT_COPPER_SLAB)
+    val WAXED_WEATHERED_CUT_COPPER_VERTICAL_SLAB = registerVerticalslab("waxed_weathered_cut_copper_vertical_slab", Blocks.WAXED_WEATHERED_CUT_COPPER_SLAB)
+    val WAXED_OXIDIZED_CUT_COPPER_VERTICAL_SLAB = registerVerticalslab("waxed_oxidized_cut_copper_vertical_slab", Blocks.WAXED_OXIDIZED_CUT_COPPER_SLAB)
 
-    /** Mangrove vertical slab block. */
-    val MANGROVE_VERTICAL_SLAB: Block =
-        register(
-            "mangrove_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.MANGROVE_SLAB)
-        )
+    // ---------------------------
+    // Stone / building material slabs
+    // ---------------------------
+    val STONE_VERTICAL_SLAB = registerVerticalslab("stone_vertical_slab", Blocks.STONE_SLAB)
+    val SMOOTH_STONE_VERTICAL_SLAB = registerVerticalslab("smooth_stone_vertical_slab", Blocks.SMOOTH_STONE_SLAB)
+    val SANDSTONE_VERTICAL_SLAB = registerVerticalslab("sandstone_vertical_slab", Blocks.SANDSTONE_SLAB)
+    val CUT_SANDSTONE_VERTICAL_SLAB = registerVerticalslab("cut_sandstone_vertical_slab", Blocks.CUT_SANDSTONE_SLAB)
+    val COBBLESTONE_VERTICAL_SLAB = registerVerticalslab("cobblestone_vertical_slab", Blocks.COBBLESTONE_SLAB)
+    val BRICK_VERTICAL_SLAB = registerVerticalslab("brick_vertical_slab", Blocks.BRICK_SLAB)
+    val STONE_BRICK_VERTICAL_SLAB = registerVerticalslab("stone_brick_vertical_slab", Blocks.STONE_BRICK_SLAB)
+    val QUARTZ_VERTICAL_SLAB = registerVerticalslab("quartz_vertical_slab", Blocks.QUARTZ_SLAB)
+    val SMOOTH_QUARTZ_VERTICAL_SLAB = registerVerticalslab("smooth_quartz_vertical_slab", Blocks.SMOOTH_QUARTZ_SLAB)
+    val RED_SANDSTONE_VERTICAL_SLAB = registerVerticalslab("red_sandstone_vertical_slab", Blocks.RED_SANDSTONE_SLAB)
+    val CUT_RED_SANDSTONE_VERTICAL_SLAB = registerVerticalslab("cut_red_sandstone_vertical_slab", Blocks.CUT_RED_SANDSTONE_SLAB)
+    val PURPUR_VERTICAL_SLAB = registerVerticalslab("purpur_vertical_slab", Blocks.PURPUR_SLAB)
+    val PRISMARINE_VERTICAL_SLAB = registerVerticalslab("prismarine_vertical_slab", Blocks.PRISMARINE_SLAB)
+    val PRISMARINE_BRICK_VERTICAL_SLAB = registerVerticalslab("prismarine_brick_vertical_slab", Blocks.PRISMARINE_BRICK_SLAB)
+    val DARK_PRISMARINE_VERTICAL_SLAB = registerVerticalslab("dark_prismarine_vertical_slab", Blocks.DARK_PRISMARINE_SLAB)
+    val POLISHED_GRANITE_VERTICAL_SLAB = registerVerticalslab("polished_granite_vertical_slab", Blocks.POLISHED_GRANITE_SLAB)
+    val SMOOTH_RED_SANDSTONE_VERTICAL_SLAB = registerVerticalslab("smooth_red_sandstone_vertical_slab", Blocks.SMOOTH_RED_SANDSTONE_SLAB)
+    val MOSSY_STONE_BRICK_VERTICAL_SLAB = registerVerticalslab("mossy_stone_brick_vertical_slab", Blocks.MOSSY_STONE_BRICK_SLAB)
+    val POLISHED_DIORITE_VERTICAL_SLAB = registerVerticalslab("polished_diorite_vertical_slab", Blocks.POLISHED_DIORITE_SLAB)
+    val MOSSY_COBBLESTONE_VERTICAL_SLAB = registerVerticalslab("mossy_cobblestone_vertical_slab", Blocks.MOSSY_COBBLESTONE_SLAB)
+    val END_STONE_BRICK_VERTICAL_SLAB = registerVerticalslab("end_stone_brick_vertical_slab", Blocks.END_STONE_BRICK_SLAB)
+    val SMOOTH_SANDSTONE_VERTICAL_SLAB = registerVerticalslab("smooth_sandstone_vertical_slab", Blocks.SMOOTH_SANDSTONE_SLAB)
+    val GRANITE_VERTICAL_SLAB = registerVerticalslab("granite_vertical_slab", Blocks.GRANITE_SLAB)
+    val ANDESITE_VERTICAL_SLAB = registerVerticalslab("andesite_vertical_slab", Blocks.ANDESITE_SLAB)
+    val POLISHED_ANDESITE_VERTICAL_SLAB = registerVerticalslab("polished_andesite_vertical_slab", Blocks.POLISHED_ANDESITE_SLAB)
+    val DIORITE_VERTICAL_SLAB = registerVerticalslab("diorite_vertical_slab", Blocks.DIORITE_SLAB)
+    val RED_NETHER_BRICK_VERTICAL_SLAB = registerVerticalslab("red_nether_brick_vertical_slab", Blocks.RED_NETHER_BRICK_SLAB)
+    val NETHER_BRICK_VERTICAL_SLAB = registerVerticalslab("nether_brick_vertical_slab", Blocks.NETHER_BRICK_SLAB)
+    val COBBLED_DEEPSLATE_VERTICAL_SLAB = registerVerticalslab("cobbled_deepslate_vertical_slab", Blocks.COBBLED_DEEPSLATE_SLAB)
+    val POLISHED_DEEPSLATE_VERTICAL_SLAB = registerVerticalslab("polished_deepslate_vertical_slab", Blocks.POLISHED_DEEPSLATE_SLAB)
+    val DEEPSLATE_BRICK_VERTICAL_SLAB = registerVerticalslab("deepslate_brick_vertical_slab", Blocks.DEEPSLATE_BRICK_SLAB)
+    val DEEPSLATE_TILE_VERTICAL_SLAB = registerVerticalslab("deepslate_tile_vertical_slab", Blocks.DEEPSLATE_TILE_SLAB)
+    val BLACKSTONE_VERTICAL_SLAB = registerVerticalslab("blackstone_vertical_slab", Blocks.BLACKSTONE_SLAB)
+    val POLISHED_BLACKSTONE_VERTICAL_SLAB = registerVerticalslab("polished_blackstone_vertical_slab", Blocks.POLISHED_BLACKSTONE_SLAB)
+    val POLISHED_BLACKSTONE_BRICK_VERTICAL_SLAB = registerVerticalslab("polished_blackstone_brick_vertical_slab", Blocks.POLISHED_BLACKSTONE_BRICK_SLAB)
 
-    /** Cherry vertical slab block. */
-    val CHERRY_VERTICAL_SLAB: Block =
-        register(
-            "cherry_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.CHERRY_SLAB)
-        )
+    // ---------------------------
+    // Misc building slabs
+    // ---------------------------
+    val MUD_BRICK_VERTICAL_SLAB = registerVerticalslab("mud_brick_vertical_slab", Blocks.MUD_BRICK_SLAB)
+    val RESIN_BRICK_VERTICAL_SLAB = registerVerticalslab("resin_brick_vertical_slab", Blocks.RESIN_BRICK_SLAB)
+    val TUFF_VERTICAL_SLAB = registerVerticalslab("tuff_vertical_slab", Blocks.TUFF_SLAB)
+    val POLISHED_TUFF_VERTICAL_SLAB = registerVerticalslab("polished_tuff_vertical_slab", Blocks.POLISHED_TUFF_SLAB)
+    val TUFF_BRICK_VERTICAL_SLAB = registerVerticalslab("tuff_brick_vertical_slab", Blocks.TUFF_BRICK_SLAB)
 
-    /** Crimson vertical slab block. */
-    val CRIMSON_VERTICAL_SLAB: Block =
-        register(
-            "crimson_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.CRIMSON_SLAB)
-        )
+    // ---------------------------
+    // Utility helpers
+    // ---------------------------
+    private fun registerVerticalslab(
+        id: String,
+        template: Block,
+        factory: (AbstractBlock.Settings) -> Block = ::VerticalSlabBlock
+    ): Block =
+        register(id, factory, AbstractBlock.Settings.copy(template))
 
-    /** Warped vertical slab block. */
-    val WARPED_VERTICAL_SLAB: Block =
-        register(
-            "warped_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.WARPED_SLAB)
-        )
-
-    /** Bamboo vertical slab block. */
-    val BAMBOO_VERTICAL_SLAB: Block =
-        register(
-            "bamboo_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.BAMBOO_SLAB)
-        )
-
-    /** Bamboo mosaic vertical slab block. */
-    val BAMBOO_MOSAIC_VERTICAL_SLAB: Block =
-        register(
-            "bamboo_mosaic_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.BAMBOO_MOSAIC_SLAB)
-        )
-
-    /** Pale oak vertical slab block. */
-    val PALE_OAK_VERTICAL_SLAB: Block =
-        register(
-            "pale_oak_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.PALE_OAK_SLAB)
-        )
-
-    /** Cut copper vertical slab block (unaffected, can oxidize). */
-    val CUT_COPPER_VERTICAL_SLAB: Block =
-        register(
-            "cut_copper_vertical_slab",
-            { settings -> OxidizableVerticalSlabBlock(Oxidizable.OxidationLevel.UNAFFECTED, settings) },
-            AbstractBlock.Settings.copy(Blocks.CUT_COPPER_SLAB)
-        )
-
-    /** Exposed cut copper vertical slab block. */
-    val EXPOSED_CUT_COPPER_VERTICAL_SLAB: Block =
-        register(
-            "exposed_cut_copper_vertical_slab",
-            { settings -> OxidizableVerticalSlabBlock(Oxidizable.OxidationLevel.EXPOSED, settings) },
-            AbstractBlock.Settings.copy(Blocks.EXPOSED_CUT_COPPER_SLAB)
-        )
-
-    /** Weathered cut copper vertical slab block. */
-    val WEATHERED_CUT_COPPER_VERTICAL_SLAB: Block =
-        register(
-            "weathered_cut_copper_vertical_slab",
-            { settings -> OxidizableVerticalSlabBlock(Oxidizable.OxidationLevel.WEATHERED, settings) },
-            AbstractBlock.Settings.copy(Blocks.WEATHERED_CUT_COPPER_SLAB)
-        )
-
-    /** Oxidized cut copper vertical slab block. */
-    val OXIDIZED_CUT_COPPER_VERTICAL_SLAB: Block =
-        register(
-            "oxidized_cut_copper_vertical_slab",
-            { settings -> OxidizableVerticalSlabBlock(Oxidizable.OxidationLevel.OXIDIZED, settings) },
-            AbstractBlock.Settings.copy(Blocks.OXIDIZED_CUT_COPPER_SLAB)
-        )
-
-    /** Waxed cut copper vertical slab block. */
-    val WAXED_CUT_COPPER_VERTICAL_SLAB: Block =
-        register(
-            "waxed_cut_copper_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.WAXED_CUT_COPPER_SLAB)
-        )
-
-    /** Waxed exposed cut copper vertical slab block. */
-    val WAXED_EXPOSED_CUT_COPPER_VERTICAL_SLAB: Block =
-        register(
-            "waxed_exposed_cut_copper_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.WAXED_EXPOSED_CUT_COPPER_SLAB)
-        )
-
-    /** Waxed weathered cut copper vertical slab block. */
-    val WAXED_WEATHERED_CUT_COPPER_VERTICAL_SLAB: Block =
-        register(
-            "waxed_weathered_cut_copper_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.WAXED_WEATHERED_CUT_COPPER_SLAB)
-        )
-
-    /** Waxed oxidized cut copper vertical slab block. */
-    val WAXED_OXIDIZED_CUT_COPPER_VERTICAL_SLAB: Block =
-        register(
-            "waxed_oxidized_cut_copper_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.WAXED_OXIDIZED_CUT_COPPER_SLAB)
-        )
-
-    /** Stone vertical slab block. */
-    val STONE_VERTICAL_SLAB: Block =
-        register(
-            "stone_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.STONE_SLAB)
-        )
-
-    /** Smooth stone vertical slab block. */
-    val SMOOTH_STONE_VERTICAL_SLAB: Block =
-        register(
-            "smooth_stone_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.SMOOTH_STONE_SLAB)
-        )
-
-    /** Sandstone vertical slab block. */
-    val SANDSTONE_VERTICAL_SLAB: Block =
-        register(
-            "sandstone_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.SANDSTONE_SLAB)
-        )
-
-    /** Cut sandstone vertical slab block. */
-    val CUT_SANDSTONE_VERTICAL_SLAB: Block =
-        register(
-            "cut_sandstone_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.CUT_SANDSTONE_SLAB)
-        )
-
-    /** Cobblestone vertical slab block. */
-    val COBBLESTONE_VERTICAL_SLAB: Block =
-        register(
-            "cobblestone_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.COBBLESTONE_SLAB)
-        )
-
-    /** Brick vertical slab block. */
-    val BRICK_VERTICAL_SLAB: Block =
-        register(
-            "brick_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.BRICK_SLAB)
-        )
-
-    /** Stone brick vertical slab block. */
-    val STONE_BRICK_VERTICAL_SLAB: Block =
-        register(
-            "stone_brick_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.STONE_BRICK_SLAB)
-        )
-
-    /** Quartz vertical slab block. */
-    val QUARTZ_VERTICAL_SLAB: Block =
-        register(
-            "quartz_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.QUARTZ_SLAB)
-        )
-
-    /** Smooth quartz vertical slab block. */
-    val SMOOTH_QUARTZ_VERTICAL_SLAB: Block =
-        register(
-            "smooth_quartz_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.SMOOTH_QUARTZ_SLAB)
-        )
-
-    /** Red sandstone vertical slab block. */
-    val RED_SANDSTONE_VERTICAL_SLAB: Block =
-        register(
-            "red_sandstone_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.RED_SANDSTONE_SLAB)
-        )
-
-    /** Cut red sandstone vertical slab block. */
-    val CUT_RED_SANDSTONE_VERTICAL_SLAB: Block =
-        register(
-            "cut_red_sandstone_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.CUT_RED_SANDSTONE_SLAB)
-        )
-
-    /** Purpur vertical slab block. */
-    val PURPUR_VERTICAL_SLAB: Block =
-        register(
-            "purpur_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.PURPUR_SLAB)
-        )
-
-    /** Prismarine vertical slab block. */
-    val PRISMARINE_VERTICAL_SLAB: Block =
-        register(
-            "prismarine_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.PRISMARINE_SLAB)
-        )
-
-    /** Prismarine brick vertical slab block. */
-    val PRISMARINE_BRICK_VERTICAL_SLAB: Block =
-        register(
-            "prismarine_brick_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.PRISMARINE_BRICK_SLAB)
-        )
-
-    /** Dark prismarine vertical slab block. */
-    val DARK_PRISMARINE_VERTICAL_SLAB: Block =
-        register(
-            "dark_prismarine_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.DARK_PRISMARINE_SLAB)
-        )
-
-    /** Polished granite vertical slab block. */
-    val POLISHED_GRANITE_VERTICAL_SLAB: Block =
-        register(
-            "polished_granite_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.POLISHED_GRANITE_SLAB)
-        )
-
-    /** Smooth red sandstone vertical slab block. */
-    val SMOOTH_RED_SANDSTONE_VERTICAL_SLAB: Block =
-        register(
-            "smooth_red_sandstone_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.SMOOTH_RED_SANDSTONE_SLAB)
-        )
-
-    /** Mossy stone brick vertical slab block. */
-    val MOSSY_STONE_BRICK_VERTICAL_SLAB: Block =
-        register(
-            "mossy_stone_brick_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.MOSSY_STONE_BRICK_SLAB)
-        )
-
-    /** Polished diorite vertical slab block. */
-    val POLISHED_DIORITE_VERTICAL_SLAB: Block =
-        register(
-            "polished_diorite_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.POLISHED_DIORITE_SLAB)
-        )
-
-    /** Mossy cobblestone vertical slab block. */
-    val MOSSY_COBBLESTONE_VERTICAL_SLAB: Block =
-        register(
-            "mossy_cobblestone_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.MOSSY_COBBLESTONE_SLAB)
-        )
-
-    /** Smooth sandstone vertical slab block. */
-    val SMOOTH_SANDSTONE_VERTICAL_SLAB: Block =
-        register(
-            "smooth_sandstone_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.SMOOTH_SANDSTONE_SLAB)
-        )
-
-    /** Granite vertical slab block. */
-    val GRANITE_VERTICAL_SLAB: Block =
-        register(
-            "granite_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.GRANITE_SLAB)
-        )
-
-    /** Andesite vertical slab block. */
-    val ANDESITE_VERTICAL_SLAB: Block =
-        register(
-            "andesite_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.ANDESITE_SLAB)
-        )
-
-    /** Polished andesite vertical slab block. */
-    val POLISHED_ANDESITE_VERTICAL_SLAB: Block =
-        register(
-            "polished_andesite_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.POLISHED_ANDESITE_SLAB)
-        )
-
-    /** Diorite vertical slab block. */
-    val DIORITE_VERTICAL_SLAB: Block =
-        register(
-            "diorite_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.DIORITE_SLAB)
-        )
-
-    /** Red nether brick vertical slab block. */
-    val RED_NETHER_BRICK_VERTICAL_SLAB: Block =
-        register(
-            "red_nether_brick_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.RED_NETHER_BRICK_SLAB)
-        )
-
-    /** Nether brick vertical slab block. */
-    val NETHER_BRICK_VERTICAL_SLAB: Block =
-        register(
-            "nether_brick_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.NETHER_BRICK_SLAB)
-        )
-
-    /** Cobbled deepslate vertical slab block. */
-    val COBBLED_DEEPSLATE_VERTICAL_SLAB: Block =
-        register(
-            "cobbled_deepslate_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.COBBLED_DEEPSLATE_SLAB)
-        )
-
-    /** Polished deepslate vertical slab block. */
-    val POLISHED_DEEPSLATE_VERTICAL_SLAB: Block =
-        register(
-            "polished_deepslate_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.POLISHED_DEEPSLATE_SLAB)
-        )
-
-    /** Deepslate brick vertical slab block. */
-    val DEEPSLATE_BRICK_VERTICAL_SLAB: Block =
-        register(
-            "deepslate_brick_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.DEEPSLATE_BRICK_SLAB)
-        )
-
-    /** Deepslate tile vertical slab block. */
-    val DEEPSLATE_TILE_VERTICAL_SLAB: Block =
-        register(
-            "deepslate_tile_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.DEEPSLATE_TILE_SLAB)
-        )
-
-    /** Blackstone vertical slab block. */
-    val BLACKSTONE_VERTICAL_SLAB: Block =
-        register(
-            "blackstone_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.BLACKSTONE_SLAB)
-        )
-
-    /** Polished blackstone vertical slab block. */
-    val POLISHED_BLACKSTONE_VERTICAL_SLAB: Block =
-        register(
-            "polished_blackstone_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.POLISHED_BLACKSTONE_SLAB)
-        )
-
-    /** Polished blackstone brick vertical slab block. */
-    val POLISHED_BLACKSTONE_BRICK_VERTICAL_SLAB: Block =
-        register(
-            "polished_blackstone_brick_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.POLISHED_BLACKSTONE_BRICK_SLAB)
-        )
-
-    /** Mud brick vertical slab block. */
-    val MUD_BRICK_VERTICAL_SLAB: Block =
-        register(
-            "mud_brick_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.MUD_BRICK_SLAB)
-        )
-
-    /** Resin brick vertical slab block. */
-    val RESIN_BRICK_VERTICAL_SLAB: Block =
-        register(
-            "resin_brick_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.RESIN_BRICK_SLAB)
-        )
-
-    /** Tuff vertical slab block. */
-    val TUFF_VERTICAL_SLAB: Block =
-        register(
-            "tuff_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.TUFF_SLAB)
-        )
-
-    /** Polished tuff vertical slab block. */
-    val POLISHED_TUFF_VERTICAL_SLAB: Block =
-        register(
-            "polished_tuff_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.POLISHED_TUFF_SLAB)
-        )
-
-    /** Tuff brick vertical slab block. */
-    val TUFF_BRICK_VERTICAL_SLAB: Block =
-        register(
-            "tuff_brick_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.TUFF_BRICK_SLAB)
-        )
-
-    /** End stone brick vertical slab block. */
-    val END_STONE_BRICK_VERTICAL_SLAB: Block =
-        register(
-            "end_stone_brick_vertical_slab",
-            ::VerticalSlabBlock,
-            AbstractBlock.Settings.copy(Blocks.END_STONE_BRICK_SLAB)
-        )
+    private fun registerOxidizableVerticalSlab(
+        id: String,
+        level: Oxidizable.OxidationLevel,
+        template: Block
+    ): Block = register(
+        id,
+        { settings -> OxidizableVerticalSlabBlock(level, settings) },
+        AbstractBlock.Settings.copy(template)
+    )
 
     /**
      * Registers a block and its BlockItem with the given ID, factory, and settings.
@@ -523,45 +150,20 @@ object ModBlocks {
         factory: (AbstractBlock.Settings) -> Block,
         settings: AbstractBlock.Settings
     ): Block {
-        return register(keyOf(id), factory, settings)
-    }
+        val identifier = Identifier.of(MOD_ID, id)
 
-    /**
-     * Registers a block and its BlockItem with the given registry key, factory, and settings.
-     *
-     * @param key The registry key for the block.
-     * @param factory The function to create the block.
-     * @param settings The block settings.
-     * @return The registered [Block].
-     */
-    private fun register(
-        key: RegistryKey<Block>,
-        factory: (AbstractBlock.Settings) -> Block,
-        settings: AbstractBlock.Settings
-    ): Block {
-        // 1) Create and register the block
-        val block = factory(settings.registryKey(key))
-        val registered = Registry.register(Registries.BLOCK, key, block)
+        // Create the block instance
+        val block = factory(settings)
 
-        // 2) Create and register the BlockItem with the same ID
-        val itemKey: RegistryKey<Item> = RegistryKey.of(RegistryKeys.ITEM, key.value)
-        Registry.register(
-            Registries.ITEM,
-            itemKey,
-            BlockItem(registered, Item.Settings().registryKey(itemKey))
-        )
+        // Register block
+        val registered = Registry.register(Registries.BLOCK, identifier, block)
+
+        // Register BlockItem with the same id
+        val item = BlockItem(registered, Item.Settings())
+        Registry.register(Registries.ITEM, identifier, item)
 
         return registered
     }
-
-    /**
-     * Creates a registry key for a block using its ID.
-     *
-     * @param id The string ID for the block.
-     * @return The [RegistryKey] for the block.
-     */
-    private fun keyOf(id: String): RegistryKey<Block> =
-        RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(MOD_ID, id))
 
     /**
      * Initializes all mod blocks.

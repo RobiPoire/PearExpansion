@@ -41,7 +41,7 @@ open class VerticalSlabBlock(settings: Settings) : Block(settings), Waterloggabl
 
     init {
         // Set default state: facing north and not waterlogged
-        this.defaultState = this.defaultState.with(TYPE, VerticalSlabType.NORTH).with(WATERLOGGED, false)
+        defaultState = defaultState.with(TYPE, VerticalSlabType.NORTH).with(WATERLOGGED, false)
     }
 
     /**
@@ -103,7 +103,7 @@ open class VerticalSlabBlock(settings: Settings) : Block(settings), Waterloggabl
             VerticalSlabType.SOUTH -> side == Direction.NORTH
             VerticalSlabType.WEST -> side == Direction.EAST
             VerticalSlabType.EAST -> side == Direction.WEST
-            else -> false
+            VerticalSlabType.DOUBLE -> false
         }
 
     /**
@@ -115,27 +115,24 @@ open class VerticalSlabBlock(settings: Settings) : Block(settings), Waterloggabl
      * @return The new block state, or null if placement is not allowed.
      */
     override fun getPlacementState(ctx: ItemPlacementContext): BlockState? {
-        val blockPos = ctx.blockPos
-        val existing = ctx.world.getBlockState(blockPos)
+        val pos = ctx.blockPos
+        val world = ctx.world
+        val existing = world.getBlockState(pos)
 
         if (existing.isOf(this)) {
             val currentType = existing[TYPE]
-            if (currentType != VerticalSlabType.DOUBLE) {
-                val side = ctx.side
-                if (isOppositeSide(currentType, side)) {
-                    // Merge into double slab
-                    return existing.with(TYPE, VerticalSlabType.DOUBLE).with(WATERLOGGED, false)
-                }
-                return null
+            // If existing is a single slab and we clicked the opposite side, merge into double slab
+            if (currentType != VerticalSlabType.DOUBLE && isOppositeSide(currentType, ctx.side)) {
+                return existing.with(TYPE, VerticalSlabType.DOUBLE).with(WATERLOGGED, false)
             }
+            // Otherwise keep existing (no change)
             return existing
         }
 
-        // Normal placement
-        val fluidState = ctx.world.getFluidState(blockPos)
-        val base = this.defaultState.with(WATERLOGGED, fluidState.fluid == Fluids.WATER)
-
-        val type = getSlabTypeForPlacement(ctx, blockPos)
+        // Normal placement: consider waterlogging
+        val fluidState = world.getFluidState(pos)
+        val base = defaultState.with(WATERLOGGED, fluidState.isIn(FluidTags.WATER))
+        val type = getSlabTypeForPlacement(ctx, pos)
         return base.with(TYPE, type)
     }
 
@@ -177,25 +174,10 @@ open class VerticalSlabBlock(settings: Settings) : Block(settings), Waterloggabl
         val type = state[TYPE]
 
         // Not replaceable if already double or wrong item
-        if (type == VerticalSlabType.DOUBLE || !stack.isOf(this.asItem())) {
-            return false
-        }
+        if (type == VerticalSlabType.DOUBLE || !stack.isOf(this.asItem())) return false
 
-        // Allow direct click on existing slab
-        if (context.canReplaceExisting()) {
-            val pos = context.blockPos
-            val target = getSlabTypeForPlacement(context, pos)
-
-            // Allow if placing on a different side (merging)
-            if (target != type) {
-                return true
-            }
-
-            // Also allow if clicking the same side
-            return true
-        }
-
-        return true
+        // Only allow replacement when player is explicitly trying to replace existing block (clicking)
+        return context.canReplaceExisting()
     }
 
     /**

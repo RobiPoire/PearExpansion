@@ -36,9 +36,8 @@ class OxidizableVerticalSlabBlock(
      * @param pos The block position.
      * @param random The random instance.
      */
-    override fun randomTick(state: BlockState, world: ServerWorld, pos: BlockPos, random: Random) {
+    override fun randomTick(state: BlockState, world: ServerWorld, pos: BlockPos, random: Random) =
         tickDegradation(state, world, pos, random)
-    }
 
     /**
      * Checks if the block should receive random ticks for oxidation.
