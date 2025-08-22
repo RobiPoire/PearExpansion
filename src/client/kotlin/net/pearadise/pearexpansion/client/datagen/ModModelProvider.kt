@@ -1,6 +1,5 @@
 package net.pearadise.pearexpansion.client.datagen
 
-import com.sun.tools.javac.jvm.Items
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput
 import net.minecraft.block.Block

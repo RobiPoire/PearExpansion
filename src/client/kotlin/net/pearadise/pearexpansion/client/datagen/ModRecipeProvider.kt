@@ -52,6 +52,7 @@ class ModRecipeProvider(
              * @param input The input ingredient.
              * @return The [CraftingRecipeJsonBuilder] for the recipe.
              */
+            @Suppress("SameParameterValue")
             private fun createVerticalSlabRecipe(
                 category: RecipeCategory,
                 output: ItemConvertible,
