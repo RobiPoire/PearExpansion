@@ -7,7 +7,7 @@ import net.fabricmc.api.ClientModInitializer
  *
  * Handles client-side initialization tasks such as rendering and client events.
  */
-class PearExpansionClient : ClientModInitializer {
+object PearExpansionClient : ClientModInitializer {
 
     /**
      * Called by Fabric when the client is starting.

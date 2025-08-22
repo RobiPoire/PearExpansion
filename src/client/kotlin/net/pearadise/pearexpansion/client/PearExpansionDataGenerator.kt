@@ -10,7 +10,7 @@ import net.pearadise.pearexpansion.client.datagen.*
  * Registers all data providers needed for generating mod assets such as
  * loot tables, models, tags, recipes, and language files.
  */
-class PearExpansionDataGenerator : DataGeneratorEntrypoint {
+object PearExpansionDataGenerator : DataGeneratorEntrypoint {
 
     /**
      * Called by Fabric to initialize the data generator.
