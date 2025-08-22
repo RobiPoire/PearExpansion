@@ -5,7 +5,6 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider
 import net.minecraft.registry.Registries
 import net.minecraft.registry.RegistryWrapper
 import net.minecraft.util.Identifier
-import net.pearadise.pearexpansion.PearExpansion
 import net.pearadise.pearexpansion.util.ModContentLists
 import java.util.concurrent.CompletableFuture
 

@@ -11,8 +11,8 @@ import net.minecraft.registry.RegistryKey
 import net.minecraft.registry.RegistryKeys
 import net.minecraft.util.Identifier
 import net.minecraft.util.Rarity
+import net.pearadise.pearexpansion.LOGGER
 import net.pearadise.pearexpansion.MOD_ID
-import net.pearadise.pearexpansion.PearExpansion
 import net.pearadise.pearexpansion.item.enums.CrabClawLevel
 
 /**
@@ -114,6 +114,6 @@ object ModItems {
      * Should be called during mod setup.
      */
     fun initialize() {
-        PearExpansion.LOGGER.info("ModItems initialized.")
+        LOGGER.info("ModItems initialized.")
     }
 }

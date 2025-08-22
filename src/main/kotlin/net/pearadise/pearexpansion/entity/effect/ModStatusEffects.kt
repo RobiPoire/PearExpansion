@@ -8,7 +8,7 @@ import net.minecraft.registry.Registries
 import net.minecraft.registry.Registry
 import net.minecraft.util.Identifier
 import net.pearadise.pearexpansion.MOD_ID
-import net.pearadise.pearexpansion.PearExpansion
+import net.pearadise.pearexpansion.LOGGER
 
 object ModStatusEffects {
 
@@ -31,6 +31,6 @@ object ModStatusEffects {
     }
 
     fun initialize() {
-        PearExpansion.LOGGER.info("ModStatusEffects initialized.")
+        LOGGER.info("ModStatusEffects initialized.")
     }
 }

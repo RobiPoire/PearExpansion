@@ -12,7 +12,7 @@ import net.minecraft.registry.RegistryKey
 import net.minecraft.registry.RegistryKeys
 import net.minecraft.util.Identifier
 import net.pearadise.pearexpansion.MOD_ID
-import net.pearadise.pearexpansion.PearExpansion
+import net.pearadise.pearexpansion.LOGGER
 
 /**
  * Registers and stores all custom vertical slab blocks for the mod.
@@ -178,6 +178,6 @@ object ModBlocks {
      * Should be called during mod setup.
      */
     fun initialize() {
-        PearExpansion.LOGGER.info("ModBlocks initialized.")
+        LOGGER.info("ModBlocks initialized.")
     }
 }

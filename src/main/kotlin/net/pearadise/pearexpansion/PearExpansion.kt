@@ -17,17 +17,16 @@ import org.slf4j.LoggerFactory
 const val MOD_ID = "pear_expansion"
 
 /**
+ * Logger for Pear Expansion mod messages.
+ */
+val LOGGER: Logger = LoggerFactory.getLogger(MOD_ID)
+
+/**
  * Main entry point for the Pear Expansion mod.
  *
  * Handles registration of items, blocks, item groups, and custom block behaviors.
  */
 object PearExpansion : ModInitializer {
-
-    /**
-     * Logger for Pear Expansion mod messages.
-     */
-    val LOGGER: Logger = LoggerFactory.getLogger(MOD_ID)
-
     /**
      * Called by Fabric to initialize the mod.
      *

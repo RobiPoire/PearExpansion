@@ -6,7 +6,6 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput
 import net.minecraft.block.Block
 import net.minecraft.client.data.*
 import net.minecraft.util.Identifier
-import net.pearadise.pearexpansion.PearExpansion
 import net.pearadise.pearexpansion.block.ModBlocks
 import net.pearadise.pearexpansion.client.datagen.modelgnerator.VerticalSlabModelGenerator
 import net.pearadise.pearexpansion.item.ModItems
@@ -101,12 +100,12 @@ class ModModelProvider(output: FabricDataOutput) : FabricModelProvider(output) {
      * @param blockStateModelGenerator The generator for blockstate models.
      */
     override fun generateBlockStateModels(blockStateModelGenerator: BlockStateModelGenerator) {
-        PearExpansion.LOGGER.info("Generating blockstate models for vertical slabs...")
+        LOGGER.info("Generating blockstate models for vertical slabs...")
 
         ModContentLists.ALL_VERTICAL_SLABS.forEach { modSlab ->
             val source = ModContentLists.VERTICAL_TO_BASE_BLOCK[modSlab]
             if (source == null) {
-                PearExpansion.LOGGER.warn("Skipping vertical slab with null block or source: {} -> {}", modSlab, source)
+                LOGGER.warn("Skipping vertical slab with null block or source: {} -> {}", modSlab, source)
                 return@forEach
             }
 
@@ -121,7 +120,7 @@ class ModModelProvider(output: FabricDataOutput) : FabricModelProvider(output) {
             )
         }
 
-        PearExpansion.LOGGER.info("Blockstate model generation complete.")
+        LOGGER.info("Blockstate model generation complete.")
     }
 
     /**
@@ -130,7 +129,7 @@ class ModModelProvider(output: FabricDataOutput) : FabricModelProvider(output) {
      * @param itemModelGenerator The generator for item models.
      */
     override fun generateItemModels(itemModelGenerator: ItemModelGenerator) {
-        PearExpansion.LOGGER.info("Generating blockstate models for items...")
+        LOGGER.info("Generating blockstate models for items...")
         ModContentLists.ALL_ITEMS.forEach {
             if (it == ModItems.ENCHANTED_GOLDEN_PEAR) {
                 itemModelGenerator.registerWithTextureSource(
