@@ -74,24 +74,31 @@ dependencies {
     modImplementation("org.ladysnake.cardinal-components-api:cardinal-components-entity:${project.property("cardinal_components_version")}")
 }
 
+val modVersion: String = project.version.toString()
+val mcVersion: String = project.property("minecraft_version").toString()
+val loaderVersion: String = project.property("loader_version").toString()
+val kotlinLoaderVersion: String = project.property("kotlin_loader_version").toString()
+val trinketsVersion: String = project.property("trinkets_version").toString()
+val cardinalComponentsVersion: String = project.property("cardinal_components_version").toString()
+
 tasks.processResources {
-    inputs.property("version", project.version)
-    inputs.property("minecraft_version", project.property("minecraft_version"))
-    inputs.property("loader_version", project.property("loader_version"))
-    inputs.property("kotlin_loader_version", project.property("kotlin_loader_version"))
-    inputs.property("trinkets_version", project.property("trinkets_version")) // si utilisé dans fabric.mod.json
-    inputs.property("cardinal_components_version", project.property("cardinal_components_version")) // <-- ajouté
+    inputs.property("version", modVersion)
+    inputs.property("minecraft_version", mcVersion)
+    inputs.property("loader_version", loaderVersion)
+    inputs.property("kotlin_loader_version", kotlinLoaderVersion)
+    inputs.property("trinkets_version", trinketsVersion)
+    inputs.property("cardinal_components_version", cardinalComponentsVersion)
 
     filteringCharset = "UTF-8"
 
     filesMatching("fabric.mod.json") {
         expand(
-            "version" to project.version,
-            "minecraft_version" to project.property("minecraft_version"),
-            "loader_version" to project.property("loader_version"),
-            "kotlin_loader_version" to project.property("kotlin_loader_version"),
-            "trinkets_version" to project.property("trinkets_version"), // si tu l'utilises dans ton JSON
-            "cardinal_components_version" to project.property("cardinal_components_version") // <-- ajouté
+            "version" to modVersion,
+            "minecraft_version" to mcVersion,
+            "loader_version" to loaderVersion,
+            "kotlin_loader_version" to kotlinLoaderVersion,
+            "trinkets_version" to trinketsVersion,
+            "cardinal_components_version" to cardinalComponentsVersion
         )
     }
 }
