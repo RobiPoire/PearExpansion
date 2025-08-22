@@ -8,7 +8,7 @@
     "RobiPoire"
   ],
   "contact": {},
-  "license": "GPL-3.0",
+  "license": "MIT",
   "icon": "assets/pear_expansion/icon.png",
   "environment": "*",
   "entrypoints": {
