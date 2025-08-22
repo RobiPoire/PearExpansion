@@ -5,7 +5,6 @@ enum class CrabClawLevel(val level: Int, val blockInteractionRange: Double) {
     DIAMOND_LEVEL(2, 2.0),
     NETHERITE_LEVEL(3, 4.0);
 
-    fun retrieveLevel(): Int = level
 
     companion object {
         @Suppress("unused")
